@@ -125,4 +125,21 @@
       });
     },{passive:true});
   }
+  // Magnetic navigation affordances: a few pixels, never a layout change.
+  if(canHover.matches){
+    document.querySelectorAll(".hero-actions .btn,.contact-actions .btn").forEach(btn=>{
+      let rect=null;
+      btn.addEventListener("pointerenter",()=>{rect=btn.getBoundingClientRect()});
+      btn.addEventListener("pointermove",e=>{
+        if(!rect||root.dataset.motion==="off"||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+        const dx=Math.max(-7,Math.min(7,(e.clientX-rect.left-rect.width/2)*.11));
+        const dy=Math.max(-6,Math.min(6,(e.clientY-rect.top-rect.height/2)*.11));
+        btn.style.setProperty("--magnet-x",dx.toFixed(1)+"px");
+        btn.style.setProperty("--magnet-y",dy.toFixed(1)+"px");
+      },{passive:true});
+      btn.addEventListener("pointerleave",()=>{
+        rect=null;btn.style.removeProperty("--magnet-x");btn.style.removeProperty("--magnet-y");
+      });
+    });
+  }
 })();
