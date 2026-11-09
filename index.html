@@ -22,8 +22,9 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="/assets/style.css?v=3060.3">
-  <script defer src="/assets/app.js?v=3060.3"></script>
+  <link rel="stylesheet" href="/assets/style.css?v=3.2">
+  <script defer src="/assets/app.js?v=3.2"></script>
+  <script defer src="/assets/experience.js?v=3.2"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Suraj Kumar","url":"https://heysuraj.com/","description":"Entrepreneur, digital strategist and technology builder exploring marketing, AI and products.","knowsAbout":["Digital marketing","Search engine optimisation","AI automation","Digital strategy","Entrepreneurship"],"sameAs":["https://github.com/surajsingh5803"]}</script>
   <title>Hey Suraj — Suraj Kumar | Building, Thinking, Proving</title>
 </head>
@@ -46,24 +47,59 @@
       </nav>
       <div class="nav-right">
         <button type="button" class="key-btn" id="command-open" aria-label="Open command centre"><span aria-hidden="true">⌕</span> <span>⌘ K</span></button>
-        <button type="button" class="icon-btn" id="theme-toggle" aria-label="Switch to light theme" title="Change visual theme">◐</button>
-        <button type="button" class="icon-btn" id="motion-toggle" aria-label="Toggle animation" aria-pressed="false" title="Toggle animation">✧</button>
+        <button type="button" class="icon-btn" id="theme-toggle" aria-label="Choose colour theme" aria-expanded="false" aria-controls="experience-panel" title="Explore colour themes">◐</button>
+        <button type="button" class="icon-btn" id="motion-toggle" aria-label="Choose animation style" aria-expanded="false" aria-controls="experience-panel" title="Explore animation styles">✧</button>
         <button type="button" class="hamburger" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
       </div>
     </div>
   </header>
+  <aside id="experience-panel" class="experience-panel" aria-label="Visual experience studio" aria-labelledby="studio-heading" hidden>
+    <div class="studio-top">
+      <div><div class="mono accent2">EXPERIENCE STUDIO / PERSONALISE</div><h2 id="studio-heading">Make it yours<span class="accent">.</span></h2><p>Change the atmosphere. Keep the experience.</p></div>
+      <button type="button" id="studio-close" class="studio-close" aria-label="Close appearance settings">×</button>
+    </div>
+    <div class="studio-tabs" role="tablist" aria-label="Appearance settings">
+      <button type="button" class="studio-tab" id="studio-tab-theme" role="tab" aria-controls="studio-themes" aria-selected="true" data-studio-tab="theme">◐ &nbsp; Colour worlds</button>
+      <button type="button" class="studio-tab" id="studio-tab-motion" role="tab" aria-controls="studio-motions" aria-selected="false" data-studio-tab="motion">✧ &nbsp; Motion styles</button>
+    </div>
+    <section id="studio-themes" class="studio-view" role="tabpanel" aria-labelledby="studio-tab-theme">
+      <p class="studio-intro">Six curated atmospheres, one consistent visual identity. Changes apply immediately.</p>
+      <div class="palette-grid" role="group" aria-label="Choose visual theme">
+        <button class="palette-option" type="button" data-palette-option="lime" aria-pressed="true"><span class="palette-preview" style="--pv-bg:#07101a;--pv-accent:#baff68;--pv-second:#6ef1df"><i></i><i></i><i></i></span><span><strong>Midnight Lime</strong><small>Original signature</small></span></button>
+        <button class="palette-option" type="button" data-palette-option="ivory" aria-pressed="false"><span class="palette-preview" style="--pv-bg:#f7f6ef;--pv-accent:#33654b;--pv-second:#b3a873"><i></i><i></i><i></i></span><span><strong>Ivory Atelier</strong><small>Editorial daylight</small></span></button>
+        <button class="palette-option" type="button" data-palette-option="ocean" aria-pressed="false"><span class="palette-preview" style="--pv-bg:#061622;--pv-accent:#70dcff;--pv-second:#69eed0"><i></i><i></i><i></i></span><span><strong>Deep Ocean</strong><small>Fluid and luminous</small></span></button>
+        <button class="palette-option" type="button" data-palette-option="ember" aria-pressed="false"><span class="palette-preview" style="--pv-bg:#191110;--pv-accent:#ffba7f;--pv-second:#f17c6f"><i></i><i></i><i></i></span><span><strong>Ember Studio</strong><small>Warm and cinematic</small></span></button>
+        <button class="palette-option" type="button" data-palette-option="orchid" aria-pressed="false"><span class="palette-preview" style="--pv-bg:#110f25;--pv-accent:#d3b1ff;--pv-second:#9aefed"><i></i><i></i><i></i></span><span><strong>Orchid Night</strong><small>Creative and immersive</small></span></button>
+        <button class="palette-option" type="button" data-palette-option="rose" aria-pressed="false"><span class="palette-preview" style="--pv-bg:#fcf3f0;--pv-accent:#a32e62;--pv-second:#bd6646"><i></i><i></i><i></i></span><span><strong>Rose Paper</strong><small>Soft and expressive</small></span></button>
+      </div>
+    </section>
+    <section id="studio-motions" class="studio-view" role="tabpanel" aria-labelledby="studio-tab-motion" hidden>
+      <p class="studio-intro">Switch the way the page moves. Each mode changes the background and interactive sculpture.</p>
+      <div class="motion-options" role="group" aria-label="Choose animation style">
+        <button class="motion-option" type="button" data-scene-option="orbit" aria-pressed="true"><span class="motion-icon">◎</span><span><strong>Orbit</strong><small>Signature celestial motion</small></span><span class="mode-marker">01</span></button>
+        <button class="motion-option" type="button" data-scene-option="constellation" aria-pressed="false"><span class="motion-icon">✳</span><span><strong>Constellation</strong><small>Interactive connecting stars</small></span><span class="mode-marker">02</span></button>
+        <button class="motion-option" type="button" data-scene-option="aurora" aria-pressed="false"><span class="motion-icon">≋</span><span><strong>Aurora</strong><small>Soft flowing waves of light</small></span><span class="mode-marker">03</span></button>
+        <button class="motion-option" type="button" data-scene-option="meteor" aria-pressed="false"><span class="motion-icon">↗</span><span><strong>Meteor</strong><small>Fast atmospheric light trails</small></span><span class="mode-marker">04</span></button>
+        <button class="motion-option" type="button" data-scene-option="breathe" aria-pressed="false"><span class="motion-icon">◉</span><span><strong>Breathe</strong><small>Slow, mindful energy pulses</small></span><span class="mode-marker">05</span></button>
+        <button class="motion-option" type="button" data-scene-option="still" aria-pressed="false"><span class="motion-icon">∎</span><span><strong>Still</strong><small>No animation or motion</small></span><span class="mode-marker">OFF</span></button>
+      </div>
+      <p class="studio-accessibility">System reduced-motion preferences are respected automatically.</p>
+    </section>
+    <div class="studio-footer"><span class="mono">CURRENT: <b id="studio-selection" class="accent">Midnight Lime</b></span><button class="studio-reset" type="button" id="studio-reset">Restore original ↺</button></div>
+  </aside>
   <div class="ticker-line">
     <div class="container ticker-in">
       <div class="ticker-left"><span class="pulse" aria-hidden="true"></span><span>HEYSURAJ / PERSONAL HEADQUARTERS</span><span aria-hidden="true">—</span><span>EXPLORING THE NEXT</span></div>
-      <div class="ticker-right"><span>DESIGNED FOR 3060</span><span>✦</span><span>BUILT IN THE PRESENT</span></div>
+      <div class="ticker-right"><span>BUILD / THINK / PROVE</span><span>✦</span><span>BUILT WITH CURIOSITY</span></div>
     </div>
   </div>
   <main id="main">
     <div id="top" class="container hero">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse" aria-hidden="true"></span><span>HELLO FROM THE FUTURE</span><b>✦ THIS IS SURAJ</b></div>
-        <h1><span class="line">I build</span><span class="line outlined">what's</span><span class="line lit">next<span style="color:var(--text)">.</span></span></h1>
-        <p class="hero-summary">Hey, I’m <strong style="color:var(--text)">Suraj Kumar.</strong> A marketer by profession, a builder by instinct and an experimenter by nature. I connect <strong style="color:var(--text)">marketing, AI, technology and business</strong> to turn ideas into things that work.</p>
+        <div class="eyebrow"><span class="pulse" aria-hidden="true"></span><span>BUILDER · STRATEGIST · CURIOUS MIND</span></div>
+        <h1 class="hero-title"><span class="line">Hey, I'm</span><span class="line lit">Suraj<span style="color:var(--text)">.</span></span></h1>
+        <h2 class="hero-subheading">I turn ambitious ideas into real-world experiences.</h2>
+        <p class="hero-summary">I turn ambitious ideas into real-world experiences — blending <strong style="color:var(--text)">AI, digital strategy and entrepreneurship</strong> to build what's next.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">Enter my universe <span class="arrow" aria-hidden="true">↗</span></a>
           <a class="btn btn-outline" href="#about">The story behind it <span class="arrow" aria-hidden="true">↓</span></a>
@@ -163,7 +199,7 @@
         <div class="section-id">03 / The project universe</div>
         <div class="section-head reveal">
           <h2 id="projects-heading">Ideas, made<br><span class="accent">tangible.</span></h2>
-          <p class="section-desc">An honest archive of ventures, products, experiments, creative pursuits and professional work — not all at the same stage.</p>
+          <p class="section-desc">A mix of ventures, experiments and tools — because the best way to learn is to build.</p>
         </div>
         <div class="portfolio-top reveal">
           <div class="tabs" role="group" aria-label="Filter projects by type">
@@ -234,7 +270,7 @@
     <div class="container footer-in">
       <div><div class="footer-brand">hey<em>suraj.</em></div><div style="margin-top:7px">© <span id="year">2026</span> Suraj Kumar. Built with curiosity.</div></div>
       <div class="footer-links"><a href="#top">Top ↑</a><a href="#projects">Projects</a><a href="#lab">Lab</a><a href="https://github.com/surajsingh5803" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
-      <div class="mono muted">EST. 2026 // IMAGINED 3060</div>
+      <div class="mono muted">BUILD · THINK · PROVE</div>
     </div>
   </footer>
   <div class="overlay" id="detail-overlay" aria-hidden="true">
