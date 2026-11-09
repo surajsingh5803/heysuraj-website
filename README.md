@@ -1,68 +1,61 @@
 # Hey Suraj · Personal Headquarters
 
 **Live domain:** https://heysuraj.com  
-**GitHub Pages source:** \`main\` → \`/ (root)\`
+**Deployment:** GitHub Pages / \`main\` / \`/ (root)\`  
+**Owner:** Suraj Kumar
 
-A fast, interactive, static-first personal website for Suraj Kumar: professional work, ventures, experiments, writing ideas and building in public.
+A static-first, interactive personal website about marketing, AI, technology, entrepreneurship, work and experiments.
 
-## HeySuraj 3060
+## Introduction
 
-The interface uses a retro-futuristic visual system — but the site is intentionally practical, lightweight and privacy-respecting.
+**Hey, I'm Suraj.**  
+**I turn ambitious ideas into real-world experiences.**
 
-### Shipped features
+I turn ambitious ideas into real-world experiences — blending AI, digital strategy and entrepreneurship to build what's next.
 
-- Orbital, pointer-responsive hero with animated ambient particle canvas
-- Fully responsive dark/light themes
-- Animation toggle and reduced-motion accessibility support
-- Searchable project universe with category filters and detailed project modals
-- Interactive experimentation lab: hypotheses, methods and learnings
-- Editorial ideas and preview notes (clearly labelled as **not yet published**)
-- Command centre: \`Ctrl/Cmd+K\` to search pages, projects and actions
-- Keyboard support including \`/\` for project search and \`Esc\` to close dialogs
-- Semantic HTML, focus outlines, dialog focus handling and skip navigation
-- SEO metadata, Person JSON-LD, XML sitemap, robots.txt and custom 404
-- Custom favicon, manifest, and no login/API/database requirement
+> A mix of ventures, experiments and tools — because the best way to learn is to build.
 
-### Tech stack
+## Experience Studio
 
-Plain HTML, CSS and JavaScript. No build command. No package manager. No frameworks. No external JavaScript libraries. Google Fonts improves typography but there are robust local font fallbacks. No cookies, third-party analytics, forms or customer data collection are configured.
+The top-right controls open **Experience Studio**, where each visitor can customise the website without disrupting its underlying design.
 
-### Files
+**Six colour themes:** Midnight Lime (original), Ivory Atelier, Deep Ocean, Ember Studio, Orchid Night and Rose Paper.
 
-| File | Purpose |
-| ---- | ------- |
-| \`index.html\` | SEO, page structure, accessible markup |
-| \`assets/style.css\` | 3060 visual system, animation and responsive layouts |
-| \`assets/app.js\` | Project archive, experiment lab, writing library, command centre and interactions |
-| \`assets/favicon.svg\` | Brand icon |
-| \`site.webmanifest\` | App display metadata |
-| \`sitemap.xml\` | Indexing sitemap |
-| \`robots.txt\` | Search crawler guidance |
-| \`404.html\` | Custom not-found page |
-| \`CNAME\` | Production domain binding — **do not delete** |
+**Five motion styles:** Orbit, Constellation, Aurora, Meteor and Breathe, with **Still** as an animation-free option.
 
-### Updating content
+Selection changes are live and are remembered locally when browser storage is available. OS reduced-motion preferences are respected even if a visitor selects an animated mode.
 
-- Edit \`PROJECTS\`, \`LAB\`, and \`WRITING\` in \`assets/app.js\`.
-- Edit headline, professional story, experience and contact links in \`index.html\`.
-- Edit visual tokens at the top of \`assets/style.css\`.
-- After any content changes, commit to \`main\`; GitHub Pages should redeploy automatically.
+## Other interactions
 
-### Publishing
+- Cursor-reactive orbital art and canvas backgrounds
+- Subtle tracked-spotlight card hover and magnetic primary buttons
+- Keyboard command palette (\`Ctrl/Cmd+K\`)
+- Project archive search (\`/\`) and category filters
+- Interactive project details with honest status labels
+- Six experiment dossiers in The Lab
+- Original writing ideas clearly labelled as concepts
+- Responsive mobile navigation, dark/light-aware palettes, keyboard support and focus states
+- Custom favicon, 404, sitemap, structured data and no backend or subscription dependencies
 
-GitHub repository → **Settings → Pages** → Source: **Deploy from a branch** → Branch: **main / (root)**. Custom domain: **heysuraj.com**.
+## Stack
 
-Hostinger DNS points to GitHub Pages via the four official apex A records and a \`www\` CNAME. Keep those DNS records and \`CNAME\` intact. Enable **Enforce HTTPS** when the GitHub certificate is ready.
+Plain HTML, CSS and JavaScript. No frameworks, build tools, paid services, database or API keys.
 
-### Editorial safeguards
+- \`index.html\`: Layout, structure and copy
+- \`assets/style.css\`: Responsive design system, palettes, hover effects and scene visual styling
+- \`assets/app.js\`: Project data, search, lab, command centre and animation canvas
+- \`assets/experience.js\`: Experience Studio, palette and scene choices, hover interactions
+- \`CNAME\`: Critical custom domain configuration (**do not delete**)
+- \`assets/favicon.svg\`, \`site.webmanifest\`, \`robots.txt\`, \`sitemap.xml\`, \`404.html\`: Supporting assets
 
-- An experiment, concept, historical venture, professional practice area and working SaaS are not equivalent; labels should remain accurate.
-- Do not publish employer-confidential details, sensitive customer information, unapproved client screenshots or invented results.
-- Detailed client case studies should be added only with permission and verified supporting evidence.
-- Never hardcode secrets or API keys in this public repository.
+## Updates
 
-### Next recommended improvements
+Edit \`PROJECTS\`, \`LAB\` and \`WRITING\` in \`assets/app.js\` to change the featured catalogue. Edit \`index.html\` for the homepage narrative and work details. Edit theme tokens in \`assets/style.css\`. Commit to \`main\` to trigger GitHub Pages publishing.
 
-Add a verified professional contact method and social URLs; publish original case studies and articles; replace the abstract monogram with a real professional photo where it suits your brand; set up Search Console when ready.
+### Safety and editorial notes
 
-© Suraj Kumar — designed for the future, built in the present.
+Keep project statuses truthful. Publish only verified achievements, results and links, respecting client confidentiality and data privacy. The writing cards represent original essay topics in development, not published articles.
+
+This repo is public. Never commit personal data, client secrets, API keys, private emails or passwords.
+
+© Suraj Kumar · Build / Think / Prove
