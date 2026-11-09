@@ -46,6 +46,8 @@
     palette=value;
     root.dataset.palette=value;
     root.dataset.theme=lightModes.has(value)?"light":"dark";
+    const backgrounds={lime:"#070b12",ivory:"#f7f6f0",ocean:"#06121c",ember:"#150e0e",orchid:"#100d20",rose:"#fcf3f0"};
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content",backgrounds[value]);
     save("hs-palette",value);save("hs-theme",root.dataset.theme);
     refreshChoiceLabels();
     if(announce&&typeof toast==="function")toast(PALETTES[value].name+" theme applied");
