@@ -106,7 +106,7 @@ function renderLab(id){
 }
 function renderWriting(){
  const grid=byId("writing-grid");
- grid.innerHTML=WRITING.slice(0,6).map((w,i)=>'<button class="article-card" type="button" data-writing="'+fmt(w.id)+'"><span class="mono">FIELD NOTE / '+fmt(w.category)+'</span><h3>'+fmt(w.title)+'</h3><span class="meta"><span>IDEA IN DEVELOPMENT</span><strong>Explore ↗</strong></span></button>').join("");
+ grid.innerHTML=WRITING.map((w,i)=>'<button class="article-card" type="button" data-writing="'+fmt(w.id)+'"><span class="mono">FIELD NOTE / '+fmt(w.category)+'</span><h3>'+fmt(w.title)+'</h3><span class="meta"><span>IDEA IN DEVELOPMENT</span><strong>Explore ↗</strong></span></button>').join("");
  grid.querySelectorAll("[data-writing]").forEach(btn=>btn.addEventListener("click",()=>openWriting(btn.dataset.writing)));
 }
 function openWriting(id){
