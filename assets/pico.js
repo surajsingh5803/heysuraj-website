@@ -40,7 +40,8 @@ function refusalReply(text){
 }
 function fromSession(){try{const v=JSON.parse(store.read("hs.pico.session")||"null");return v&&Array.isArray(v.history)?v:null;}catch{return null;}}
 function preferences(){const defaults={voice:false,music:false,fx:false,follow:false,quiet:false};try{const v=JSON.parse(store.read("hs.pico.prefs",true)||"null");if(v&&typeof v==="object")for(const k of Object.keys(defaults))if(typeof v[k]==="boolean")defaults[k]=v[k];}catch{}return defaults;}
-let prefs=preferences();const previous=fromSession();
+let prefs=preferences();prefs.music=false; // Browser audio needs a fresh visitor gesture on each page load.
+const previous=fromSession();
 const state={role:previous&&previous.role||null,history:previous&&previous.history.slice(-18)||[],nudges:previous&&previous.nudges||0,lastNudge:previous&&previous.lastNudge||0,petCount:0,open:false,view:"chat",busy:false,interactions:0,section:"home",voiceRecording:null,voiceMode:false,micPaused:false,speaking:false,voiceFailures:0,rejections:0};
 const voiceCapable="speechSynthesis" in window;
 let audio=null,musicHandle=0,musicStep=0,animationHandle=0,nudgeHandle=0;
@@ -97,7 +98,7 @@ function appendMessage(who,text,quiet=false,save=true){
  const bubble=document.createElement("div");bubble.className="pico-message";bubble.textContent=value;
  box.append(label,bubble);$("pico-choices")?.remove();chat.append(box);chat.scrollTop=chat.scrollHeight;
  if(save){state.history.push({who,text:value});state.history=state.history.slice(-18);persist();}
- if(who==="pico"&&!quiet){mood("pico-speaking",Math.min(1800,Math.max(450,value.length*17)));if(prefs.voice)speak(value);}
+ if(who==="pico"&&!quiet){mood("pico-speaking",Math.min(1800,Math.max(450,value.length*17)));if(prefs.fx)playPicoEffect("reply");if(prefs.voice)speak(value);}
 }
 function choices(custom){
  $("pico-choices")?.remove();
@@ -157,7 +158,7 @@ function localReply(message){
    "I once stole a snack from my own emergency snack drawer. It was an inside job.",
    about.website]);
  if(/\b(voice|microphone|mic|sound|speak|talk aloud|music)\b/.test(t))
-  return "Tap my little mic and we can talk out loud. Tap it again to return to typing. I'll do my best squeaky-panda impression. 🎙";
+  return "Tap Talk to start. I pause my ears when it gets quiet, and Resume mic wakes them up. Or tap Type instead. My tiny voice is on duty. 🎙";
  if(/\b(tell me a story about suraj|about suraj|who is suraj|suraj ke bare|suraj ke baare|suraj kaun)\b/.test(t))return about.story;
  if(/\b(college|mba|pgdm|education|isb)\b/.test(t))return about.school;
  if(/\b(lazy plex|lazyplex|consultancy|agency)\b/.test(t))return about.lazy;
@@ -442,21 +443,58 @@ function playTone(freq,duration=.15,volume=.012){
  gain.gain.exponentialRampToValueAtTime(volume,at+.025);gain.gain.exponentialRampToValueAtTime(.0001,at+duration);
  osc.connect(gain).connect(ctx.destination);osc.start(at);osc.stop(at+duration+.03);
 }
-const song=[220,329.63,392,293.66,246.94,329.63,440,392,196,293.66,369.99,293.66,220,261.63,329.63,246.94];
+// Original, gently looping ambient soundtrack — no recordings or copyrighted songs.
+const melody=[392,440,523.25,493.88,440,392,349.23,329.63,392,440,587.33,523.25,493.88,440,392,349.23];
+const harmony=[196,174.61,164.81,146.83]; // G, F, E, D roots
+let musicTick=0;
+function ambientTone(freq,duration=.75,volume=.02,type="sine"){
+ const ctx=audioContext();if(!ctx)return;
+ const osc=ctx.createOscillator(),gain=ctx.createGain(),now=ctx.currentTime;
+ osc.type=type;osc.frequency.setValueAtTime(freq,now);
+ // Gentle attack and fade; softer and more musical than a notification beep.
+ gain.gain.setValueAtTime(.0001,now);
+ gain.gain.linearRampToValueAtTime(volume,now+.09);
+ gain.gain.exponentialRampToValueAtTime(.0001,now+duration);
+ osc.connect(gain).connect(ctx.destination);osc.start(now);osc.stop(now+duration+.03);
+}
+function musicBeat(){
+ if(document.hidden||state.voiceRecording||state.speaking)return;
+ const step=musicTick++,idx=step%melody.length,chord=harmony[Math.floor(step/4)%harmony.length];
+ ambientTone(melody[idx],.74,.019,"sine");
+ if(idx%4===0){ambientTone(chord,1.7,.014,"triangle");ambientTone(chord*1.498,1.25,.008,"sine");}
+ if(idx%4===2)ambientTone(melody[idx]/2,1.05,.007,"triangle");
+}
 function music(){
  clearInterval(musicHandle);musicHandle=0;
- if(prefs.music){audioContext();musicHandle=setInterval(()=>{if(document.hidden)return;const f=song[(musicStep++)%song.length];playTone(f,.45,.008);if(musicStep%4===0)playTone(f/2,.68,.004);},850);}
+ if(!prefs.music)return;
+ if(!audioContext())return;
+ musicTick=0;musicBeat();
+ musicHandle=setInterval(musicBeat,790);
+}
+function playPicoEffect(kind="happy"){
+ if(!prefs.fx||document.hidden||state.voiceRecording)return;
+ const notes=kind==="pet"?[620,780]:kind==="open"?[490,660,740]:kind==="reply"?[680,840]:[520,650];
+ notes.forEach((note,i)=>setTimeout(()=>{if(prefs.fx&&!state.voiceRecording)playTone(note,.10,.032);},i*72));
 }
 function refreshSettings(){
  for(const k of ["voice","music","fx","follow","quiet"])$("pico-"+k+"-setting").checked=prefs[k];
  $("pico-voice-toggle").textContent=prefs.voice?"🔊 Voice on":"🔇 Voice off";
  $("pico-voice-toggle").setAttribute("aria-pressed",String(prefs.voice));
+ for(const [key,ids] of [["music",["pico-site-music","pico-music-toggle"]],["fx",["pico-site-fx","pico-fx-toggle"]]]){
+  for(const id of ids){
+   const el=$(id);if(!el)continue;
+   el.setAttribute("aria-pressed",String(prefs[key]));
+   if(id.startsWith("pico-site-")){
+    el.querySelector("span").textContent=key==="music"?(prefs.music?"Music on":"Music off"):(prefs.fx?"Sounds on":"Sounds off");
+   }else el.textContent=key==="music"?(prefs.music?"♫ Music on":"♫ Music off"):(prefs.fx?"✧ Sounds on":"✧ Sounds off");
+  }
+ }
 }
 function setPref(key,value){
  prefs[key]=Boolean(value);store.write("hs.pico.prefs",JSON.stringify(prefs),true);refreshSettings();
  if(key==="voice"&&!value){if(state.voiceMode)stopVoiceMode({focus:false,keepMuted:true});else window.speechSynthesis?.cancel();}
  if(key==="music")music();
- if(key==="fx"&&value)playTone(520,.14,.02);
+ if(key==="fx"&&value)playPicoEffect("open");
  if(key==="follow"&&!value){spriteButton.style.setProperty("--pico-dx","0px");spriteButton.style.setProperty("--pico-dy","0px");}
  if(key==="quiet")nudge.hidden=true;
 }
@@ -511,9 +549,9 @@ function pointerFollow(event){
 }
 let frame=0;
 document.addEventListener("pointermove",event=>{if(frame)return;const x=event.clientX,y=event.clientY,type=event.pointerType;frame=requestAnimationFrame(()=>{frame=0;pointerFollow({clientX:x,clientY:y,pointerType:type});});},{passive:true});
-spriteButton.addEventListener("pointerenter",()=>{state.petCount++;mood("pico-petting",700);if(prefs.fx&&state.petCount%2===0)playTone(590,.1,.018);if(state.petCount===5)showNudge("Secret unlocked: I've decided you're my friend. 🐾");});
-spriteButton.addEventListener("click",()=>{openPanel(!state.open);if(prefs.fx)playTone(490,.1,.015);});
-spriteButton.addEventListener("dblclick",()=>{mood("pico-celebrate",950);if(prefs.fx)playTone(720,.16,.018);});
+spriteButton.addEventListener("pointerenter",()=>{state.petCount++;mood("pico-petting",700);if(prefs.fx&&state.petCount%2===0)playPicoEffect("pet");if(state.petCount===5)showNudge("Secret unlocked: I've decided you're my friend. 🐾");});
+spriteButton.addEventListener("click",()=>{openPanel(!state.open);if(prefs.fx)playPicoEffect("open");});
+spriteButton.addEventListener("dblclick",()=>{mood("pico-celebrate",950);if(prefs.fx)playPicoEffect("happy");});
 $("pico-close").addEventListener("click",()=>openPanel(false));
 $("pico-nudge-dismiss").addEventListener("click",()=>{nudge.hidden=true;});
 $("pico-settings-button").addEventListener("click",()=>showView("settings"));
@@ -522,6 +560,8 @@ $("pico-leave-note").addEventListener("click",()=>showView("contact"));
 $("pico-contact-back").addEventListener("click",()=>showView("chat"));
 $("pico-story").addEventListener("click",()=>sendText("Surprise me with something funny"));
 $("pico-voice-toggle").addEventListener("click",()=>setPref("voice",!prefs.voice));
+for(const id of ["pico-site-music","pico-music-toggle"])$(id).addEventListener("click",()=>setPref("music",!prefs.music));
+for(const id of ["pico-site-fx","pico-fx-toggle"])$(id).addEventListener("click",()=>setPref("fx",!prefs.fx));
 $("pico-clear-chat").addEventListener("click",()=>{
  state.history=[];state.role=null;store.del("hs.pico.session");chat.replaceChildren();
  appendMessage("pico","Fresh start. 🐾 I'm still Pico, still here to chat. What's on your mind?",true);choices();
