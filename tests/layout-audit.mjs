@@ -3,7 +3,7 @@
 import { chromium } from "playwright";
 import { mkdir } from "node:fs/promises";
 const origin="http://127.0.0.1:8765";
-const paths=["/","/about/","/work/","/writing/","/writing/seo-github-pages-guide/","/writing/google-ads-lead-quality/","/writing/ai-agents-vs-automations/","/projects/lazy-plex/","/projects/lp-crm/","/projects/lp-leados/","/projects/seo-audit-engine/","/projects/heysuraj-website/"];
+const paths=["/privacy/","/","/about/","/work/","/writing/","/writing/seo-github-pages-guide/","/writing/google-ads-lead-quality/","/writing/ai-agents-vs-automations/","/projects/lazy-plex/","/projects/lp-crm/","/projects/lp-leados/","/projects/seo-audit-engine/","/projects/heysuraj-website/"];
 const widths=[{name:"desktop",width:1440,height:900},{name:"laptop",width:1024,height:768},{name:"tablet",width:768,height:900},{name:"mobile",width:390,height:844},{name:"small-mobile",width:320,height:720}];
 const fails=[];
 let browser;

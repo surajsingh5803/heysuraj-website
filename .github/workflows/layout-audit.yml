@@ -12,6 +12,7 @@ on:
       - 'assets/**'
       - 'tests/**'
       - 'pico-service/**'
+      - 'privacy/**'
       - '.github/workflows/layout-audit.yml'
   workflow_dispatch:
 

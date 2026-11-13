@@ -65,13 +65,13 @@ Plain HTML, CSS and JavaScript. No CMS subscription or paid hosting requirement.
 | `writing/editorial-plan.json` | 30-topic roadmap and publication statuses |
 | `seo/backlink-outreach-plan.md` | 30 relevant *candidate* websites, not 30 achieved links |
 | `seo/backlink-ledger.csv` | Source links with verification state |
-| `sitemap.xml` | Twelve canonical indexable URLs |
+| `sitemap.xml` | Thirteen canonical indexable URLs |
 | `robots.txt` | Crawl instructions and sitemap pointer |
 | `CNAME` | Custom-domain binding; **do not delete** |
 
 ## Pico — a companion, not a tour guide
 
-**Pico is live as a frontend companion** on all 12 pages: an original red-panda mascot with blinking, animated tail, hover-petting, sleeping, subtle cursor tracking and optional cursor-follow mode. His comments adapt to what a visitor is reading, without interrupting navigation.
+**Pico is live as a frontend companion** on all 13 pages: an original red-panda mascot with blinking, animated tail, hover-petting, sleeping, subtle cursor tracking and optional cursor-follow mode. His comments adapt to what a visitor is reading, without interrupting navigation.
 
 - **Conversation:** friendly, role-aware static chat for friends, recruiters, founders and curious visitors. Session chat continues across pages via sessionStorage.
 - **Voice:** opt-in speech synthesis, and optional microphone input using browser speech-recognition support. This site does not record audio, although a browser speech-recognition provider may process speech.
