@@ -18,10 +18,30 @@ const store={
 };
 function cap(t,n=900){return String(t==null?"":t).trim().slice(0,n);}
 function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function pickFresh(options){
+ const recent=new Set(state.history.filter(h=>h.who==="pico").slice(-8).map(h=>h.text));
+ const fresh=options.filter(text=>!recent.has(text));
+ return pick(fresh.length?fresh:options);
+}
+function isRefusal(text){
+ const t=text.toLowerCase().trim().replace(/[.!?]+$/,"").trim();
+ return /^(?:(?:no|nope|nah|nahi|nhi|na|naa|nopes|no thanks|not now|not interested|nah thanks|bas|nahi chahiye|chup|stop)[\s,]*){1,7}$/.test(t)
+  || /^(?:please\s+)?(?:stop asking|stop talking|leave me alone|don't ask(?: me)?|do not ask(?: me)?|don't want to talk|bas karo|chup raho|no more questions|not interested)(?:\b|$)/.test(t);
+}
+function refusalReply(text){
+ state.rejections=(state.rejections||0)+1;
+ if(/stop talking|leave me alone|chup|bas karo|don't want to talk|no more questions/i.test(text)){
+  prefs.quiet=true;store.write("hs.pico.prefs",JSON.stringify(prefs),true);
+  refreshSettings();nudge.hidden=true;
+ }
+ if(state.rejections===1)return "Got it. No pressure, no questions. I'll just hang out here. 🐾";
+ if(state.rejections===2)return "Understood. Quiet panda mode activated. 🤐";
+ return null; // Repeated 'no' means silence, not another question.
+}
 function fromSession(){try{const v=JSON.parse(store.read("hs.pico.session")||"null");return v&&Array.isArray(v.history)?v:null;}catch{return null;}}
 function preferences(){const defaults={voice:false,music:false,fx:false,follow:false,quiet:false};try{const v=JSON.parse(store.read("hs.pico.prefs",true)||"null");if(v&&typeof v==="object")for(const k of Object.keys(defaults))if(typeof v[k]==="boolean")defaults[k]=v[k];}catch{}return defaults;}
 let prefs=preferences();const previous=fromSession();
-const state={role:previous&&previous.role||null,history:previous&&previous.history.slice(-18)||[],nudges:previous&&previous.nudges||0,lastNudge:previous&&previous.lastNudge||0,petCount:0,open:false,view:"chat",busy:false,interactions:0,section:"home",voiceRecording:null,voiceMode:false,speaking:false,voiceFailures:0};
+const state={role:previous&&previous.role||null,history:previous&&previous.history.slice(-18)||[],nudges:previous&&previous.nudges||0,lastNudge:previous&&previous.lastNudge||0,petCount:0,open:false,view:"chat",busy:false,interactions:0,section:"home",voiceRecording:null,voiceMode:false,micPaused:false,speaking:false,voiceFailures:0,rejections:0};
 const voiceCapable="speechSynthesis" in window;
 let audio=null,musicHandle=0,musicStep=0,animationHandle=0,nudgeHandle=0;
 const spriteButton=$("pico-sprite-button"),sprite=$("pico-sprite"),panel=$("pico-panel"),chat=$("pico-chat"),input=$("pico-input"),nudge=$("pico-nudge");
@@ -91,7 +111,7 @@ function choices(custom){
  chat.append(div);chat.scrollTop=chat.scrollHeight;
 }
 function setRole(role){
- state.role=role;persist();appendMessage("pico",pick(modes[role].intro));choices(role==="friend"?[["From college","college"],["From work","work friend"],["Send a surprise","note"]]:role==="founder"?[["Launching something","launch"],["Marketing challenge","marketing"],["Contact Suraj","note"]]:role==="recruiter"?[["Marketing role","marketing"],["AI role","ai"],["Share opportunity","note"]]:undefined);
+ state.role=role;persist();appendMessage("pico",pickFresh(modes[role].intro));choices(role==="friend"?[["From college","college"],["From work","work friend"],["Send a surprise","note"]]:role==="founder"?[["Launching something","launch"],["Marketing challenge","marketing"],["Contact Suraj","note"]]:role==="recruiter"?[["Marketing role","marketing"],["AI role","ai"],["Share opportunity","note"]]:undefined);
 }
 function localReply(message){
  const t=message.toLowerCase();
@@ -102,37 +122,38 @@ function localReply(message){
  if(/\b(message|contact|send.*suraj|leave.*note|tell suraj|share.*opportunity)\b/.test(t)){
   showView("contact");return "Ooh, post office duty! 💌 I'll help you write it. Nothing sends without your say-so.";
  }
- if(/\b(sad|lonely|stressed|bad day|anxious|feeling down)\b/.test(t)){
-  return pick(["Oof, that sounds like a lot. Want to tell me what happened? I can just listen. 🐾",
-   "I can't fix the entire universe with tiny paws, but I can listen. What's bothering you?"]);
+ if(/\b(sad|lonely|stressed|bad day|anxious|feeling down|upset|hurt|worried)\b/.test(t)&&!/\b(not sad|not stressed|not worried)\b/.test(t)){
+  return pickFresh(["That sounds rough. I won't joke about it. I'm here if you want company. 🐾",
+   "I hear you. No pressure to explain anything—I can just sit beside you for a bit.",
+   "Oof. Some days are heavy. You don't have to entertain me or answer questions."]);
  }
  if(/\b(roast me|roast my|make fun of me|roast please)\b/.test(t))
-  return pick(["You came here to get roasted by a cartoon red panda. I think your browser already won. 😂",
+  return pickFresh(["You came here to get roasted by a cartoon red panda. I think your browser already won. 😂",
    "Your productivity app has a productivity app. And somehow you're still here chatting with a tiny panda.",
    "I'd roast you harder, but I'm five inches tall. My lawyers are two biscuits and a leaf."]);
  if(/\b(roast suraj|make fun of suraj)\b/.test(t))
-  return pick(["He builds tools to save time, then spends all the saved time building more tools. Genius or side quest? Yes. 😂",
+  return pickFresh(["He builds tools to save time, then spends all the saved time building more tools. Genius or side quest? Yes. 😂",
    "Suraj once gave his website more themes than my wardrobe has leaves. And I don't even wear clothes."]);
  if(/\b(roast|sarcasm|sarcastic)\b/.test(t))
   return "Sarcasm? My favourite free service. Unlike certain apps, I won't ask for your card number. 😌";
  if(/\b(joke|funny|make me laugh|surprise me|something funny)\b/.test(t))
-  return pick(["I tried being an influencer. My first post got three likes. Two were from me. 🐾",
+  return pickFresh(["I tried being an influencer. My first post got three likes. Two were from me. 🐾",
    "My to-do list says 'eat, nap, repeat'. HR says I need more ambition. HR is a squirrel.",
    "Why do developers hate nature? Too many bugs. Sorry. I'm legally required to make one bad joke.",
    "I applied for a job as a search engine. They said I had too many tabs open. Honestly, fair."]);
  if(/\b(kaise ho|kya haal|kese ho|how are you|how's it going)\b/.test(t))
-  return pick(["Main mast! Bas duniya ke saare biscuits ka audit kar raha hoon. Tum batao? 🐾",
+  return pickFresh(["Main mast! Bas duniya ke saare biscuits ka audit kar raha hoon. Tum batao? 🐾",
    "Alive, fluffy, and underqualified for taxes. Tumhara din kaisa gaya?"]);
  if(/^(hi|hello|hey|yo|namaste|sup|good morning|good evening)\b/.test(t))
-  return pick(["Arre hello! I was in the middle of an important nap. Kya scene hai? 🐾",
+  return pickFresh(["Arre hello! I was in the middle of an important nap. Kya scene hai? 🐾",
    "Well well well. A human! Please tell me you brought gossip or snacks.",
    "Hi! No sales pitch, promise. What's going on?"]);
  if(/\b(bye|goodbye|later|good night)\b/.test(t))return "Okay, go be legendary. I’ll be here judging the furniture. Bye! 🐾";
- if(/\b(thanks|thank you|shukriya)\b/.test(t))return pick(["Anytime. Payment accepted in compliments and biscuits. 🐾","Shukriya accepted. My ego has grown three sizes."]);
+ if(/\b(thanks|thank you|shukriya)\b/.test(t))return pickFresh(["Anytime. Payment accepted in compliments and biscuits. 🐾","Shukriya accepted. My ego has grown three sizes."]);
  if(/\b(are you ai|are you real|who are you|what can you do|bot)\b/.test(t))
   return "I'm Pico, a cartoon red panda with opinions, zero rent and some actual software. Let's chat—what's on your mind?";
  if(/\b(secret|easter egg|hidden)\b/.test(t))
-  return pick(["Pssst. My greatest secret? I sometimes pretend the mouse cursor is a butterfly. Don't tell anyone.",
+  return pickFresh(["Pssst. My greatest secret? I sometimes pretend the mouse cursor is a butterfly. Don't tell anyone.",
    "I once stole a snack from my own emergency snack drawer. It was an inside job.",
    about.website]);
  if(/\b(voice|microphone|mic|sound|speak|talk aloud|music)\b/.test(t))
@@ -145,18 +166,27 @@ function localReply(message){
  if(/\b(gaming|game|hobby|free time)\b/.test(t))return about.hobby;
  if(/\b(website|github|hosting|domain)\b/.test(t))return about.website;
  if(/\b(what are you doing|what's up|bored|bore ho raha|kya kar rahe)\b/.test(t))
-  return pick(["Trying to look busy. Difficult when your entire career is sitting in a corner. 😂",
+  return pickFresh(["Trying to look busy. Difficult when your entire career is sitting in a corner. 😂",
    "Thinking about snacks. What are you up to?",
    "Planning a very serious heist. Target: one biscuit. Wanna join?"]);
  if(/\b(tell me a story|story time)\b/.test(t))
   return "Once upon a time, a red panda opened 42 browser tabs to find one biscuit recipe. He found an SEO audit instead. The end. Dramatic, no?";
- if(state.role&&modes[state.role])return pick(modes[state.role].follow);
- return pick([
-  "Interesting. Tell me the part you left out—I have giant ears for a reason. 🐾",
-  "Okay wait, that sounds like a story. What happened next?",
-  "I have two questions: how did we get here, and are snacks involved?",
-  "You're not boring, which is rude because I was planning a nap. Go on.",
-  "Fair point. Are we solving something, venting, or just hanging out?"
+ if(/\b(no questions|stop questioning|just listen|listen only|don't ask questions)\b/.test(t))return "Absolutely. I'm listening. No interrogation. 🐾";
+ if(/\b(you keep asking|same question|repeating|annoying|shut up)\b/.test(t))return "Fair. I was sounding like a broken doorbell. I'll stop with the questions.";
+ if(/\b(i am fine|i'm okay|all good|nothing much|kuch nahi|nothing|just chilling|okay|ok)\b/.test(t))return pickFresh(["Nice. No agenda required. 🐾","That works. We can enjoy the silence. I've been training for this.","Same. I'm just hanging out too."]);
+ if(state.role&&modes[state.role])return pickFresh([
+  "I hear you. No interview required. We can just chill. 🐾",
+  "Fair enough. I'll sit right here and try to look employed.",
+  "That's a vibe. I'm going to stop interrogating you now.",
+  "Yep. My tiny paws are available for moral support.",
+  ...modes[state.role].follow.filter(v=>!v.includes("?"))
+ ]);
+ return pickFresh([
+  "Hmm. I'm listening—no rush. 🐾",
+  "Fair. You don't owe a tiny panda a full explanation.",
+  "I have extremely large ears and absolutely no deadline.",
+  "Noted. I'll be here, quietly judging my snack cupboard.",
+  "I can be silent. My tail hasn't learned that skill yet."
  ]);
 }
 async function remoteReply(message){
@@ -171,10 +201,18 @@ async function remoteReply(message){
 async function sendText(value){
  const text=cap(value,700);if(!text||state.busy)return;
  state.busy=true;appendMessage("visitor",text,true);state.interactions++;input.value="";$("pico-send").disabled=true;mood("pico-curious",700);
- const locally=localReply(text);
- if(locally===null||state.view!=="chat"){state.busy=false;$("pico-send").disabled=false;if(state.voiceMode&&!state.speaking)scheduleListening(600);return;}
- const reply=await remoteReply(text)||locally;
- if(state.open&&state.view==="chat"){appendMessage("pico",reply);choices();}
+ const refused=isRefusal(text);
+ const locally=refused?refusalReply(text):localReply(text);
+ if(!refused)state.rejections=0;
+ if(locally===null||state.view!=="chat"){
+  if(refused)$("pico-choices")?.remove();
+  state.busy=false;$("pico-send").disabled=false;
+  if(state.voiceMode&&!state.speaking)scheduleListening(600);
+  return;
+ }
+ // Boundaries are enforced locally even if a remote AI service is connected.
+ const reply=refused?locally:(await remoteReply(text)||locally);
+ if(state.open&&state.view==="chat"){appendMessage("pico",reply);if(!refused)choices();else $("pico-choices")?.remove();}
  state.busy=false;$("pico-send").disabled=false;
  if(state.voiceMode&&!state.speaking)scheduleListening(500);
 }
@@ -204,8 +242,7 @@ function showNudge(text){
 function sectionChange(next){
  if(state.section===next)return;
  state.section=next;
- if(state.open&&state.interactions&&Date.now()-state.lastNudge>130000){state.lastNudge=Date.now();appendMessage("pico",sections[next],true);}
- else if(!state.open)showNudge(sections[next]);
+ if(!state.open&&!prefs.quiet&&state.rejections===0)showNudge(sections[next]);
 }
 function observePages(){
  window.addEventListener("hashchange",()=>sectionChange(where()));
