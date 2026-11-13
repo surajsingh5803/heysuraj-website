@@ -24,7 +24,7 @@ for(const [category,uri] of feeds){
   if(!xml.includes("<rss")&&!xml.includes("<channel"))throw Error("Unexpected feed format");
   for(const block of xml.match(/<item>[\s\S]*?<\/item>/g)||[]){
    const title=tag(block,"title"),url=tag(block,"link"),published=tag(block,"pubDate");
-   const publishedAt=new Date(published).toISOString?.();
+   const publishedAt=Number.isFinite(Date.parse(published))?new Date(published).toISOString():null;
    if(!title||!url.startsWith("https://")||!Number.isFinite(Date.parse(published))||!publishedAt)continue;
    if(Date.now()-Date.parse(published)>4*86400000)continue;
    const parsed=new URL(url);
