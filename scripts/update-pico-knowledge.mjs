@@ -5,7 +5,20 @@ import path from "node:path";
 const output="assets/pico-knowledge.json";
 const existing=JSON.parse(await readFile(output,"utf8"));
 const keep=(existing.records||[]).filter(x=>x.kind!=="heysuraj"&&x.kind!=="project");
-const directories=["","about","work","projects/lazy-plex","projects/lp-leados","projects/lp-crm","projects/seo-audit-engine","projects/heysuraj-website","writing","writing/seo-github-pages-guide","writing/google-ads-lead-quality","writing/ai-agents-vs-automations"];
+// Discover every published HTML page rather than maintaining an article list manually.
+const directories=[];
+const excluded=new Set(["assets","tests","scripts","tools","pico-service",".github","node_modules","seo"]);
+async function discover(dir="",depth=0){
+ if(depth>5)return;
+ const entries=await readdir(dir||".",{withFileTypes:true});
+ if(entries.some(x=>x.isFile()&&x.name==="index.html"))directories.push(dir);
+ for(const item of entries){
+  if(!item.isDirectory()||excluded.has(item.name)||item.name.startsWith("."))continue;
+  await discover(path.posix.join(dir,item.name),depth+1);
+ }
+}
+await discover();
+directories.sort((a,b)=>a.length-b.length||a.localeCompare(b));
 const categoryKeywords={
 "":["suraj","personal website","heysuraj","portfolio","digital marketing","builder","ai","projects"],
 "about":["about suraj","suraj","education","career","mba","work experience","icici bank","college","who is suraj"],
@@ -33,7 +46,7 @@ for(const dir of directories){
  const article=(main.match(/<article class="prose"[^>]*>([\s\S]*?)<\/article>/i)||[])[1];
  const content=text(article||main).slice(0,dir.startsWith("writing/")?4700:6500);
  records.push({id:dir.replace(/[^a-z0-9]+/gi,"-")||"home",kind:"heysuraj",title,
-  url:"https://heysuraj.com/"+(dir?dir+"/":""),summary:desc,keywords:categoryKeywords[dir]||dir.split("/"),content,
+  url:"https://heysuraj.com/"+(dir?dir+"/":""),summary:desc,keywords:categoryKeywords[dir]||[title,...dir.split("/")].filter(Boolean),content,
   source:"Official HeySuraj website",updated:new Date().toISOString().slice(0,10)});
 }
 const app=await readFile("assets/app.js","utf8");
