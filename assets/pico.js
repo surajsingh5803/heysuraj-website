@@ -67,7 +67,7 @@ function persist(){
  store.write("hs.pico.session",JSON.stringify({role:state.role,history:state.history.slice(-18),nudges:state.nudges,lastNudge:state.lastNudge}));
 }
 function mood(name,time=900){
- for(const v of ["pico-sleeping","pico-speaking","pico-petting","pico-celebrate","pico-hop","pico-curious"])root.classList.remove(v);
+ for(const v of ["pico-sleeping","pico-speaking","pico-petting","pico-celebrate","pico-hop","pico-curious","pico-scratch","pico-walk","pico-stretch","pico-yawn","pico-peek","pico-wiggle"])root.classList.remove(v);
  root.classList.add(name);clearTimeout(animationHandle);
  animationHandle=setTimeout(()=>{root.classList.remove(name);},time);
 }
@@ -95,6 +95,11 @@ function setRole(role){
 }
 function localReply(message){
  const t=message.toLowerCase();
+ if(/\b(kaise ho|kya haal|kese ho)\b/.test(t))return "Main mast hoon! Bas apni poonch sambhaal raha hoon. 🐾 Tum batao, kaisa chal raha hai sab?";
+ if(/\b(suraj ke bare|suraj ke baare|suraj ko jaante|suraj kaun)\b/.test(t))return "Haan, Suraj ko jaanta hoon! Usko marketing, AI aur naye experiments banana bahut pasand hai. Uski journey ke baare mein kya jaanna hai?";
+ if(/\b(dost hoon|dost hun|suraj ka dost|mera dost suraj)\b/.test(t)&&state.role!=="friend"){setRole("friend");return null;}
+ if(/\b(kya kar rahe|kya karte|tum kya|batao pico)\b/.test(t))return "Main? Yahin baitha hoon, visitors se dosti kar raha hoon. 🐾 Tum kya kar rahe ho?";
+
  if(/^(hi|hello|hey|yo|namaste|sup|good morning|good evening)\b/.test(t))return pick(["Hi, human! 🐾 What's something good about your day?","Hey hey! Pico here. Need a friend for a few minutes?","Hello. I was just pretending to be busy. How's life?"]);
  if(/\b(friend|classmate|school friend|college friend|know suraj)\b/.test(t)&&state.role!=="friend"){setRole("friend");return null;}
  if(/\b(recruiter|recruiting|hiring|job|vacancy|open role)\b/.test(t)&&state.role!=="recruiter"){setRole("recruiter");return null;}
@@ -299,7 +304,7 @@ $("pico-mic").addEventListener("click",()=>{
 });
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&state.open){if(state.view!=="chat")showView("chat");else openPanel(false);}});
 document.addEventListener("visibilitychange",()=>{if(document.hidden){window.speechSynthesis?.cancel();}else if(!state.open)root.classList.add("pico-sleeping");});
-fetch("/assets/pico-red-panda.svg").then(r=>r.ok?r.text():null).then(svg=>{if(svg&&svg.startsWith("<svg"))sprite.innerHTML=svg;}).catch(()=>{});
+fetch("/assets/pico-red-panda.svg?v=2").then(r=>r.ok?r.text():null).then(svg=>{if(svg&&svg.startsWith("<svg"))sprite.innerHTML=svg;}).catch(()=>{});
 if(previous&&previous.history.length){
  for(const entry of state.history){const box=document.createElement("div");box.className="pico-turn";box.dataset.who=entry.who==="visitor"?"visitor":"pico";
  const label=document.createElement("small");label.textContent=entry.who==="visitor"?"You":"Pico";const bubble=document.createElement("div");bubble.className="pico-message";bubble.textContent=cap(entry.text);box.append(label,bubble);chat.append(box);}
@@ -308,4 +313,8 @@ choices();refreshSettings();observePages();
 $("pico-mode").textContent=API?"AI replies are processed by the connected API. Notes require your consent.":"Pico's chat stays in this tab. Notes can be sent using WhatsApp.";
 setTimeout(()=>{if(!state.open&&!prefs.quiet)showNudge(pick(["Hey, human! Need a tiny friend for a few minutes? 🐾","Psst. I'm Pico. No tours, just good company!"]));},12500);
 setTimeout(()=>{if(!state.open&&!prefs.follow)root.classList.add("pico-sleeping");},54000);
+setInterval(()=>{
+ if(document.hidden||state.open||prefs.quiet||state.busy||!matchMedia("(prefers-reduced-motion: no-preference)").matches||document.documentElement.dataset.motion==="off")return;
+ mood(pick(["pico-yawn","pico-wiggle","pico-stretch","pico-scratch","pico-walk","pico-peek","pico-curious"]),1250);
+},29000);
 })();
