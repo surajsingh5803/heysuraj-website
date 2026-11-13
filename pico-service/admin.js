@@ -20,7 +20,9 @@ function render(){
   const state=make("select");state.setAttribute("aria-label","Status for "+(item.name||"visitor"));
   for(const value of ["new","reviewed","replied","archived"]){const option=make("option",value);option.value=value;option.selected=value===item.status;state.append(option);}
   state.addEventListener("change",async()=>{const next=state.value;state.disabled=true;try{await api("/api/messages/"+item.id,{method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify({status:next})});item.status=next;render();}catch(e){alert("Could not save status: "+e.message);render();}});
-  controls.append(make("span","Status: "),state);card.append(controls);list.append(card);
+  const remove=make("button","Delete permanently");remove.type="button";remove.className="outline";remove.setAttribute("aria-label","Delete note from "+(item.name||"visitor")+" permanently");
+  remove.addEventListener("click",async()=>{if(!confirm("Permanently delete this visitor note? This cannot be undone."))return;remove.disabled=true;try{await api("/api/messages/"+item.id,{method:"DELETE"});items=items.filter(x=>x.id!==item.id);render();}catch(e){alert("Could not delete note: "+e.message);remove.disabled=false;}});
+  controls.append(make("span","Status: "),state,remove);card.append(controls);list.append(card);
  }
 }
 $("access-form").addEventListener("submit",e=>{e.preventDefault();token=$("token").value.trim();status.textContent="Unlocking...";fetchMessages();});
