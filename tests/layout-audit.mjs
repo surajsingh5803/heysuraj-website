@@ -49,6 +49,33 @@ for(const v of widths){
       await page.screenshot({path:"layout-screenshots/"+id+"-"+v.name+".png",fullPage:true});
     }
    }
+   // Pico is a cross-page feature; verify the actual widget on every route.
+   await page.waitForSelector("#pico-sprite-button",{timeout:5000});
+   const petStatus=await page.evaluate(()=>{
+     const button=document.getElementById("pico-sprite-button"),panel=document.getElementById("pico-panel");
+     return {present:!!button,visible:!!button&&button.getBoundingClientRect().width>20,panel:!!panel};
+   });
+   if(!petStatus.present||!petStatus.visible||!petStatus.panel)fails.push("Pico missing "+path+" "+v.name+" "+JSON.stringify(petStatus));
+   if((path==="/"||path==="/writing/")&&(v.name==="desktop"||v.name==="mobile")){
+     await page.locator("#pico-sprite-button").click();
+     await page.locator("#pico-panel").waitFor({state:"visible",timeout:3500});
+     const size=await page.locator("#pico-panel").boundingBox();
+     if(!size||size.x<-2||size.x+size.width>v.width+2||size.y<0)fails.push("Pico panel out of viewport "+path+" "+v.name+" "+JSON.stringify(size));
+     await page.locator("#pico-input").fill("Hello Pico");
+     await page.locator("#pico-send").click();
+     await page.waitForTimeout(350);
+     const turnCount=await page.locator(".pico-turn").count();
+     if(turnCount<3)fails.push("Pico conversation failed "+path+" "+v.name+" turns="+turnCount);
+     await page.locator("#pico-settings-button").click();
+     await page.locator("#pico-settings-view").waitFor({state:"visible"});
+     await page.locator("#pico-settings-back").click();
+     await page.locator("#pico-leave-note").click();
+     await page.locator("#pico-contact-view").waitFor({state:"visible"});
+     await page.locator("#pico-contact-back").click();
+     await page.locator("#pico-close").click();
+     await page.locator("#pico-panel").waitFor({state:"hidden"});
+     console.log("PICO PASS "+v.name+" "+path+" chat, note view, settings, close");
+   }
    if(errors.length)fails.push(path+" "+v.name+" runtime error: "+errors.join(" | ").slice(0,600));
    console.log("PASS "+v.name.padEnd(12)+" "+path.padEnd(44)+" "+metrics.width+"px viewport / "+metrics.pageWidth+"px content");
   }catch(e){fails.push(path+" "+v.name+" "+e.message);}
