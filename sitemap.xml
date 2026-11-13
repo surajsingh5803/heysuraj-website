@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://heysuraj.com/</loc></url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://heysuraj.com/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://heysuraj.com/about/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://heysuraj.com/work/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://heysuraj.com/writing/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://heysuraj.com/writing/seo-github-pages-guide/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://heysuraj.com/writing/google-ads-lead-quality/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://heysuraj.com/writing/ai-agents-vs-automations/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://heysuraj.com/projects/lazy-plex/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://heysuraj.com/projects/lp-crm/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://heysuraj.com/projects/lp-leados/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://heysuraj.com/projects/seo-audit-engine/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://heysuraj.com/projects/heysuraj-website/</loc><lastmod>2026-11-14</lastmod></url>
+</urlset>
