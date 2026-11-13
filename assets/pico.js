@@ -44,7 +44,7 @@ function fromSession(){try{const v=JSON.parse(store.read("hs.pico.session")||"nu
 function preferences(){const defaults={voice:false,music:false,fx:false,follow:false,quiet:false};try{const v=JSON.parse(store.read("hs.pico.prefs",true)||"null");if(v&&typeof v==="object")for(const k of Object.keys(defaults))if(typeof v[k]==="boolean")defaults[k]=v[k];}catch{}return defaults;}
 let prefs=preferences();prefs.music=false; // Browser audio needs a fresh visitor gesture on each page load.
 const previous=fromSession();
-const state={role:previous&&previous.role||null,history:previous&&previous.history.slice(-18)||[],nudges:previous&&previous.nudges||0,lastNudge:previous&&previous.lastNudge||0,petCount:0,open:false,view:"chat",busy:false,interactions:0,section:"home",voiceRecording:null,voiceMode:false,micPaused:false,speaking:false,voiceFailures:0,rejections:0};
+const state={role:previous&&previous.role||null,history:previous&&previous.history.slice(-18)||[],nudges:previous&&previous.nudges||0,lastNudge:previous&&previous.lastNudge||0,petCount:0,open:false,view:"chat",busy:false,interactions:0,section:"home",voiceRecording:null,voiceMode:false,micPaused:false,speaking:false,voiceFailures:0,rejections:0,contactInviteShown:false};
 const voiceCapable="speechSynthesis" in window;
 let audio=null,musicHandle=0,musicStep=0,animationHandle=0,nudgeHandle=0;
 const spriteButton=$("pico-sprite-button"),sprite=$("pico-sprite"),panel=$("pico-panel"),chat=$("pico-chat"),input=$("pico-input"),nudge=$("pico-nudge");
@@ -104,11 +104,11 @@ function appendMessage(who,text,quiet=false,save=true){
 }
 function choices(custom){
  $("pico-choices")?.remove();
- const values=custom||(state.role?[["Roast me (gently)","roast"],["Surprise me","surprise"],["Leave a message","note"]]:[["I'm a friend","friend"],["I'm a recruiter","recruiter"],["I run a business","founder"],["Just hanging out","visitor"]]);
+ const values=custom||(state.role?[["Roast me (gently)","roast"],["Surprise me","surprise"],["Leave a message","note"]]:[["I'm a friend","friend"],["I'm a recruiter","recruiter"],["I run a business","founder"],["Just hanging out","visitor"],["📰 Fresh headlines","news"]]);
  const div=document.createElement("div");div.className="pico-chips";div.id="pico-choices";
  for(const [label,cmd] of values){
   const button=document.createElement("button");button.className="pico-chip";button.type="button";button.textContent=label;
-  button.addEventListener("click",()=>{if(cmd==="note"){showView("contact");return}if(modes[cmd]){appendMessage("visitor",label,true);setRole(cmd);return}sendText(cmd==="roast"?"Roast me gently":cmd==="surprise"?"Surprise me with something funny":cmd==="secret"?"Tell me a secret about Suraj":cmd==="about"?"Tell me about Suraj":label);});
+  button.addEventListener("click",()=>{if(cmd==="note"){showView("contact");return}if(cmd==="news"){void sendText("latest news");return}if(modes[cmd]){appendMessage("visitor",label,true);setRole(cmd);return}sendText(cmd==="roast"?"Roast me gently":cmd==="surprise"?"Surprise me with something funny":cmd==="secret"?"Tell me a secret about Suraj":cmd==="about"?"Tell me about Suraj":label);});
   div.append(button);
  }
  chat.append(div);chat.scrollTop=chat.scrollHeight;
@@ -214,6 +214,14 @@ function appendResourceLinks(links){
  }
  chat.append(box);chat.scrollTop=chat.scrollHeight;
 }
+function appendContactInvite(){
+ if(state.contactInviteShown)return;
+ state.contactInviteShown=true;
+ const action=document.createElement("button");action.className="pico-chip pico-contact-invite";action.type="button";
+ action.textContent="✉ Leave a project enquiry (optional)";
+ action.addEventListener("click",()=>showView("contact"));
+ chat.append(action);chat.scrollTop=chat.scrollHeight;
+}
 async function sendText(value){
  const text=cap(value,700);if(!text||state.busy)return;
  state.busy=true;appendMessage("visitor",text,true);state.interactions++;input.value="";$("pico-send").disabled=true;mood("pico-curious",700);
@@ -234,6 +242,7 @@ async function sendText(value){
  if(state.open&&state.view==="chat"){
   appendMessage("pico",reply);
   if(enhanced?.links?.length)appendResourceLinks(enhanced.links);
+  if(enhanced?.action==="contact")appendContactInvite();
   if(refused)$("pico-choices")?.remove();
   else if(!enhanced&&state.interactions===1)choices();
  }
@@ -586,7 +595,7 @@ $("pico-voice-toggle").addEventListener("click",()=>setPref("voice",!prefs.voice
 for(const id of ["pico-site-music","pico-music-toggle"])$(id).addEventListener("click",()=>setPref("music",!prefs.music));
 for(const id of ["pico-site-fx","pico-fx-toggle"])$(id).addEventListener("click",()=>setPref("fx",!prefs.fx));
 $("pico-clear-chat").addEventListener("click",()=>{
- state.history=[];state.role=null;store.del("hs.pico.session");chat.replaceChildren();
+ state.history=[];state.role=null;state.contactInviteShown=false;store.del("hs.pico.session");chat.replaceChildren();
  appendMessage("pico","Fresh start. 🐾 I'm still Pico, still here to chat. What's on your mind?",true);choices();
 });
 $("pico-compose-form").addEventListener("submit",e=>{e.preventDefault();sendText(input.value);});
