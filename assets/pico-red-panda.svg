@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 272" role="img" aria-labelledby="pico-title pico-desc">
+<title id="pico-title">Pico the red panda</title><desc id="pico-desc">A playful fluffy red panda with smiling eyes and a lime scarf</desc>
+<defs><linearGradient id="coat" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fca65f"/><stop offset=".52" stop-color="#df753f"/><stop offset="1" stop-color="#ad4b36"/></linearGradient><linearGradient id="cheek" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#fff9df"/><stop offset="1" stop-color="#f1d5b4"/></linearGradient><linearGradient id="pico-scarf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d8ff9a"/><stop offset="1" stop-color="#86d655"/></linearGradient><radialGradient id="pico-light"><stop stop-color="#ffe5ac"/><stop offset="1" stop-color="#e69b54"/></radialGradient></defs>
+<g class="pico-tail"><path d="M168 200C221 176 252 196 240 226c-14 39-62 32-89 18" fill="none" stroke="#9b4a31" stroke-width="41" stroke-linecap="round"/><path d="M190 198q24 6 27 41M226 207q10 9 9 22" stroke="#ffd3a3" stroke-width="16" opacity=".8" fill="none"/></g>
+<g class="pico-legs"><ellipse cx="96" cy="242" rx="28" ry="18" fill="#4c3a42"/><ellipse cx="157" cy="242" rx="28" ry="18" fill="#4c3a42"/></g>
+<ellipse cx="129" cy="202" rx="69" ry="63" fill="url(#coat)"/><ellipse cx="126" cy="205" rx="38" ry="45" fill="#f7e1c1"/>
+<g class="pico-arms"><ellipse cx="66" cy="195" rx="17" ry="35" transform="rotate(20 66 195)" fill="#5b3d40"/><ellipse cx="190" cy="196" rx="17" ry="35" transform="rotate(-19 190 196)" fill="#5b3d40"/></g>
+<g class="pico-head">
+<path d="M64 69Q43 37 54 19q25-13 53 29" fill="#d87547" stroke="#a45d48" stroke-width="4"/><path d="M150 49q28-45 49-31 17 27-9 52" fill="#d87547" stroke="#a45d48" stroke-width="4"/><path d="M65 54q-16-25-6-30 14-3 31 21M165 45q20-24 30-20 4 15-10 30" fill="#eab2ab"/>
+<path d="M51 104q-5-63 78-70c81-6 89 60 80 109-6 53-46 79-81 81-44 2-81-28-87-78-3-16 2-31 10-42Z" fill="url(#coat)"/>
+<path d="M68 91q31-43 61-31 30-12 60 31l-31 26h-63Z" fill="#f7b57b" opacity=".65"/>
+<path d="M48 133q22-33 50-26l20 37-24 48q-44-7-46-59ZM207 132q-20-32-51-26l-18 40 25 47q45-10 44-61Z" fill="url(#cheek)"/>
+<path d="M82 77q24-16 39 8l-12 33q-21 6-36-5ZM173 77q-25-13-38 9l13 31q22 3 35-9Z" fill="#f8e5d4" opacity=".93"/>
+<g class="pico-eyes"><ellipse cx="97" cy="125" rx="14" ry="17" fill="#3e3036"/><ellipse cx="161" cy="125" rx="14" ry="17" fill="#3e3036"/><circle cx="101" cy="119" r="5" fill="#fff"/><circle cx="165" cy="119" r="5" fill="#fff"/><circle cx="94" cy="129" r="2.5" fill="#fff" opacity=".6"/><circle cx="158" cy="129" r="2.5" fill="#fff" opacity=".6"/></g>
+<path d="M103 150q26-11 52 0l-8 25q-19 13-37 0Z" fill="#fff0d9"/><path d="M119 153q12-11 22 0-3 12-12 13-10-1-10-13Z" fill="#38292e"/>
+<path class="pico-mouth" d="M129 165q-9 12-19 4m19-4q9 12 20 4" stroke="#4f3035" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<ellipse cx="84" cy="155" rx="12" ry="6" fill="#ed8791" opacity=".63"/><ellipse cx="175" cy="155" rx="12" ry="6" fill="#ed8791" opacity=".63"/>
+</g>
+<path d="M66 180q65 25 126 0l-4 22q-61 28-119-1Z" fill="url(#pico-scarf)" stroke="#6dab4c" stroke-width="3"/><path d="M158 201l19 34 17-8-12-35Z" fill="#a8ed6b"/><path d="M175 212l10 18" stroke="#d7ffa1" stroke-width="3"/>
+</svg>
