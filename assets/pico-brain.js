@@ -2,7 +2,7 @@
    No external tracking. Only documented published resources and dated news links. */
 export function createPicoBrain(){
  const cache={knowledge:null,news:null};
- let lastRecord=null,lastNews=null;
+ let lastRecord=null,lastNews=null,lastNewsList=[];
  const ALLOWED=["heysuraj.com","lazyplex.com","www.lazyplex.com","www.linkedin.com","www.instagram.com","github.com","www.bbc.com","www.bbc.co.uk","www.reuters.com"];
  const safeUrl=url=>{
   try{const u=new URL(url);return u.protocol==="https:"&&ALLOWED.includes(u.hostname);}catch{return false;}
@@ -22,7 +22,13 @@ export function createPicoBrain(){
  async function news(){
   if(cache.news)return cache.news;
   const data=await fetchJSON("/assets/pico-news.json?v=1");
-  cache.news=data&&Array.isArray(data.items)?data:{generatedAt:"",items:[]};return cache.news;
+  let selected=data&&Array.isArray(data.items)?data:{generatedAt:"",items:[]};
+  // Bot commits may precede a Pages rebuild; raw GitHub is an allowed, read-only freshness fallback.
+  if(!Date.parse(selected.generatedAt)||Date.now()-Date.parse(selected.generatedAt)>6*3600000){
+   const raw=await fetchJSON("https://raw.githubusercontent.com/surajsingh5803/heysuraj-website/main/assets/pico-news.json");
+   if(Array.isArray(raw?.items)&&Date.parse(raw.generatedAt)>Date.parse(selected.generatedAt||0))selected=raw;
+  }
+  cache.news=selected;return cache.news;
  }
  function score(record,query){
   const q=normal(query),terms=stem(query).split(" ").filter(w=>w.length>2);
@@ -64,7 +70,7 @@ export function createPicoBrain(){
   if(!knowledgeRequested(query)&&!(lastRecord&&/^(?:and|what about|tell me more|how does it|why|where|can it)/i.test(query)))return null;
   if(/\b(hire|work with suraj|work with lazy plex|work with you|book a call|growth audit|request a quote|request proposal|business enquiry|want marketing help|need leads|need a consultant)\b/i.test(query)){
    const business=/lazy\s*plex|growth audit|marketing|business|lead|consultant/i.test(query);
-   return {reply:business?"Sounds like a real project. Lazy Plex starts by understanding where demand, follow-up or measurement is getting stuck. You can explore the Growth Audit, or leave Suraj a note if you'd rather explain your situation privately. No pressure. 🐾":"Interested in working together? Suraj's LinkedIn is the best professional starting point. You can also use Leave a note here; Pico won't send anything without your consent.",links:business?[{title:"See Lazy Plex's Growth Audit",url:"https://lazyplex.com/"},{title:"Suraj's professional profile",url:"https://www.linkedin.com/in/surajkumarmarketing/"}]:[{title:"Suraj's LinkedIn",url:"https://www.linkedin.com/in/surajkumarmarketing/"}]};
+   return {action:"contact",reply:business?"Sounds like a real project. Lazy Plex starts by understanding where demand, follow-up or measurement is getting stuck. You can explore the Growth Audit, or leave Suraj a note if you'd rather explain your situation privately. No pressure. 🐾":"Interested in working together? Suraj's LinkedIn is the best professional starting point. You can also use Leave a note here; Pico won't send anything without your consent.",links:business?[{title:"See Lazy Plex's Growth Audit",url:"https://lazyplex.com/"},{title:"Suraj's professional profile",url:"https://www.linkedin.com/in/surajkumarmarketing/"}]:[{title:"Suraj's LinkedIn",url:"https://www.linkedin.com/in/surajkumarmarketing/"}]};
   }
 
   const list=await knowledge();if(!list.length)return null;
@@ -114,15 +120,32 @@ export function createPicoBrain(){
   if(lastNews&&/\b(that|this|more about|explain|why|details)\b/i.test(q)&&!NEWS_Q.test(q)){
    const item=lastNews;return {reply:item.title+" ("+dateLabel(item.publishedAt)+", "+item.source+"). "+(item.summary||"The headline alone isn't enough for a complete explanation; read the original source."),links:[{title:"Read original report",url:item.url}]};
   }
-  lastNews=chosen[0];
+  lastNewsList=chosen;lastNews=chosen[0];
   return {reply:"Here's what my news shelf has as of "+dateLabel(data.generatedAt)+" (headlines, not a live broadcast):\n"+
    chosen.map((x,i)=>(i+1)+". "+x.title+" — "+x.source+", "+dateLabel(x.publishedAt)).join("\n")+
    "\nWant one of these explained? I'm happy to discuss what the sourced brief says.",links:chosen.map(x=>({title:x.title,url:x.url}))};
  }
  async function tryAnswer(query){
   if(NEWS_Q.test(query))return answerNews(query);
-  if(lastNews&&/\b(more about that|explain that news|tell me about that story)\b/i.test(query))
-   return {reply:lastNews.title+": "+(lastNews.summary||"Only the headline is available in my feed. Check the original article for detail."),links:[{title:"Original news source",url:lastNews.url}]};
+  if(lastNewsList.length){
+   const t=normal(query);
+   let chosen=null;
+   if(/\b(first|1st|number one|headline one)\b/.test(t))chosen=lastNewsList[0];
+   else if(/\b(second|2nd|number two|headline two)\b/.test(t))chosen=lastNewsList[1];
+   else if(/\b(third|3rd|number three|headline three)\b/.test(t))chosen=lastNewsList[2];
+   else{
+    const terms=stem(query).split(" ").filter(w=>w.length>3);
+    const scored=lastNewsList.map(item=>({item,score:terms.filter(w=>normal(item.title).includes(w)).length})).sort((a,b)=>b.score-a.score);
+    if(scored[0]?.score>=2)chosen=scored[0].item;
+    else if(/\b(more about that|explain that news|tell me about that story|what happened with that)\b/i.test(query))chosen=lastNews;
+   }
+   if(chosen){
+    lastNews=chosen;
+    return {reply:chosen.title+" — "+chosen.source+" ("+dateLabel(chosen.publishedAt)+"). "+
+     (chosen.summary||"Only the dated headline is available; I can't verify more detail from this brief.")+
+     " The original report has the full context.",links:[{title:"Read the original report",url:chosen.url}]};
+   }
+  }
   return answerKnowledge(query);
  }
  return {tryAnswer,knowledge,news,isNewsQuery:q=>NEWS_Q.test(q)};
