@@ -133,3 +133,26 @@
 @keyframes pico-sleepblink{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.12)}}
 @keyframes pico-peek{0%,100%{transform:translateX(0) rotate(0)}40%{transform:translateX(22px) rotate(8deg)}65%{transform:translateX(13px) rotate(-4deg)}}
 @media(prefers-reduced-motion:reduce){#pico-root .pico-ear-left,#pico-root .pico-ear-right{animation:none!important}}
+
+/* Pico v2: opt-in continuous conversational voice mode.
+   Single explicit switch controls listening; a quiet, separate typing mode
+   remains accessible at any time. */
+#pico-root .pico-mic{display:flex;flex-direction:column;gap:0;align-items:center;justify-content:center;line-height:1.08;transition:background .2s,border-color .2s,width .2s,box-shadow .2s}
+#pico-root .pico-mic-label{font:700 8px/1.1 var(--mono,monospace);letter-spacing:.02em}
+#pico-root .pico-mic[aria-pressed="true"]{background:var(--pc-accent);color:#15231e;border-color:var(--pc-accent);box-shadow:0 0 0 3px rgba(186,255,104,.16)}
+#pico-root.pico-voice-mode .pico-compose{align-items:center}
+#pico-root.pico-voice-mode .pico-input,
+#pico-root.pico-voice-mode .pico-send{display:none}
+#pico-root.pico-voice-mode .pico-mic{width:100%;height:49px;flex:1 1 auto;display:flex;flex-direction:row;gap:9px;font-size:20px}
+#pico-root.pico-voice-mode .pico-mic-label{font-size:12px}
+#pico-root .pico-voice-status{padding:9px 11px;margin-top:8px;border:1px solid var(--pc-line);background:rgba(132,171,148,.06);border-radius:11px;display:flex;align-items:center;gap:9px;color:var(--pc-muted);font-size:11px;line-height:1.45}
+#pico-root .pico-voice-dot{width:8px;height:8px;border-radius:50%;flex:none;background:var(--pc-accent);box-shadow:0 0 0 3px rgba(186,255,104,.08)}
+#pico-root.pico-voice-listening .pico-voice-dot{animation:pico-listen 1.15s ease-in-out infinite}
+#pico-root.pico-voice-thinking .pico-voice-dot{background:#f2ca71}
+#pico-root.pico-voice-speaking .pico-voice-dot{background:#93dfff}
+#pico-root.pico-voice-paused .pico-voice-dot{background:#dbb177}
+#pico-root.pico-voice-listening .pico-sprite .pico-head{filter:drop-shadow(0 0 4px rgba(186,255,104,.25))}
+#pico-root.pico-voice-speaking .pico-mouth{animation:pico-chatter .18s ease-in-out infinite alternate}
+#pico-root .pico-fineprint{align-items:flex-start}
+@keyframes pico-listen{0%,100%{box-shadow:0 0 0 0 rgba(186,255,104,.24)}50%{box-shadow:0 0 0 6px rgba(186,255,104,0)}}
+@media(prefers-reduced-motion:reduce){#pico-root .pico-voice-dot{animation:none!important}}
