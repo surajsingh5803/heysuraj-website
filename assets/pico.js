@@ -260,7 +260,7 @@ function observePages(){
 }
 /* Voice chat is opt-in. The switch remains active across individual utterances,
    but never keeps a microphone open in a hidden tab or closed chat window. */
-let voiceRestart=0,speechWatchdog=0,speechGeneration=0,voiceSettingBeforeMic=null;
+let voiceRestart=0,speechWatchdog=0,speechGeneration=0,voiceSettingBeforeMic=null,micSilenceTimer=0;
 const SpeechInput=window.SpeechRecognition||window.webkitSpeechRecognition;
 const microphone=$("pico-mic"),voiceStatusBox=$("pico-voice-status"),voiceStatusText=$("pico-voice-hint");
 function voiceStatus(text,kind="paused"){
@@ -268,6 +268,7 @@ function voiceStatus(text,kind="paused"){
  if(state.voiceMode)root.classList.add("pico-voice-"+kind);
  voiceStatusBox.hidden=!state.voiceMode;
  if(state.voiceMode)voiceStatusText.textContent=text||"Say something. I'm all ears. 🐾";
+ $("pico-resume-mic").hidden=!state.voiceMode||!state.micPaused;
  microphone.setAttribute("aria-pressed",String(state.voiceMode));
  microphone.setAttribute("aria-label",state.voiceMode?"Turn microphone off and switch to typing":"Switch to voice conversation");
  microphone.title=state.voiceMode?"Turn mic off / type instead":"Start continuous voice conversation";
@@ -279,16 +280,17 @@ function voiceStatus(text,kind="paused"){
 }
 function stopVoiceRecognition(){
  clearTimeout(voiceRestart);voiceRestart=0;
+ clearTimeout(micSilenceTimer);micSilenceTimer=0;
  const rec=state.voiceRecording;state.voiceRecording=null;
  if(rec){try{rec.abort();}catch{}}
 }
 function scheduleListening(delay=400){
  clearTimeout(voiceRestart);voiceRestart=0;
- if(!state.voiceMode||state.speaking||state.busy||!state.open||state.view!=="chat"||document.hidden)return;
+ if(state.micPaused||!state.voiceMode||state.speaking||state.busy||!state.open||state.view!=="chat"||document.hidden)return;
  voiceRestart=setTimeout(()=>{voiceRestart=0;startVoiceRecognition();},delay);
 }
 function stopVoiceMode({focus=true,keepMuted=false}={}){
- state.voiceMode=false;state.speaking=false;
+ state.voiceMode=false;state.micPaused=false;state.speaking=false;
  if(voiceSettingBeforeMic!==null){prefs.voice=keepMuted?false:voiceSettingBeforeMic;voiceSettingBeforeMic=null;store.write("hs.pico.prefs",JSON.stringify(prefs),true);refreshSettings();}
  speechGeneration++;clearTimeout(speechWatchdog);
  stopVoiceRecognition();
@@ -296,15 +298,29 @@ function stopVoiceMode({focus=true,keepMuted=false}={}){
  voiceStatus();
  if(focus&&state.open&&state.view==="chat")input.focus({preventScroll:true});
 }
+function pauseMicrophone(reason="Mic paused after a quiet moment. Tap Resume mic to talk again."){
+ if(!state.voiceMode)return;
+ state.micPaused=true;stopVoiceRecognition();
+ voiceStatus(reason,"paused");
+}
 function startVoiceRecognition(){
- if(!state.voiceMode||state.voiceRecording||state.busy||state.speaking||!state.open||state.view!=="chat"||document.hidden)return;
- if(!SpeechInput){stopVoiceMode();appendMessage("pico","This browser doesn't support voice input. Typing still works. 🐾",true);return;}
+ if(!state.voiceMode||state.micPaused||state.voiceRecording||state.busy||state.speaking||!state.open||state.view!=="chat"||document.hidden)return;
+ if(!SpeechInput){stopVoiceMode();appendMessage("pico","Voice input isn't supported in this browser. Typing still works. 🐾",true);return;}
  try{
   const rec=new SpeechInput();
+  let heardFinal=false,hadError=false;
   state.voiceRecording=rec;
   rec.lang=(navigator.language||"").toLowerCase().startsWith("hi")?"hi-IN":"en-IN";
-  rec.continuous=true;rec.interimResults=true;rec.maxAlternatives=1;
-  rec.onstart=()=>{if(rec===state.voiceRecording&&state.voiceMode)voiceStatus("Listening… say whatever's on your mind.","listening");};
+  rec.continuous=false;rec.interimResults=true;rec.maxAlternatives=1;
+  rec.onstart=()=>{
+   if(rec!==state.voiceRecording||!state.voiceMode)return;
+   voiceStatus("Listening… I'll pause my mic if things go quiet.","listening");
+   clearTimeout(micSilenceTimer);
+   micSilenceTimer=setTimeout(()=>{
+    if(rec!==state.voiceRecording||heardFinal||!state.voiceMode)return;
+    pauseMicrophone("Quiet moment detected. Tap Resume mic whenever you're ready. 🐾");
+   },14000);
+  };
   rec.onresult=e=>{
    if(rec!==state.voiceRecording||!state.voiceMode||state.busy)return;
    let finalText="",partial="";
@@ -314,41 +330,51 @@ function startVoiceRecognition(){
     else partial=heard;
    }
    if(finalText){
-    state.voiceFailures=0;stopVoiceRecognition();
-    voiceStatus("Got it! Thinking of something clever…","thinking");
+    heardFinal=true;state.voiceFailures=0;clearTimeout(micSilenceTimer);
+    stopVoiceRecognition();
+    voiceStatus("Got it. One tiny panda thought coming up…","thinking");
     void sendText(finalText);
-   }else if(partial){voiceStatus("Hearing you: "+partial.slice(0,75),"listening");}
+   }else if(partial){
+    voiceStatus("Hearing you: "+partial.slice(0,65),"listening");
+    clearTimeout(micSilenceTimer);
+    micSilenceTimer=setTimeout(()=>{
+     if(rec===state.voiceRecording&&!heardFinal)pauseMicrophone("No more speech heard. Tap Resume mic to continue.");
+    },14000);
+   }
   };
   rec.onerror=e=>{
    if(rec!==state.voiceRecording||!state.voiceMode)return;
    const error=e?.error||"unknown";
    if(["not-allowed","service-not-allowed","audio-capture","language-not-supported"].includes(error)){
     stopVoiceMode();
-    appendMessage("pico",error==="not-allowed"||error==="service-not-allowed"
-     ?"My mic needs browser permission. You can type instead, no drama. 🎙"
-     :"My microphone isn't available right now. Typing still works.",true);
+    appendMessage("pico",error==="not-allowed"||error==="service-not-allowed"?"Microphone permission wasn't available. Typing is always an option. 🐾":"My microphone isn't working right now. You can type instead.",true);
     return;
    }
-   if(error!=="aborted"){
-    state.voiceFailures++;
-    voiceStatus(error==="no-speech"?"Still here. Listening again…":"A tiny audio hiccup. Trying again…","paused");
-    if(state.voiceFailures>8){
-     stopVoiceMode();
-     appendMessage("pico","My ears need a break—voice input keeps failing in this browser. You can try the mic again or type.",true);
-    }
-   }
+   if(error==="aborted")return;
+   hadError=true;state.voiceFailures++;
+   // Browser recognition sometimes ends on silence; don't restart in an endless loop.
+   if(error==="no-speech"){pauseMicrophone();return;}
+   if(state.voiceFailures>=3){pauseMicrophone("My ears had a few glitches. Tap Resume mic to try again.");return;}
+   pauseMicrophone("My ears got confused. Tap Resume mic when you'd like to try again.");
   };
   rec.onend=()=>{
-   if(rec===state.voiceRecording)state.voiceRecording=null;
-   if(state.voiceMode&&!state.busy&&!state.speaking)scheduleListening(650);
+   if(rec!==state.voiceRecording)return;
+   state.voiceRecording=null;clearTimeout(micSilenceTimer);
+   if(!heardFinal&&!hadError&&state.voiceMode&&!state.speaking&&!state.busy){
+    pauseMicrophone(); // Ended without a transcript: silence, not a new question.
+   }
   };
-  rec.start();
-  voiceStatus("Turning my ears on…","paused");
+  rec.start();voiceStatus("Turning my ears on…","paused");
  }catch{
-  state.voiceRecording=null;
-  stopVoiceMode();
-  appendMessage("pico","Couldn't start the mic. Please check browser microphone access, or just type. 🐾",true);
+  state.voiceRecording=null;stopVoiceMode();
+  appendMessage("pico","Couldn't start the mic. You can check browser access, or type instead.",true);
  }
+}
+function resumeMicrophone(){
+ if(!state.voiceMode||!state.micPaused)return;
+ state.micPaused=false;state.voiceFailures=0;
+ voiceStatus("Ready. I'm listening!","listening");
+ startVoiceRecognition();
 }
 function startVoiceMode(){
  if(!SpeechInput){
@@ -356,18 +382,23 @@ function startVoiceMode(){
  }
  if(!state.open||state.view!=="chat")return;
  voiceSettingBeforeMic=prefs.voice;
- state.voiceMode=true;state.voiceFailures=0;
+ state.voiceMode=true;state.micPaused=false;state.voiceFailures=0;
  setPref("voice",true); // one explicit mic click also opts in to spoken replies
  voiceStatus("Microphone on. Say hi—I'll reply out loud.","paused");
  startVoiceRecognition();
 }
 function chooseYouthfulVoice(voices){
  const english=voices.filter(v=>/^en(?:-|$)/i.test(v.lang||""));
- const sorted=english.sort((a,b)=>{
-  const score=v=>(/^en-IN$/i.test(v.lang)?6:0)+(/natural|neural|google|microsoft|samantha|zira|heera|female/i.test(v.name)?2:0)+(/child|young|junior/i.test(v.name)?2:0);
-  return score(b)-score(a);
- });
- return sorted[0]||voices[0]||null;
+ const score=v=>{
+  const name=(v.name||"").toLowerCase();
+  let points=(/female|aria|zira|samantha|jenny|heera|veena|susan|victoria|moira|serena|amy|ava|google us english/i.test(name)?16:0);
+  if(/child|young|junior|bright|cheerful|friendly/i.test(name))points+=9;
+  if(/neural|natural|enhanced|premium/i.test(name))points+=4;
+  if(/male|david|guy|daniel|mark|alex|ravi|richard|george|aaron/i.test(name))points-=20;
+  if(/^en-(?:us|gb|in)$/i.test(v.lang||""))points+=2;
+  return points;
+ };
+ return english.sort((a,b)=>score(b)-score(a))[0]||voices[0]||null;
 }
 function speak(message){
  if((!prefs.voice&&!state.voiceMode)||!voiceCapable){
@@ -380,7 +411,7 @@ function speak(message){
  try{
   speechSynthesis.cancel();
   const utterance=new SpeechSynthesisUtterance(message.replace(/[\u{1F300}-\u{1FAFF}]/gu,"").replace(/\s+/g," ").trim());
-  utterance.pitch=1.43;utterance.rate=1.045;utterance.volume=.82;
+  utterance.pitch=1.66;utterance.rate=1.105;utterance.volume=.88;
   const selected=chooseYouthfulVoice(speechSynthesis.getVoices());
   if(selected){utterance.voice=selected;utterance.lang=selected.lang||"en-IN";}
   else utterance.lang="en-IN";
@@ -390,7 +421,7 @@ function speak(message){
    if(generation!==speechGeneration)return;
    clearTimeout(speechWatchdog);state.speaking=false;
    root.classList.remove("pico-speaking");
-   if(state.voiceMode){voiceStatus("Your turn! I'm listening…","paused");scheduleListening(550);}
+   if(state.voiceMode){if(state.micPaused)voiceStatus("Mic paused. Tap Resume mic when you want to speak.","paused");else{voiceStatus("Your turn! I'm listening…","paused");scheduleListening(550);}}
   };
   utterance.onend=finish;utterance.onerror=finish;
   speechSynthesis.speak(utterance);
@@ -500,8 +531,9 @@ input.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventD
 $("pico-contact-view").addEventListener("submit",sendNote);
 for(const k of ["voice","music","fx","follow","quiet"])$("pico-"+k+"-setting").addEventListener("change",e=>setPref(k,e.target.checked));
 $("pico-mic").addEventListener("click",()=>{if(state.voiceMode)stopVoiceMode();else startVoiceMode();});
+$("pico-resume-mic").addEventListener("click",resumeMicrophone);
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&state.open){if(state.view!=="chat")showView("chat");else openPanel(false);}});
-document.addEventListener("visibilitychange",()=>{if(document.hidden){stopVoiceRecognition();speechGeneration++;clearTimeout(speechWatchdog);state.speaking=false;window.speechSynthesis?.cancel();if(state.voiceMode)voiceStatus("Paused while this tab is hidden.","paused");}else if(state.voiceMode)scheduleListening(550);else if(!state.open)root.classList.add("pico-sleeping");});
+document.addEventListener("visibilitychange",()=>{if(document.hidden){if(state.voiceMode)pauseMicrophone("Mic paused while the tab is hidden. Tap Resume mic to continue.");else stopVoiceRecognition();speechGeneration++;clearTimeout(speechWatchdog);state.speaking=false;window.speechSynthesis?.cancel();}else if(state.voiceMode&&state.micPaused)voiceStatus("Mic paused. Tap Resume mic when you want to continue.","paused");else if(!state.open)root.classList.add("pico-sleeping");});
 fetch("/assets/pico-red-panda.svg?v=2").then(r=>r.ok?r.text():null).then(svg=>{if(svg&&svg.startsWith("<svg"))sprite.innerHTML=svg;}).catch(()=>{});
 if(previous&&previous.history.length){
  for(const entry of state.history){const box=document.createElement("div");box.className="pico-turn";box.dataset.who=entry.who==="visitor"?"visitor":"pico";
