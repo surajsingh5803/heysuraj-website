@@ -175,3 +175,9 @@
  #pico-root .pico-soundbar{right:83px;bottom:16px}
  #pico-root .pico-soundbar button{padding:7px 6px;font-size:9px}
 }
+
+/* Pico's verified resources accompany answers without an intrusive sales overlay. */
+#pico-root .pico-resource-links{display:flex;flex-direction:column;gap:6px;margin:2px 12px 12px 24px;align-items:stretch}
+#pico-root .pico-resource-links a{display:block;width:fit-content;max-width:100%;font:600 11px/1.5 var(--mono,monospace);color:var(--pc-accent);text-decoration:none;border:1px solid var(--pc-line);background:rgba(160,208,156,.07);padding:7px 10px;border-radius:9px;overflow-wrap:anywhere}
+#pico-root .pico-resource-links a:hover{text-decoration:underline;border-color:var(--pc-accent)}
+#pico-root .pico-message{white-space:pre-line;overflow-wrap:anywhere}
