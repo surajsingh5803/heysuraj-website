@@ -150,7 +150,7 @@ function showView(view){
 function openPanel(next){
  state.open=next;panel.hidden=!next;root.classList.toggle("pico-is-open",next);spriteButton.setAttribute("aria-expanded",String(next));nudge.hidden=true;
  if(next){root.classList.remove("pico-sleeping");showView("chat");}
- else{window.speechSynthesis?.cancel();if(state.voiceRecording)try{state.voiceRecording.stop();}catch{}}
+ else{window.window.speechSynthesis?.cancel();if(state.voiceRecording)try{state.voiceRecording.stop();}catch{}}
 }
 function showNudge(text){
  if(prefs.quiet||state.open||state.nudges>=2||Date.now()-state.lastNudge<85000)return;
@@ -208,7 +208,7 @@ function refreshSettings(){
 }
 function setPref(key,value){
  prefs[key]=Boolean(value);store.write("hs.pico.prefs",JSON.stringify(prefs),true);refreshSettings();
- if(key==="voice"&&!value)speechSynthesis?.cancel();
+ if(key==="voice"&&!value)window.speechSynthesis?.cancel();
  if(key==="music")music();
  if(key==="fx"&&value)playTone(520,.14,.02);
  if(key==="follow"&&!value){spriteButton.style.setProperty("--pico-dx","0px");spriteButton.style.setProperty("--pico-dy","0px");}
@@ -298,14 +298,14 @@ $("pico-mic").addEventListener("click",()=>{
  }catch{state.voiceRecording=null;$("pico-mic").setAttribute("aria-pressed","false");}
 });
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&state.open){if(state.view!=="chat")showView("chat");else openPanel(false);}});
-document.addEventListener("visibilitychange",()=>{if(document.hidden){speechSynthesis?.cancel();}else if(!state.open)root.classList.add("pico-sleeping");});
+document.addEventListener("visibilitychange",()=>{if(document.hidden){window.speechSynthesis?.cancel();}else if(!state.open)root.classList.add("pico-sleeping");});
 fetch("/assets/pico-red-panda.svg").then(r=>r.ok?r.text():null).then(svg=>{if(svg&&svg.startsWith("<svg"))sprite.innerHTML=svg;}).catch(()=>{});
 if(previous&&previous.history.length){
  for(const entry of state.history){const box=document.createElement("div");box.className="pico-turn";box.dataset.who=entry.who==="visitor"?"visitor":"pico";
  const label=document.createElement("small");label.textContent=entry.who==="visitor"?"You":"Pico";const bubble=document.createElement("div");bubble.className="pico-message";bubble.textContent=cap(entry.text);box.append(label,bubble);chat.append(box);}
 }else appendMessage("pico","Psst, hello! I'm Pico, Suraj's little red-panda pal. 🐾 I'm not a tour guide. I just like spending time with visitors. Want to hang out?",true);
 choices();refreshSettings();observePages();
-if(!API)$("pico-mode").textContent="Pico's chat stays in this tab. Notes can be sent using WhatsApp.";
+$("pico-mode").textContent=API?"AI replies are processed by the connected API. Notes require your consent.":"Pico's chat stays in this tab. Notes can be sent using WhatsApp.";
 setTimeout(()=>{if(!state.open&&!prefs.quiet)showNudge(pick(["Hey, human! Need a tiny friend for a few minutes? 🐾","Psst. I'm Pico. No tours, just good company!"]));},12500);
 setTimeout(()=>{if(!state.open&&!prefs.follow)root.classList.add("pico-sleeping");},54000);
 })();
