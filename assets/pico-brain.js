@@ -46,7 +46,7 @@ export function createPicoBrain(){
   return rank;
  }
  function knowledgeRequested(query){
-  return /\b(suraj|heysuraj|lazy\s*plex|linkedin|instagram|github|portfolio|seo audit|lp crm|leados|lead os|agency|consultancy|consultant|client|marketing service|seo service|project|blog|articles|pricing|service|business growth|advertis(?:e|ing)|digital marketing|automation|lead generation|growth audit|real estate|property developer|resume|recruit|hire|experience|college|mba|education|career|contact|website)\b/i.test(query);
+  return /\b(suraj|heysuraj|lazy\s*plex|linkedin|instagram|github|portfolio|seo audit|lp crm|leados|lead os|agency|consultancy|consultant|client|marketing service|seo service|project|blog|articles|pricing|service|offer|help my business|help with|business growth|advertis(?:e|ing)|digital marketing|automation|lead generation|growth audit|real estate|property developer|resume|recruit|hire|experience|college|mba|education|career|contact|website)\b/i.test(query);
  }
  function businessReply(query,record){
   const q=normal(query);
@@ -62,9 +62,14 @@ export function createPicoBrain(){
  }
  async function answerKnowledge(query){
   if(!knowledgeRequested(query)&&!(lastRecord&&/^(?:and|what about|tell me more|how does it|why|where|can it)/i.test(query)))return null;
+  if(/\b(hire|work with suraj|work with lazy plex|work with you|book a call|growth audit|request a quote|request proposal|business enquiry|want marketing help|need leads|need a consultant)\b/i.test(query)){
+   const business=/lazy\s*plex|growth audit|marketing|business|lead|consultant/i.test(query);
+   return {reply:business?"Sounds like a real project. Lazy Plex starts by understanding where demand, follow-up or measurement is getting stuck. You can explore the Growth Audit, or leave Suraj a note if you'd rather explain your situation privately. No pressure. 🐾":"Interested in working together? Suraj's LinkedIn is the best professional starting point. You can also use Leave a note here; Pico won't send anything without your consent.",links:business?[{title:"See Lazy Plex's Growth Audit",url:"https://lazyplex.com/"},{title:"Suraj's professional profile",url:"https://www.linkedin.com/in/surajkumarmarketing/"}]:[{title:"Suraj's LinkedIn",url:"https://www.linkedin.com/in/surajkumarmarketing/"}]};
+  }
+
   const list=await knowledge();if(!list.length)return null;
   const q=normal(query);
-  if(/^(?:and|what about|tell me more|how does it|why|where)/i.test(query)&&lastRecord&&q.length<50){
+  if(/^(?:and|what about|tell me more|how does it|why|where)/i.test(query)&&lastRecord&&q.length<50&&!/\b(crm|leados|seo|linkedin|lazy\s*plex|suraj|marketing|website|ads|project|automation)\b/i.test(query)){
    return {reply:lastRecord.content.slice(0,530)+(lastRecord.content.length>530?"…":""),links:[{title:lastRecord.title,url:lastRecord.url}]};
   }
   const ranked=list.map(r=>({record:r,rank:score(r,query)})).sort((a,b)=>b.rank-a.rank);
