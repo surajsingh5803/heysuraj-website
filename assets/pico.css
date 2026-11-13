@@ -156,3 +156,22 @@
 #pico-root .pico-fineprint{align-items:flex-start}
 @keyframes pico-listen{0%,100%{box-shadow:0 0 0 0 rgba(186,255,104,.24)}50%{box-shadow:0 0 0 6px rgba(186,255,104,0)}}
 @media(prefers-reduced-motion:reduce){#pico-root .pico-voice-dot{animation:none!important}}
+
+/* Pico v4: compact, always reachable sound toggles and calm paused microphone. */
+#pico-root .pico-soundbar{position:fixed;right:137px;bottom:34px;display:flex;align-items:center;gap:7px;pointer-events:auto;z-index:2;max-width:calc(100vw - 151px)}
+#pico-root .pico-soundbar button{font:600 11px/1.25 var(--mono,monospace);display:inline-flex;align-items:center;gap:6px;min-height:35px;padding:8px 11px;border:1px solid var(--pc-line);border-radius:999px;color:var(--pc-muted);background:var(--pc-panel);box-shadow:0 5px 18px rgba(0,0,0,.15);white-space:nowrap;transition:border-color .18s,background .18s,color .18s}
+#pico-root .pico-soundbar button:hover,#pico-root .pico-soundbar button:focus-visible{color:var(--pc-text);border-color:var(--pc-accent)}
+#pico-root .pico-soundbar button[aria-pressed="true"]{color:var(--pc-accent);border-color:var(--pc-accent);background:var(--pc-panel)}
+#pico-root .pico-voice-status{flex-wrap:wrap;gap:8px}
+#pico-root .pico-voice-status #pico-voice-hint{flex:1 1 160px}
+#pico-root .pico-resume-mic{background:var(--pc-accent);color:#132019;border:1px solid transparent;border-radius:9px;padding:7px 11px;font-size:11px;font-weight:750;white-space:nowrap}
+#pico-root.pico-voice-paused .pico-voice-dot{animation:none}
+#pico-root .pico-sound-toggle{min-width:0}
+@media(max-width:650px){
+ #pico-root .pico-soundbar{right:87px;bottom:19px;gap:5px;max-width:calc(100vw - 97px)}
+ #pico-root .pico-soundbar button{min-height:33px;padding:7px 8px;font-size:10px;gap:4px}
+}
+@media(max-width:360px){
+ #pico-root .pico-soundbar{right:83px;bottom:16px}
+ #pico-root .pico-soundbar button{padding:7px 6px;font-size:9px}
+}
