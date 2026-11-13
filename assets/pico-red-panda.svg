@@ -6,7 +6,7 @@
 <ellipse cx="129" cy="202" rx="69" ry="63" fill="url(#coat)"/><ellipse cx="126" cy="205" rx="38" ry="45" fill="#f7e1c1"/>
 <g class="pico-arms"><ellipse cx="66" cy="195" rx="17" ry="35" transform="rotate(20 66 195)" fill="#5b3d40"/><ellipse cx="190" cy="196" rx="17" ry="35" transform="rotate(-19 190 196)" fill="#5b3d40"/></g>
 <g class="pico-head">
-<path d="M64 69Q43 37 54 19q25-13 53 29" fill="#d87547" stroke="#a45d48" stroke-width="4"/><path d="M150 49q28-45 49-31 17 27-9 52" fill="#d87547" stroke="#a45d48" stroke-width="4"/><path d="M65 54q-16-25-6-30 14-3 31 21M165 45q20-24 30-20 4 15-10 30" fill="#eab2ab"/>
+<g class="pico-ear-left"><path d="M64 69Q43 37 54 19q25-13 53 29" fill="#d87547" stroke="#a45d48" stroke-width="4"/><path d="M65 54q-16-25-6-30 14-3 31 21" fill="#eab2ab"/></g><g class="pico-ear-right"><path d="M150 49q28-45 49-31 17 27-9 52" fill="#d87547" stroke="#a45d48" stroke-width="4"/><path d="M165 45q20-24 30-20 4 15-10 30" fill="#eab2ab"/></g>
 <path d="M51 104q-5-63 78-70c81-6 89 60 80 109-6 53-46 79-81 81-44 2-81-28-87-78-3-16 2-31 10-42Z" fill="url(#coat)"/>
 <path d="M68 91q31-43 61-31 30-12 60 31l-31 26h-63Z" fill="#f7b57b" opacity=".65"/>
 <path d="M48 133q22-33 50-26l20 37-24 48q-44-7-46-59ZM207 132q-20-32-51-26l-18 40 25 47q45-10 44-61Z" fill="url(#cheek)"/>
