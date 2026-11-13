@@ -1,0 +1,42 @@
+name: Pico verified news refresh
+
+on:
+  schedule:
+    - cron: '20 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update-pico-news.mjs'
+      - '.github/workflows/pico-news.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pico-news-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Fetch source-linked news headlines
+        run: node scripts/update-pico-news.mjs
+      - name: Commit refreshed public headlines if changed
+        run: |
+          if ! git diff --quiet -- assets/pico-news.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/pico-news.json
+            git commit -m "Refresh Pico's dated news headlines"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          else
+            echo "No headline updates"
+          fi
