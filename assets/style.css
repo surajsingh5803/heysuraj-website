@@ -697,3 +697,6 @@ body,main{min-width:0}
 }
 @media(prefers-reduced-motion:reduce){.reveal.visible{animation:none!important}.essay-card,.article-card{transition:none}}
 
+
+/* Keep portrait art within the hero grid at laptop and narrow-mobile widths. */
+@media(max-width:1120px){.portrait-plane{left:0;right:0}}
