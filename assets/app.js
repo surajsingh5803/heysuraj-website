@@ -230,10 +230,10 @@ function initMotion(){
  if(stage&&area){area.addEventListener("pointermove",e=>{if(!motionEnabled()||e.pointerType==="touch")return;const r=area.getBoundingClientRect();const x=((e.clientX-r.left)/r.width-.5)*12;const y=((e.clientY-r.top)/r.height-.5)*-12;stage.style.setProperty("--tilt-x",y+"deg");stage.style.setProperty("--tilt-y",x+"deg")},{passive:true});area.addEventListener("pointerleave",()=>{stage.style.setProperty("--tilt-x","0deg");stage.style.setProperty("--tilt-y","0deg")});}
  if("IntersectionObserver" in window){
   const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}}),{threshold:.04,rootMargin:"0px 0px 80px 0px"});
-  $(".reveal").forEach(el=>obs.observe(el));
-  const navObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){const id=e.target.id;$(".nav-list a").forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+id));}}),{rootMargin:"-25% 0px -55% 0px"});
-  $("main section[id],#top").forEach(el=>navObserver.observe(el));
- }else{$(".reveal").forEach(el=>el.classList.add("visible"));}
+  $$(".reveal").forEach(el=>obs.observe(el));
+  const navObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){const id=e.target.id;$$(".nav-list a").forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+id));}}),{rootMargin:"-25% 0px -55% 0px"});
+  $$("main section[id],#top").forEach(el=>navObserver.observe(el));
+ }else{$$(".reveal").forEach(el=>el.classList.add("visible"));}
  const progress=byId("progress");let queued=false;
  addEventListener("scroll",()=>{if(queued)return;queued=true;requestAnimationFrame(()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?Math.max(0,scrollY/h*100):0)+"%";queued=false;});},{passive:true});
 }
