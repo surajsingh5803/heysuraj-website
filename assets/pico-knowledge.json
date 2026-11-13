@@ -347,6 +347,358 @@
       "content": "Suraj maintains software experiments including his personal GitHub Pages site and projects such as LP LeadOS, LP CRM and an SEO Audit Engine. Projects have varying statuses, including prototypes and works in progress. Check the linked repository and project pages before assuming a feature is production-ready.",
       "source": "Official GitHub profile provided within HeySuraj site",
       "updated": "2026-11-14"
+    },
+    {
+      "id": "project-lazy-plex",
+      "kind": "project",
+      "title": "Lazy Plex",
+      "url": "https://heysuraj.com/projects/lazy-plex/",
+      "summary": "My entrepreneurial journey through digital marketing, brand building, website work and, increasingly, strategy-led consulting.",
+      "keywords": [
+        "Lazy Plex",
+        "lazy plex",
+        "Marketing",
+        "Digital strategy · Brand growth · Web experiences"
+      ],
+      "content": "Project status: Venture. Tagline: A home for practical digital growth.. What it is: My entrepreneurial journey through digital marketing, brand building, website work and, increasingly, strategy-led consulting.. Focus: Digital strategy · Brand growth · Web experiences. Approach: Translate business needs into meaningful digital systems instead of chasing vanity metrics.. Lessons: Running a venture is an ongoing lesson in product thinking, communication and execution.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-lp-crm",
+      "kind": "project",
+      "title": "LP CRM",
+      "url": "https://heysuraj.com/projects/lp-crm/",
+      "summary": "An integrated CRM concept and implementation effort spanning projects, tasks, time logs, clients, invoices, approvals and business operations.",
+      "keywords": [
+        "LP CRM",
+        "lp crm",
+        "Products",
+        "SaaS architecture · Workflows · Operations"
+      ],
+      "content": "Project status: Building. Tagline: A simpler operating system for teams.. What it is: An integrated CRM concept and implementation effort spanning projects, tasks, time logs, clients, invoices, approvals and business operations.. Focus: SaaS architecture · Workflows · Operations. Approach: Unify fragmented processes into a modular workspace with permissions and clear workflows.. Lessons: The complexity is often in reliability, permissions and everyday usability, not the dashboard.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-lp-leados",
+      "kind": "project",
+      "title": "LP LeadOS",
+      "url": "https://heysuraj.com/projects/lp-leados/",
+      "summary": "A lead-discovery and research system intended to help businesses identify relevant potential customers by industry, location, needs and evidence.",
+      "keywords": [
+        "LP LeadOS",
+        "lp leados",
+        "Products",
+        "Lead research · AI workflows · Data quality"
+      ],
+      "content": "Project status: Building. Tagline: Finding the right prospects, not just more names.. What it is: A lead-discovery and research system intended to help businesses identify relevant potential customers by industry, location, needs and evidence.. Focus: Lead research · AI workflows · Data quality. Approach: Improve prospect fit, verification and traceability rather than optimise only for volume.. Lessons: Lead quantity means little without qualification and accurate contact information.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-seo-engine",
+      "kind": "project",
+      "title": "SEO Audit Engine",
+      "url": "https://heysuraj.com/projects/seo-audit-engine/",
+      "summary": "An initiative to connect search performance, technical issues, content opportunity and prioritised recommendations into actionable SEO audits.",
+      "keywords": [
+        "SEO Audit Engine",
+        "seo engine",
+        "Products",
+        "Search Console · Auditing · Analysis"
+      ],
+      "content": "Project status: In progress. Tagline: From messy SEO data to useful decisions.. What it is: An initiative to connect search performance, technical issues, content opportunity and prioritised recommendations into actionable SEO audits.. Focus: Search Console · Auditing · Analysis. Approach: Move beyond lists of errors and focus on the changes most likely to improve measurable outcomes.. Lessons: Good reporting should tell someone what to do next.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-custom-gpts",
+      "kind": "project",
+      "title": "177 Custom GPTs",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "A collection of 177 custom GPT experiments documented across different tasks, workflows and problem types.",
+      "keywords": [
+        "177 Custom GPTs",
+        "custom gpts",
+        "AI",
+        "Prompt design · Tool behaviour · Use-case testing"
+      ],
+      "content": "Project status: Explored. Tagline: A long-running experiment in specialised AI.. What it is: A collection of 177 custom GPT experiments documented across different tasks, workflows and problem types.. Focus: Prompt design · Tool behaviour · Use-case testing. Approach: Experiment with focused assistants for practical, repeatable jobs.. Lessons: Useful AI starts with defining the job clearly, not with adding complexity.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-chatbot-studio",
+      "kind": "project",
+      "title": "AI Chatbots",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "Work exploring and creating task-specific chatbots, assistant experiences and workflows for business and content use cases.",
+      "keywords": [
+        "AI Chatbots",
+        "chatbot studio",
+        "AI",
+        "Conversational UX · Automation · Custom assistants"
+      ],
+      "content": "Project status: Explored. Tagline: Conversational interfaces built around tasks.. What it is: Work exploring and creating task-specific chatbots, assistant experiences and workflows for business and content use cases.. Focus: Conversational UX · Automation · Custom assistants. Approach: Design around real user requests, context and safe hand-offs.. Lessons: A helpful assistant must be useful when answers are uncertain, not only when they're easy.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-automation-lab",
+      "kind": "project",
+      "title": "AI Automation Workflows",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "Experiments combining AI tools, APIs, automation platforms and lightweight scripting to streamline research, content and operations.",
+      "keywords": [
+        "AI Automation Workflows",
+        "automation lab",
+        "AI",
+        "APIs · Workflow design · Make.com · Python"
+      ],
+      "content": "Project status: Experimental. Tagline: Make the repetitive work disappear.. What it is: Experiments combining AI tools, APIs, automation platforms and lightweight scripting to streamline research, content and operations.. Focus: APIs · Workflow design · Make.com · Python. Approach: Automate repeatable steps while keeping decisions and approvals understandable.. Lessons: Reliability and clear fallback paths are part of automation design.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-marketing-engine",
+      "kind": "project",
+      "title": "Marketing Engine Hub",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "A strategy-led consultancy concept focused on helping businesses understand acquisition, conversion and the systems behind sustainable growth.",
+      "keywords": [
+        "Marketing Engine Hub",
+        "marketing engine",
+        "Marketing",
+        "Growth systems · Analytics · Conversion"
+      ],
+      "content": "Project status: Venture idea. Tagline: Measure. Automate. Convert. Grow.. What it is: A strategy-led consultancy concept focused on helping businesses understand acquisition, conversion and the systems behind sustainable growth.. Focus: Growth systems · Analytics · Conversion. Approach: Bring strategy, tracking, campaigns and automation into one understandable operating model.. Lessons: A good marketing system connects acquisition with real business outcomes.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-describe-anything",
+      "kind": "project",
+      "title": "DescribeAnything.in",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "An exploration of AI-powered description generation and useful content assistance.",
+      "keywords": [
+        "DescribeAnything.in",
+        "describe anything",
+        "AI",
+        "AI content tools · Product exploration"
+      ],
+      "content": "Project status: Concept. Tagline: Turning inputs into clearer descriptions.. What it is: An exploration of AI-powered description generation and useful content assistance.. Focus: AI content tools · Product exploration. Approach: Find specific jobs where structured AI assistance genuinely saves effort.. Lessons: The narrowest useful workflow can become the strongest product.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-omnihuman",
+      "kind": "project",
+      "title": "OmniHuman1.in",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "A research and project exploration involving AI avatars, human-like media and new creative interfaces.",
+      "keywords": [
+        "OmniHuman1.in",
+        "omnihuman",
+        "AI",
+        "Creative AI · Digital avatars · Emerging media"
+      ],
+      "content": "Project status: Exploration. Tagline: Curiosity about digital humans.. What it is: A research and project exploration involving AI avatars, human-like media and new creative interfaces.. Focus: Creative AI · Digital avatars · Emerging media. Approach: Understand what generative interfaces can and cannot do reliably.. Lessons: Impressive visuals only matter when the experience serves a purpose.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-my-trend-wear",
+      "kind": "project",
+      "title": "My Trend Wear",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "An exploration of online apparel, trend-led merchandising and e-commerce branding.",
+      "keywords": [
+        "My Trend Wear",
+        "my trend wear",
+        "Creative",
+        "E-commerce · Brand concept · Digital sales"
+      ],
+      "content": "Project status: Venture idea. Tagline: Testing fashion, identity and digital commerce.. What it is: An exploration of online apparel, trend-led merchandising and e-commerce branding.. Focus: E-commerce · Brand concept · Digital sales. Approach: Explore how product, brand and attention combine in online retail.. Lessons: Distribution and product-market fit matter as much as design.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-the-emotional-ceo",
+      "kind": "project",
+      "title": "The Emotional CEO",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "A book and writing exploration around leadership, psychology, emotional intelligence and the idea of scaling without burnout.",
+      "keywords": [
+        "The Emotional CEO",
+        "the emotional ceo",
+        "Creative",
+        "Leadership · Writing · Human behaviour"
+      ],
+      "content": "Project status: Writing project. Tagline: Leadership without losing the human side.. What it is: A book and writing exploration around leadership, psychology, emotional intelligence and the idea of scaling without burnout.. Focus: Leadership · Writing · Human behaviour. Approach: Turn observations about leadership into thoughtful, useful writing.. Lessons: Better systems should make room for the humans inside them.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-creator-journey",
+      "kind": "project",
+      "title": "Gaming & YouTube",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "My content-creation explorations around games, entertainment, short-form formats and creator workflows.",
+      "keywords": [
+        "Gaming & YouTube",
+        "creator journey",
+        "Creative",
+        "Video · Gaming · Storytelling"
+      ],
+      "content": "Project status: Creative work. Tagline: Creativity is another form of experimentation.. What it is: My content-creation explorations around games, entertainment, short-form formats and creator workflows.. Focus: Video · Gaming · Storytelling. Approach: Learn by publishing, iterating and understanding attention.. Lessons: A creator mindset translates surprisingly well to building products.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-winbuzzgame",
+      "kind": "project",
+      "title": "WinBuzzGame.in",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "A historical exploration of content-driven affiliate website models and online distribution.",
+      "keywords": [
+        "WinBuzzGame.in",
+        "winbuzzgame",
+        "Creative",
+        "Affiliate models · Website experimentation"
+      ],
+      "content": "Project status: Historical. Tagline: An early affiliate-platform experiment.. What it is: A historical exploration of content-driven affiliate website models and online distribution.. Focus: Affiliate models · Website experimentation. Approach: Understand discovery and distribution through hands-on experiments.. Lessons: Some ventures are most valuable for the lessons they leave behind.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-seo-growth",
+      "kind": "project",
+      "title": "SEO & Organic Growth",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "Hands-on work across website audits, on-page improvements, local visibility, Search Console analysis and content strategy.",
+      "keywords": [
+        "SEO & Organic Growth",
+        "seo growth",
+        "Marketing",
+        "SEO · Local search · Search Console"
+      ],
+      "content": "Project status: Professional work. Tagline: Find what searchers need, then make it useful.. What it is: Hands-on work across website audits, on-page improvements, local visibility, Search Console analysis and content strategy.. Focus: SEO · Local search · Search Console. Approach: Use evidence from queries, behaviour and business priorities to decide what to improve.. Lessons: Traffic is a signal; qualified enquiries and outcomes are the real test.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-paid-growth",
+      "kind": "project",
+      "title": "Performance Marketing",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "Planning, analysis and optimisation work spanning Google Ads, Meta Ads, campaigns, lead generation and conversion journeys.",
+      "keywords": [
+        "Performance Marketing",
+        "paid growth",
+        "Marketing",
+        "Paid media · Landing pages · Measurement"
+      ],
+      "content": "Project status: Professional work. Tagline: Creative ideas, measurable decisions.. What it is: Planning, analysis and optimisation work spanning Google Ads, Meta Ads, campaigns, lead generation and conversion journeys.. Focus: Paid media · Landing pages · Measurement. Approach: Connect campaign strategy to lead quality and the experience after the click.. Lessons: A low cost per lead is not automatically a good campaign.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-analytics",
+      "kind": "project",
+      "title": "Marketing Analytics",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "Measurement and reporting using GA4, Search Console, business listings and performance dashboards.",
+      "keywords": [
+        "Marketing Analytics",
+        "analytics",
+        "Marketing",
+        "GA4 · GSC · Business intelligence"
+      ],
+      "content": "Project status: Professional work. Tagline: Numbers are useful when they change decisions.. What it is: Measurement and reporting using GA4, Search Console, business listings and performance dashboards.. Focus: GA4 · GSC · Business intelligence. Approach: Turn reporting into prioritised recommendations and better communication.. Lessons: Good dashboards answer questions instead of generating more of them.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-web-experiences",
+      "kind": "project",
+      "title": "Web & Conversion",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "Website creation, WordPress and Elementor work, landing pages, conversion improvements and digital user journeys.",
+      "keywords": [
+        "Web & Conversion",
+        "web experiences",
+        "Marketing",
+        "WordPress · Elementor · CRO"
+      ],
+      "content": "Project status: Professional work. Tagline: Useful experiences convert attention into action.. What it is: Website creation, WordPress and Elementor work, landing pages, conversion improvements and digital user journeys.. Focus: WordPress · Elementor · CRO. Approach: Improve clarity, speed and the moments where visitors decide what to do.. Lessons: The best design looks obvious once the hard decisions are made.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-paperclip-team",
+      "kind": "project",
+      "title": "AI Workforce / Paperclip",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "An experiment in planning an AI-assisted team, defining roles and linking independent workflows through an agent-management environment.",
+      "keywords": [
+        "AI Workforce / Paperclip",
+        "paperclip team",
+        "AI",
+        "AI agents · Delegation · Workflow orchestration"
+      ],
+      "content": "Project status: Experiment. Tagline: Exploring how specialist agents collaborate.. What it is: An experiment in planning an AI-assisted team, defining roles and linking independent workflows through an agent-management environment.. Focus: AI agents · Delegation · Workflow orchestration. Approach: Treat agents as tools that require explicit tasks, boundaries, review and accountability.. Lessons: More agents do not automatically mean a better system; coordination is the hard part.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-seo-education",
+      "kind": "project",
+      "title": "Marketing & SEO Teaching",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "A learning and training initiative around practical SEO, digital marketing, social media and business-facing digital skills.",
+      "keywords": [
+        "Marketing & SEO Teaching",
+        "seo education",
+        "Marketing",
+        "Training design · SEO · Digital marketing"
+      ],
+      "content": "Project status: Education initiative. Tagline: Turning practice into lessons people can apply.. What it is: A learning and training initiative around practical SEO, digital marketing, social media and business-facing digital skills.. Focus: Training design · SEO · Digital marketing. Approach: Organise real workflows into teachable lessons, examples and useful practice.. Lessons: Teaching exposes the difference between knowing a term and understanding a process.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-creative-universe",
+      "kind": "project",
+      "title": "AI Creative Universe",
+      "url": "https://heysuraj.com/#projects",
+      "summary": "A creative exploration of AI-assisted entertainment, short-form video formats, comedy concepts and character-led storytelling.",
+      "keywords": [
+        "AI Creative Universe",
+        "creative universe",
+        "Creative",
+        "Generative media · Storytelling · Creator tools"
+      ],
+      "content": "Project status: Concept. Tagline: Stories, humour and generative creativity.. What it is: A creative exploration of AI-assisted entertainment, short-form video formats, comedy concepts and character-led storytelling.. Focus: Generative media · Storytelling · Creator tools. Approach: Experiment with narrative, format and human-directed creative AI.. Lessons: Good storytelling still depends on taste, timing and a human point of view.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
+    },
+    {
+      "id": "project-heysuraj",
+      "kind": "project",
+      "title": "HeySuraj.com",
+      "url": "https://heysuraj.com/projects/heysuraj-website/",
+      "summary": "A static-hosted personal brand experience with evolving long-form work, motion and colour themes, project documentation and SEO foundations.",
+      "keywords": [
+        "HeySuraj.com",
+        "heysuraj",
+        "Creative",
+        "Personal branding · Web engineering · GitHub Pages"
+      ],
+      "content": "Project status: Live website. Tagline: My personal digital headquarters.. What it is: A static-hosted personal brand experience with evolving long-form work, motion and colour themes, project documentation and SEO foundations.. Focus: Personal branding · Web engineering · GitHub Pages. Approach: Keep an interactive visual identity while making content readable, crawlable and easy to maintain.. Lessons: Technical simplicity can give creative ideas more room to grow.",
+      "source": "HeySuraj published project archive",
+      "updated": "2026-11-14"
     }
   ]
 }
