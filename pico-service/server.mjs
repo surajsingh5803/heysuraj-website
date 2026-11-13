@@ -2,6 +2,7 @@
    Secrets belong in Render environment settings, never in GitHub Pages. */
 import http from "node:http";
 import crypto from "node:crypto";
+import { readFile } from "node:fs/promises";
 import { Pool } from "pg";
 const PORT=Number(process.env.PORT||10000);
 const SITE=process.env.PICO_ALLOWED_ORIGIN||"https://heysuraj.com";
@@ -102,6 +103,18 @@ async function chat(message,history,role,page){
 http.createServer(async(req,res)=>{
  const origin=req.headers.origin||"";
  const url=new URL(req.url,"http://127.0.0.1");
+
+ const adminFiles={"/admin":["admin.html","text/html; charset=utf-8"],"/admin.js":["admin.js","text/javascript; charset=utf-8"],"/admin.css":["admin.css","text/css; charset=utf-8"]};
+ if(req.method==="GET"&&adminFiles[url.pathname]){
+  const [file,mime]=adminFiles[url.pathname];
+  try{
+   const buffer=await readFile(new URL("./"+file,import.meta.url));
+   res.writeHead(200,{"Content-Type":mime,"Cache-Control":"no-store","X-Content-Type-Options":"nosniff","X-Frame-Options":"DENY",
+    "Content-Security-Policy":"default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'"});
+   res.end(buffer);return;
+  }catch{return write(res,404,{error:"Admin asset missing"},origin);}
+ }
+
  if(req.method==="OPTIONS"){if(!domains.has(origin))return write(res,403,{error:"Origin not allowed"},origin);return write(res,204,{},origin);}
  if(url.pathname==="/health"&&req.method==="GET")return write(res,200,{ok:true,ai:!!APIKEY,inbox:!!pool},origin);
  if(url.pathname.startsWith("/api/")&&!domains.has(origin)&&!(owner(req)&&["GET","PATCH"].includes(req.method)))return write(res,403,{error:"Origin not allowed"},origin);
