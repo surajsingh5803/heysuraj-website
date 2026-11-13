@@ -223,7 +223,7 @@ function observePages(){
 }
 /* Voice chat is opt-in. The switch remains active across individual utterances,
    but never keeps a microphone open in a hidden tab or closed chat window. */
-let voiceRestart=0,speechWatchdog=0,speechGeneration=0;
+let voiceRestart=0,speechWatchdog=0,speechGeneration=0,voiceSettingBeforeMic=null;
 const SpeechInput=window.SpeechRecognition||window.webkitSpeechRecognition;
 const microphone=$("pico-mic"),voiceStatusBox=$("pico-voice-status"),voiceStatusText=$("pico-voice-hint");
 function voiceStatus(text,kind="paused"){
@@ -250,8 +250,9 @@ function scheduleListening(delay=400){
  if(!state.voiceMode||state.speaking||state.busy||!state.open||state.view!=="chat"||document.hidden)return;
  voiceRestart=setTimeout(()=>{voiceRestart=0;startVoiceRecognition();},delay);
 }
-function stopVoiceMode({focus=true}={}){
+function stopVoiceMode({focus=true,keepMuted=false}={}){
  state.voiceMode=false;state.speaking=false;
+ if(voiceSettingBeforeMic!==null){prefs.voice=keepMuted?false:voiceSettingBeforeMic;voiceSettingBeforeMic=null;store.write("hs.pico.prefs",JSON.stringify(prefs),true);refreshSettings();}
  speechGeneration++;clearTimeout(speechWatchdog);
  stopVoiceRecognition();
  try{window.speechSynthesis?.cancel();}catch{}
@@ -317,6 +318,7 @@ function startVoiceMode(){
   appendMessage("pico","My ears don't work with this browser's speech recognition. The keyboard is all yours. 🐾",true);return;
  }
  if(!state.open||state.view!=="chat")return;
+ voiceSettingBeforeMic=prefs.voice;
  state.voiceMode=true;state.voiceFailures=0;
  setPref("voice",true); // one explicit mic click also opts in to spoken replies
  voiceStatus("Microphone on. Say hi—I'll reply out loud.","paused");
@@ -384,7 +386,7 @@ function refreshSettings(){
 }
 function setPref(key,value){
  prefs[key]=Boolean(value);store.write("hs.pico.prefs",JSON.stringify(prefs),true);refreshSettings();
- if(key==="voice"&&!value){if(state.voiceMode)stopVoiceMode({focus:false});else window.speechSynthesis?.cancel();}
+ if(key==="voice"&&!value){if(state.voiceMode)stopVoiceMode({focus:false,keepMuted:true});else window.speechSynthesis?.cancel();}
  if(key==="music")music();
  if(key==="fx"&&value)playTone(520,.14,.02);
  if(key==="follow"&&!value){spriteButton.style.setProperty("--pico-dx","0px");spriteButton.style.setProperty("--pico-dy","0px");}
