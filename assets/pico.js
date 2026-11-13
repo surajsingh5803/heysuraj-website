@@ -10,6 +10,8 @@ catch(error){console.warn("Pico interface unavailable",error);return;}
 const root=document.createElement("aside");root.id="pico-root";root.setAttribute("aria-label","Pico, the friendly red panda");root.innerHTML=fragment;document.body.append(root);
 const $=id=>document.getElementById(id);
 const API=String(window.PICO_CONFIG&&window.PICO_CONFIG.apiBase||"").replace(/\/+$/,"");
+const brain=await import("/assets/pico-brain.js?v=1").then(m=>m.createPicoBrain()).catch(error=>{console.warn("Pico public knowledge fallback unavailable",error);return null;});
+
 const PRIV="917257919567";
 const store={
  read:(k,local=false)=>{try{return (local?localStorage:sessionStorage).getItem(k)}catch{return null}},
@@ -199,11 +201,27 @@ async function remoteReply(message){
   const data=await response.json();return typeof data.reply==="string"?cap(data.reply,900):null;
  }catch{return null;}finally{clearTimeout(timeout);}
 }
+function appendResourceLinks(links){
+ const verified=(Array.isArray(links)?links:[]).filter(x=>{
+  try{const u=new URL(x.url);return u.protocol==="https:"&&["heysuraj.com","lazyplex.com","www.lazyplex.com","www.linkedin.com","www.instagram.com","github.com","www.bbc.com","www.bbc.co.uk","www.reuters.com"].includes(u.hostname);}catch{return false;}
+ }).slice(0,3);
+ if(!verified.length)return;
+ const box=document.createElement("div");box.className="pico-resource-links";box.setAttribute("aria-label","Read related sources");
+ for(const item of verified){
+  const a=document.createElement("a");a.href=item.url;a.target="_blank";a.rel="noopener noreferrer";
+  a.textContent=String(item.title||"Read original source").slice(0,90)+" ↗";
+  box.append(a);
+ }
+ chat.append(box);chat.scrollTop=chat.scrollHeight;
+}
 async function sendText(value){
  const text=cap(value,700);if(!text||state.busy)return;
  state.busy=true;appendMessage("visitor",text,true);state.interactions++;input.value="";$("pico-send").disabled=true;mood("pico-curious",700);
  const refused=isRefusal(text);
- const locally=refused?refusalReply(text):localReply(text);
+ const roleDeclaration=/^(?:i\s*am|i['’]m|main|mai)\s+(?:a\s+|an\s+|your\s+|suraj.s\s+)?(?:friend|dost|recruiter|hiring|founder|startup owner|business owner|businessman)\b/i.test(text);
+ let enhanced=null;
+ try{if(!refused&&!roleDeclaration)enhanced=await brain?.tryAnswer(text)||null;}catch(error){console.warn("Pico context source unavailable",error);}
+ const locally=refused?refusalReply(text):enhanced?.reply||localReply(text);
  if(!refused)state.rejections=0;
  if(locally===null||state.view!=="chat"){
   if(refused)$("pico-choices")?.remove();
@@ -211,9 +229,14 @@ async function sendText(value){
   if(state.voiceMode&&!state.speaking)scheduleListening(600);
   return;
  }
- // Boundaries are enforced locally even if a remote AI service is connected.
- const reply=refused?locally:(await remoteReply(text)||locally);
- if(state.open&&state.view==="chat"){appendMessage("pico",reply);if(!refused)choices();else $("pico-choices")?.remove();}
+ // Keep verified business/news source links; use remote AI for open-ended conversations only.
+ const reply=refused||enhanced?locally:(await remoteReply(text)||locally);
+ if(state.open&&state.view==="chat"){
+  appendMessage("pico",reply);
+  if(enhanced?.links?.length)appendResourceLinks(enhanced.links);
+  if(refused)$("pico-choices")?.remove();
+  else if(!enhanced&&state.interactions===1)choices();
+ }
  state.busy=false;$("pico-send").disabled=false;
  if(state.voiceMode&&!state.speaking)scheduleListening(500);
 }
@@ -580,7 +603,7 @@ if(previous&&previous.history.length){
  const label=document.createElement("small");label.textContent=entry.who==="visitor"?"You":"Pico";const bubble=document.createElement("div");bubble.className="pico-message";bubble.textContent=cap(entry.text);box.append(label,bubble);chat.append(box);}
 }else appendMessage("pico","Psst! I was in the middle of a world-class nap. 🐾 I’m Pico. Want to chat, rant, or judge the internet together?",true);
 choices();refreshSettings();voiceStatus();observePages();
-$("pico-mode").textContent=API?"AI replies are processed by the connected API. Notes require your consent.":"Pico's chat stays in this tab. Notes can be sent using WhatsApp.";
+$("pico-mode").textContent=API?"AI replies use the private API; cited public facts and notes have separate sources.":"Sourced public answers + dated news. Free chat is local; notes use WhatsApp.";
 setTimeout(()=>{if(!state.open&&!prefs.quiet)showNudge(pick(["Oi, human. Your tabs look stressed. Need company? 🐾","I was napping, but gossip is technically an emergency."]))},12500);
 setTimeout(()=>{if(!state.open&&!prefs.follow)root.classList.add("pico-sleeping");},54000);
 setInterval(()=>{
