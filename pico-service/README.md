@@ -15,6 +15,10 @@ This service is **not** hosted by GitHub Pages. The public mascot works on HeySu
 
 GitHub Pages remains the website hosting platform. Render's domain is just the private API. Model and email providers may incur charges. Avoid pretending that a message is delivered until the API returns saved=true. The client falls back to a visitor-approved WhatsApp handoff when the service is unavailable.
 
+### Private owner dashboard
+
+Visit `https://YOUR-SERVICE.onrender.com/admin` after deployment. Paste your `PICO_ADMIN_TOKEN` into the unlock form; the token is held only in memory for that browser tab. You can review up to 100 recent consented notes, filter by status, and mark them reviewed/replied/archived. Do **not** share this dashboard or token publicly.
+
 ### API routes
 
 - \`GET /health\` — whether AI and DB are configured (no private data)
