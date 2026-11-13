@@ -5,7 +5,7 @@
 "use strict";
 if(document.getElementById("pico-root"))return;
 let fragment;
-try {const res=await fetch("/assets/pico-widget.html?v=3");if(!res.ok)throw Error("widget");fragment=await res.text();}
+try {const res=await fetch("/assets/pico-widget.html?v=5");if(!res.ok)throw Error("widget");fragment=await res.text();}
 catch(error){console.warn("Pico interface unavailable",error);return;}
 const root=document.createElement("aside");root.id="pico-root";root.setAttribute("aria-label","Pico, the friendly red panda");root.innerHTML=fragment;document.body.append(root);
 const $=id=>document.getElementById(id);
