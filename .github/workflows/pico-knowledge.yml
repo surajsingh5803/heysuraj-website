@@ -9,6 +9,8 @@ on:
       - 'work/**'
       - 'writing/**'
       - 'projects/**'
+      - 'privacy/**'
+      - 'assets/app.js'
       - 'scripts/update-pico-knowledge.mjs'
       - '.github/workflows/pico-knowledge.yml'
   workflow_dispatch:
