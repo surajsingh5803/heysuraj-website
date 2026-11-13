@@ -69,6 +69,33 @@ Plain HTML, CSS and JavaScript. No CMS subscription or paid hosting requirement.
 | `robots.txt` | Crawl instructions and sitemap pointer |
 | `CNAME` | Custom-domain binding; **do not delete** |
 
+## Pico — a companion, not a tour guide
+
+**Pico is live as a frontend companion** on all 12 pages: an original red-panda mascot with blinking, animated tail, hover-petting, sleeping, subtle cursor tracking and optional cursor-follow mode. His comments adapt to what a visitor is reading, without interrupting navigation.
+
+- **Conversation:** friendly, role-aware static chat for friends, recruiters, founders and curious visitors. Session chat continues across pages via sessionStorage.
+- **Voice:** opt-in speech synthesis, and optional microphone input using browser speech-recognition support. This site does not record audio, although a browser speech-recognition provider may process speech.
+- **Music and sounds:** optional original Web Audio tones; voice, music and sound effects are separate opt-in settings.
+- **Notes:** explicit consent form. Without a private backend configured, Pico opens a prepared **WhatsApp draft**; the visitor must press Send. No automatic storage or delivery is claimed.
+- **Privacy:** static mode uses no third-party chat API. Pico does not embed private memories, tokens or credentials in its public client.
+
+**Optional secure backend** in [pico-service/](pico-service/README.md) supports OpenAI Responses chat, owner-approved memories, Neon PostgreSQL note storage, optional Resend notifications and a private dashboard at the service's /admin URL. It has consent validation, basic rate-limiting and authenticated owner access.
+
+To activate, deploy the Node service separately, configure secrets privately, then set the public `apiBase` in `assets/pico-config.js`. **The private backend is not live just because its code is committed.** Both frontend and backend are covered by GitHub Actions tests.
+
+### Pico project files
+
+| File | Purpose |
+|---|---|
+| `assets/pico-red-panda.svg` | Original interactive red panda mascot |
+| `assets/pico.css` | Responsive mascot, chat and animation styles |
+| `assets/pico-widget.html` | Reusable chat, settings and consent form |
+| `assets/pico.js` | Behaviour, page awareness, chat, speech and music |
+| `assets/pico-config.js` | Public API URL only; never API keys |
+| `pico-service/server.mjs` | Optional private AI and message API |
+| `pico-service/admin.html` | Owner-only inbox interface |
+| `tests/pico-api-smoke.mjs` | Consent, authentication, CORS and fallback tests |
+
 ## Ethical authority building
 
 Owner-controlled READMEs in four GitHub repos link back to corresponding project notes. These are **four source URLs on one referring domain**, not four distinct referring websites. The outreach plan identifies 30 distinct sites that may be suitable for legitimate contributions, but none should be counted as a backlink without a verified live link. Do not submit the same content to irrelevant directories, buy artificial links, or automate spam comments.
