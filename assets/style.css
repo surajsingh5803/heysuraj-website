@@ -509,3 +509,191 @@ html[data-motion="off"] .orbit-stage:hover .portrait-picture{transform:none!impo
 @media(max-width:650px){.inner-hero{padding:60px 0 33px}.inner-hero h1{font-size:clamp(2.9rem,11vw,4.6rem)}.prose{font-size:1rem}.prose h2{margin-top:45px}.essay-grid{grid-template-columns:1fr}.writing-cta{flex-direction:column;align-items:flex-start}.insight-strip{gap:10px}.insight-strip>div{padding:22px}}
 
 @media(max-width:900px){.sticky-toc{max-height:none;overflow:visible}}
+
+
+/* ===== Layout restoration: homepage + inner editorial pages, 14 Nov 2026 ===== */
+/* Keep content visible even if an animation, optional script or observer fails. */
+.reveal{opacity:1;transform:none}
+.reveal.visible{animation:hs-enter .58s cubic-bezier(.22,1,.36,1) both}
+@keyframes hs-enter{from{opacity:.72;transform:translateY(12px)}to{opacity:1;transform:none}}
+html[data-motion="off"] .reveal.visible{animation:none}
+body,main{min-width:0}
+.container{max-width:1280px}
+.site-header .nav-shell{gap:clamp(14px,2.2vw,28px)}
+.nav-shell nav{min-width:0}
+.section{padding-block:clamp(62px,6.7vw,104px)}
+.section-head{margin-bottom:clamp(24px,3vw,40px);gap:clamp(18px,3vw,40px)}
+.section-head h2{min-width:0}
+.section-desc{line-height:1.72}
+.hero{min-height:0;padding-block:clamp(48px,5.8vw,78px) clamp(35px,4.2vw,58px);gap:clamp(26px,4.4vw,68px)}
+.hero .hero-bottom{margin-top:28px}
+#about{padding-top:clamp(58px,6vw,88px)}
+#projects,#writing,#contact{scroll-margin-top:84px}
+.about-card p{line-height:1.69}
+.about-card .signature{margin-top:23px}
+.about-side{min-width:0}
+.quote-card{min-height:285px}
+.experience-grid,.about-grid,.lab-layout{align-items:stretch}
+.career-item{gap:10px 18px}
+.career-item small{line-height:1.65}
+.work-insights{margin-top:22px}
+.insight-strip{margin:0;gap:16px}
+.insight-strip>div{display:flex;flex-direction:column;padding:clamp(21px,2.6vw,30px)}
+.insight-strip h3{margin:14px 0 9px}
+.insight-strip p{line-height:1.62}
+.projects-grid{align-items:stretch}
+.project-card{min-height:252px}
+.article-grid{align-items:stretch}
+.article-card{min-height:280px;gap:12px}
+.article-card .article-card-top{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.article-card h3{font-size:clamp(1.17rem,1.8vw,1.46rem);line-height:1.26;letter-spacing:-.035em;margin:8px 0 0}
+.article-card p{font-size:.89rem;line-height:1.67;color:var(--muted);margin:0 0 10px;flex:1}
+.article-card .meta{border-top:1px solid var(--line);padding-top:16px;align-items:center;margin-top:auto;flex-wrap:wrap;font-size:.64rem}
+.article-card .meta strong{white-space:nowrap}
+.writing-cta{margin-top:18px}
+.contact-actions{gap:12px;flex-wrap:wrap}
+.footer-links{display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:flex-end;max-width:680px}
+.footer-in{flex-wrap:wrap}
+/* Shared inner-page rhythm: comfortable headings and no awkward page-wide whitespace. */
+.inner-hero{padding:clamp(42px,6vw,76px) 0 clamp(28px,3.3vw,45px)}
+.inner-hero h1{font-size:clamp(2.65rem,5.1vw,5.25rem);line-height:1.07;max-width:1010px;overflow-wrap:break-word}
+.inner-hero .inner-deck{max-width:790px;font-size:clamp(1rem,1.55vw,1.2rem);line-height:1.67}
+.inner-hero .byline{margin-top:18px}
+.editorial-shell{grid-template-columns:minmax(0,780px) minmax(210px,1fr);gap:clamp(25px,4vw,58px)}
+.editorial-shell>*{min-width:0}
+.editorial-content{padding-bottom:clamp(56px,7vw,95px)}
+.prose{font-size:1.04rem;line-height:1.8;overflow-wrap:break-word}
+.prose h2{font-size:clamp(1.65rem,3vw,2.35rem);margin:46px 0 17px;line-height:1.16}
+.prose h3{font-size:1.31rem;line-height:1.3;margin:30px 0 13px}
+.prose p{margin-bottom:21px}
+.prose img,.prose table,.prose pre{max-width:100%}
+.prose table{display:block;overflow-x:auto}
+.sticky-toc{top:102px;padding:21px;max-height:calc(100dvh - 125px)}
+.sticky-toc a{line-height:1.42}
+.link-panel{margin:38px 0;padding:25px}
+.essay-grid{padding:0;align-items:stretch}
+/* Writing landing page: featured articles first, compact and ordered research roadmap second. */
+.writing-page{position:relative}
+.writing-hero{padding:clamp(48px,6.6vw,94px) 0 42px}
+.writing-hero .breadcrumbs{font:.66rem var(--mono);letter-spacing:.08em;color:var(--muted);margin-bottom:28px}
+.writing-hero .breadcrumbs a{color:var(--accent2)}
+.writing-hero-row{display:grid;grid-template-columns:minmax(0,1fr) 238px;gap:clamp(25px,5vw,80px);align-items:end}
+.writing-hero h1{font-size:clamp(3.2rem,6.3vw,6.5rem);letter-spacing:-.073em;line-height:1.05;margin:0 0 24px;overflow-wrap:break-word}
+.writing-hero .inner-deck{max-width:735px;color:var(--muted);font-size:clamp(1rem,1.5vw,1.18rem);line-height:1.7;margin:0}
+.writing-index{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px;max-width:275px}
+.writing-index strong{font:700 clamp(3rem,5vw,4.5rem)/1 var(--display);letter-spacing:-.075em}
+.writing-index strong span{font-size:1.6rem;color:var(--subtle);font-weight:500}
+.writing-index small{color:var(--text);font-size:.81rem}
+.writing-index p{color:var(--muted);font-size:.75rem;line-height:1.55;margin:0}
+.writing-index-rule{height:3px;border-radius:8px;background:var(--line);margin:3px 0 5px;overflow:hidden}
+.writing-index-rule span{display:block;width:10%;height:100%;background:var(--accent)}
+.writing-jump{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-top:28px}
+.writing-jump a{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;border:1px solid var(--line-strong);border-radius:999px;font-size:.79rem;font-weight:700;transition:border-color .18s,background .18s}
+.writing-jump a span{color:var(--accent2);font:.62rem var(--mono)}
+.writing-jump a:hover,.writing-jump a:focus-visible{border-color:var(--accent);background:var(--glow)}
+.writing-content-section{padding:clamp(48px,6vw,83px) 0;scroll-margin-top:85px}
+.writing-section-title{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,380px);align-items:end;gap:25px;margin-bottom:29px}
+.writing-section-title h2{font-size:clamp(2.4rem,4.7vw,4.2rem);letter-spacing:-.065em;line-height:1.12}
+.writing-section-title p{color:var(--muted);font-size:.96rem;line-height:1.65;margin:0}
+.featured-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.essay-card.article-featured{min-width:0;min-height:315px;display:flex;flex-direction:column;gap:18px;padding:29px;border-radius:20px;color:var(--text);text-decoration:none}
+.essay-card.article-featured:hover{transform:translateY(-4px)}
+.featured-card-top,.featured-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.featured-category{color:var(--accent2);font:.64rem var(--mono);letter-spacing:.05em}
+.featured-index{font:.72rem var(--mono);color:var(--subtle)}
+.article-featured h3{font-size:clamp(1.35rem,1.95vw,1.75rem);line-height:1.2;letter-spacing:-.05em;margin:0}
+.article-featured p{color:var(--muted);font-size:.88rem;line-height:1.68;flex:1;margin:0}
+.featured-card-bottom{border-top:1px solid var(--line);padding-top:17px;margin-top:auto;flex-wrap:wrap;font:.69rem var(--mono);color:var(--muted)}
+.featured-card-bottom strong{color:var(--accent);font-weight:500;white-space:nowrap}
+.roadmap-section{background:linear-gradient(180deg,transparent,var(--glow));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.roadmap-shell{display:grid;grid-template-columns:minmax(215px,285px) minmax(0,1fr);gap:clamp(20px,4vw,58px);align-items:start}
+.roadmap-intro{padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+.roadmap-intro .overline{font:.65rem var(--mono);color:var(--accent2);letter-spacing:.07em}
+.roadmap-intro p{font-size:.93rem;line-height:1.71;color:var(--muted);margin:18px 0}
+.roadmap-intro>span{font:.67rem var(--mono);color:var(--accent)}
+.roadmap-groups{display:grid;gap:13px;min-width:0}
+.roadmap-group{min-width:0;border:1px solid var(--line-strong);background:var(--panel);border-radius:17px;overflow:hidden}
+.roadmap-group>summary{list-style:none;display:flex;align-items:center;gap:18px;cursor:pointer;padding:20px 23px;min-height:68px}
+.roadmap-group>summary::-webkit-details-marker{display:none}
+.roadmap-group[open]>summary{border-bottom:1px solid var(--line)}
+.roadmap-name{font:600 clamp(1rem,1.6vw,1.22rem) var(--display);letter-spacing:-.03em;flex:1}
+.roadmap-count{color:var(--subtle);font:.68rem var(--mono);white-space:nowrap}
+.roadmap-chevron{font-size:1.3rem;color:var(--accent);transition:transform .2s}
+.roadmap-group[open] .roadmap-chevron{transform:rotate(180deg)}
+.roadmap-list{list-style:none;padding:0 24px;margin:0}
+.roadmap-list li{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:14px;padding:17px 0;align-items:start;border-bottom:1px solid var(--line)}
+.roadmap-list li:last-child{border-bottom:0}
+.roadmap-number{font:.7rem var(--mono);color:var(--accent2);padding-top:4px}
+.roadmap-info{min-width:0;display:grid;gap:5px}
+.roadmap-info strong{font:600 1rem/1.4 var(--display);color:var(--text);letter-spacing:-.025em}
+.roadmap-info>span{font-size:.81rem;line-height:1.6;color:var(--muted)}
+.roadmap-status{font:.62rem var(--mono);color:var(--subtle);text-transform:uppercase;letter-spacing:.06em;padding-top:5px}
+.writing-contact{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:clamp(45px,6vw,75px);margin-bottom:clamp(50px,6.5vw,84px);padding:clamp(24px,4vw,45px);border-radius:22px;border:1px solid var(--line-strong);background:var(--panel)}
+.writing-contact h2{font-size:clamp(2rem,3.6vw,3.4rem);line-height:1.16}
+.writing-contact p{color:var(--muted);max-width:600px;margin:15px 0 0}
+.writing-contact>.btn{white-space:nowrap}
+@media(max-width:1100px){
+ .footer-links{max-width:100%}
+ .writing-hero-row{grid-template-columns:minmax(0,1fr) 195px;gap:26px}
+ .article-featured h3{font-size:1.39rem}
+ .essay-card.article-featured{padding:24px}
+ .roadmap-shell{grid-template-columns:220px minmax(0,1fr);gap:22px}
+}
+@media(max-width:900px){
+ .section{padding-block:60px}
+ .hero{padding:50px 0 38px;gap:18px}
+ .hero .hero-bottom{margin-top:24px}
+ .quote-card{min-height:230px}
+ .insight-strip{grid-template-columns:1fr 1fr}
+ .writing-hero-row{grid-template-columns:1fr;gap:25px}
+ .writing-index{max-width:420px}
+ .writing-index strong{font-size:3.2rem}
+ .writing-section-title{grid-template-columns:1fr;gap:12px}
+ .featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .roadmap-shell{grid-template-columns:1fr}
+ .roadmap-intro{max-width:none}
+ .editorial-shell{grid-template-columns:minmax(0,1fr);gap:30px}
+ .sticky-toc{position:relative;top:auto;max-height:none;overflow:visible;order:-1}
+ .footer-in{align-items:flex-start}
+}
+@media(max-width:650px){
+ .container{width:calc(100% - 32px)}
+ .site-header .nav-shell{gap:12px}
+ .section{padding-block:52px}
+ .section-head{margin-bottom:24px}
+ .section-head h2{font-size:clamp(2.45rem,10vw,4rem)}
+ .section-desc{font-size:.93rem}
+ .hero{padding:35px 0 32px}
+ .hero .hero-bottom{margin-top:22px}
+ .about-card p{font-size:1rem}
+ .about-card,.fact-card,.quote-card,.career-list,.process-card{padding:23px}
+ .insight-strip{grid-template-columns:1fr;gap:12px}
+ .article-grid,.featured-grid{grid-template-columns:1fr}
+ .article-card{min-height:250px;padding:22px}
+ .article-card .meta{gap:8px}
+ .writing-cta{align-items:stretch}
+ .writing-cta .btn{white-space:normal}
+ .writing-hero{padding:43px 0 20px}
+ .writing-hero h1{font-size:clamp(2.85rem,11.8vw,4.6rem)}
+ .writing-jump{gap:8px}
+ .writing-jump a{padding:10px 12px;font-size:.73rem}
+ .writing-content-section{padding:45px 0}
+ .writing-section-title h2{font-size:clamp(2.3rem,9.4vw,3.5rem)}
+ .essay-card.article-featured{min-height:0;padding:24px}
+ .roadmap-group>summary{padding:17px 16px;gap:10px}
+ .roadmap-list{padding:0 16px}
+ .roadmap-list li{grid-template-columns:24px minmax(0,1fr);gap:9px}
+ .roadmap-status{display:none}
+ .roadmap-info strong{font-size:.97rem}
+ .writing-contact{flex-direction:column;align-items:stretch;margin-top:42px;margin-bottom:54px}
+ .writing-contact>.btn{align-self:flex-start}
+ .inner-hero{padding:40px 0 22px}
+ .inner-hero h1{font-size:clamp(2.45rem,10vw,3.7rem);letter-spacing:-.055em}
+ .prose{font-size:1rem;line-height:1.78}
+ .prose>p:first-child{font-size:1.08rem}
+ .prose h2{font-size:1.75rem;margin-top:37px}
+ .prose h3{font-size:1.2rem}
+ .footer-links{justify-content:flex-start;gap:9px 15px}
+}
+@media(prefers-reduced-motion:reduce){.reveal.visible{animation:none!important}.essay-card,.article-card{transition:none}}
+
