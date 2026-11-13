@@ -57,6 +57,13 @@ try{
  await mic.click();
  assert(await mic.getAttribute("aria-pressed")==="false","Second mic click did not exit voice mode");
  assert(await page.locator("#pico-input").isVisible(),"Text entry was not restored");
+ assert(await page.locator("#pico-voice-setting").isChecked()===false,"Voice audio preference should be restored when switching back to typing");
+ const voicesAtOff=await page.evaluate(()=>window.__picoUtterances.length);
+ await page.locator("#pico-input").fill("hello");
+ await page.locator("#pico-input").press("Enter");
+ await sleep(150);
+ assert((await page.evaluate(()=>window.__picoUtterances.length))===voicesAtOff,"Typing mode unexpectedly kept speaking");
+ console.log("PASS typing mode restores the visitor's previous voice preference");
  const before=await page.evaluate(()=>window.__picoRecs.length);
  await sleep(900);
  assert((await page.evaluate(()=>window.__picoRecs.length))===before,"Mic restarted after visitor opted out");
