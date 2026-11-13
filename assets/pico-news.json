@@ -1,38 +1,118 @@
 {
-  "generatedAt": "2026-11-14T00:00:00Z",
-  "sourceMethod": "Source-linked news briefs. These are dated headlines, not real-time fact verification.",
+  "generatedAt": "2026-11-13T21:51:10.237Z",
+  "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "SMIC says AI chip supply chain will remain tight through 2027",
-      "url": "https://www.reuters.com/technology/smic-says-ai-chip-supply-chain-will-remain-tight-through-2027-2026-11-13/",
-      "publishedAt": "2026-11-13T12:00:00Z",
+      "title": "Microsoft outage 'stark reminder' of how much we rely on tech",
+      "url": "https://www.bbc.co.uk/news/articles/cxzd9171m51qo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T21:15:41.000Z",
       "category": "Technology",
-      "source": "Reuters",
-      "summary": "China's leading chipmaker expects strong AI-chip demand and tight supply into 2027."
+      "source": "BBC News",
+      "summary": "Microsoft has apologised for the issue, which it said was due to a technical failure."
     },
     {
-      "title": "Drugmakers tap China AI app boom to reach doctors as crackdown upends marketing",
-      "url": "https://www.reuters.com/legal/litigation/drugmakers-tap-china-ai-app-boom-reach-doctors-crackdown-upends-marketing-2026-11-11/",
-      "publishedAt": "2026-11-11T07:03:00Z",
-      "category": "Business",
-      "source": "Reuters",
-      "summary": "Drugmakers are exploring AI applications as channels for reaching healthcare professionals amid marketing changes."
+      "title": "Microsoft 'deeply sorry' for global outage after almost 24 hours of disruption",
+      "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T21:14:22.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Experts say the event is a \"stark reminder\" of how heavily the world relies on a small group of big tech providers."
     },
     {
-      "title": "Warby Parker bets on Google AI glasses for growth, but privacy fears still loom",
-      "url": "https://www.reuters.com/business/retail-consumer/warby-parker-bets-google-ai-glasses-growth-privacy-fears-still-loom-2026-11-12/",
-      "publishedAt": "2026-11-12T12:00:00Z",
+      "title": "Nvidia scandal fallout widens as Trump's treasury secretary blames cabinet colleague",
+      "url": "https://www.bbc.co.uk/news/articles/cqvg2d1eg7zro?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T19:53:57.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Scott Bessent suggests Howard Lutnick’s commerce department failed to ban exports of Nvidia's chips to a firm thought to have links with China."
+    },
+    {
+      "title": "Why is Microsoft's outage lasting so long and will emails be lost?",
+      "url": "https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T18:36:57.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Microsoft says it is continuing to restore services including Outlook and Teams following a global outage."
+    },
+    {
+      "title": "The Peruvian city that has embraced Pope Leo as one of its own",
+      "url": "https://www.bbc.co.uk/news/articles/cwg7l8n7dx5mo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T18:34:45.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Pope Leo XIV is in Peru as part of his Latin America tour, just weeks after having surgery for lung cancer."
+    },
+    {
+      "title": "Courts, spies and MPs: How the Microsoft outage has been felt around the world",
+      "url": "https://www.bbc.co.uk/news/articles/cqp9d58eldlro?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T17:34:58.000Z",
       "category": "Technology",
-      "source": "Reuters",
-      "summary": "Smart glasses are gaining attention as a growth area, with privacy concerns remaining part of the discussion."
+      "source": "BBC News",
+      "summary": "From city governments in the US to spy agencies in Australia, the Microsoft outage is being felt around the world."
     },
     {
-      "title": "China's $3 billion-plus pipeline of Nvidia-powered AI data centres",
-      "url": "https://www.reuters.com/world/china/factbox-chinas-3-billion-plus-pipeline-nvidia-powered-ai-data-centres-2026-11-13/",
-      "publishedAt": "2026-11-13T12:00:00Z",
+      "title": "Rosenberg: Uncompromising Putin ups demands for peace with Ukraine",
+      "url": "https://www.bbc.co.uk/news/articles/cq39glwprknjo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T16:40:31.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The fact the question of European security now features in discussions is viewed in Moscow as a victory, BBC Russia Editor Steve Rosenberg says."
+    },
+    {
+      "title": "German spies handed new powers to tackle 'hybrid threats' from abroad",
+      "url": "https://www.bbc.co.uk/news/articles/c6jre3z03w4go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T15:42:52.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "German reforms mean foreign and domestic intelligence services will have greater powers to combat espionage, terrorism and sabotage."
+    },
+    {
+      "title": "NHS, schools and police forces hit by Microsoft outage",
+      "url": "https://www.bbc.co.uk/news/articles/c6vg2ljjpj32o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T13:41:25.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "Major airports and intelligence services are unaffected, while the government is still assessing the impact."
+    },
+    {
+      "title": "How a sex scandal at Nvidia is putting pressure on the White House",
+      "url": "https://www.bbc.co.uk/news/articles/c67429m3vem3o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T12:22:30.000Z",
       "category": "Business",
-      "source": "Reuters",
-      "summary": "A Reuters review examines major Chinese AI data-centre proposals involving Nvidia processors."
+      "source": "BBC News",
+      "summary": "Jensen Huang's personal life may have triggered the crisis, but the questions now reach into the White House itself."
+    },
+    {
+      "title": "Watch: How a server outage took down Microsoft Teams and Outlook",
+      "url": "https://www.bbc.co.uk/news/videos/cqzjr903n01po?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T11:43:27.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "A Microsoft outage is affecting services including Teams, Outlook and AI software Copilot."
+    },
+    {
+      "title": "Heat pumps: How much heat does your home really need?",
+      "url": "https://www.bbc.co.uk/news/articles/cqy43zk3kk04o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T09:29:25.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Knowing how much heat your home loses is important before installing a new heating system."
+    },
+    {
+      "title": "Ex-Nvidia CEO Jensen Huang summoned to testify before Congress about affair with alleged Chinese spy",
+      "url": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T03:57:01.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Huang abruptly quit on Thursday as head of one of the world's most valuable companies after revelations of alleged extramarital affairs."
+    },
+    {
+      "title": "The rise of 'housefishing' - when does using AI go from enhancing to misleading?",
+      "url": "https://www.bbc.co.uk/news/articles/cm62y0wrnz9zo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T00:13:35.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Experts warn that using AI to enhance property images can go too far and mislead prospective buyers."
     }
   ]
 }
