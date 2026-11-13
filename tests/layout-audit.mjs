@@ -12,7 +12,8 @@ catch(error){console.log("Chrome channel unavailable, testing bundled Chromium: 
 const context=await browser.newContext({reducedMotion:"reduce"});
 await mkdir("layout-screenshots",{recursive:true});
 for(const v of widths){
- const page=await context.newPage({viewport:{width:v.width,height:v.height}});
+ const page=await context.newPage();
+ await page.setViewportSize({width:v.width,height:v.height});
  const errors=[];
  page.on("pageerror",e=>errors.push(e.message));
  // This is a layout test, not a third-party network test.
