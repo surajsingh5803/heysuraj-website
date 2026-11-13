@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-11-14T00:00:00Z",
+  "sourceMethod": "Source-linked news briefs. These are dated headlines, not real-time fact verification.",
+  "items": [
+    {
+      "title": "SMIC says AI chip supply chain will remain tight through 2027",
+      "url": "https://www.reuters.com/technology/smic-says-ai-chip-supply-chain-will-remain-tight-through-2027-2026-11-13/",
+      "publishedAt": "2026-11-13T12:00:00Z",
+      "category": "Technology",
+      "source": "Reuters",
+      "summary": "China's leading chipmaker expects strong AI-chip demand and tight supply into 2027."
+    },
+    {
+      "title": "Drugmakers tap China AI app boom to reach doctors as crackdown upends marketing",
+      "url": "https://www.reuters.com/legal/litigation/drugmakers-tap-china-ai-app-boom-reach-doctors-crackdown-upends-marketing-2026-11-11/",
+      "publishedAt": "2026-11-11T07:03:00Z",
+      "category": "Business",
+      "source": "Reuters",
+      "summary": "Drugmakers are exploring AI applications as channels for reaching healthcare professionals amid marketing changes."
+    },
+    {
+      "title": "Warby Parker bets on Google AI glasses for growth, but privacy fears still loom",
+      "url": "https://www.reuters.com/business/retail-consumer/warby-parker-bets-google-ai-glasses-growth-privacy-fears-still-loom-2026-11-12/",
+      "publishedAt": "2026-11-12T12:00:00Z",
+      "category": "Technology",
+      "source": "Reuters",
+      "summary": "Smart glasses are gaining attention as a growth area, with privacy concerns remaining part of the discussion."
+    },
+    {
+      "title": "China's $3 billion-plus pipeline of Nvidia-powered AI data centres",
+      "url": "https://www.reuters.com/world/china/factbox-chinas-3-billion-plus-pipeline-nvidia-powered-ai-data-centres-2026-11-13/",
+      "publishedAt": "2026-11-13T12:00:00Z",
+      "category": "Business",
+      "source": "Reuters",
+      "summary": "A Reuters review examines major Chinese AI data-centre proposals involving Nvidia processors."
+    }
+  ]
+}
