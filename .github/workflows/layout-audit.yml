@@ -47,6 +47,8 @@ jobs:
           curl --fail http://127.0.0.1:8765/
       - name: Test all website pages at five viewport widths
         run: node tests/layout-audit.mjs
+      - name: Test Pico hands-free voice mode with simulated microphone
+        run: node tests/pico-voice-check.mjs
       - name: Save homepage and Writing screenshots
         if: always()
         uses: actions/upload-artifact@v4
