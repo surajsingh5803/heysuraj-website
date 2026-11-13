@@ -1,0 +1,44 @@
+<button class="pico-sprite-button" id="pico-sprite-button" type="button" aria-label="Say hello to Pico the red panda" aria-expanded="false" aria-controls="pico-panel">
+  <span class="pico-shadow"></span><span class="pico-sprite" id="pico-sprite"><img src="/assets/pico-red-panda.svg" alt="" draggable="false"></span>
+  <span class="pico-name">PICO</span><span class="pico-hello" aria-hidden="true">✳</span>
+</button>
+<div class="pico-nudge" id="pico-nudge" hidden><span class="pico-nudge-text" id="pico-nudge-text"></span><button type="button" id="pico-nudge-dismiss" aria-label="Dismiss Pico's thought">×</button></div>
+<section class="pico-panel" id="pico-panel" role="dialog" aria-label="Hang out with Pico" aria-modal="false" hidden>
+ <div class="pico-headbar">
+  <span class="pico-headbar-avatar"><img src="/assets/pico-red-panda.svg" alt=""></span>
+  <span class="pico-title"><strong>Pico <span aria-hidden="true">🐾</span></strong><small id="pico-subtitle">A little friend of Suraj's · here to hang out</small></span>
+  <button class="pico-icon-button" type="button" id="pico-settings-button" title="Settings" aria-label="Pico settings">⚙</button>
+  <button class="pico-icon-button" type="button" id="pico-close" title="Close chat" aria-label="Close Pico chat">✕</button>
+ </div>
+ <div id="pico-chat-view" style="display:flex;flex-direction:column;min-height:0;flex:1">
+  <div class="pico-chat" id="pico-chat" role="log" aria-label="Messages with Pico" aria-live="polite"></div>
+  <form class="pico-form" id="pico-compose-form">
+   <div class="pico-compose"><textarea class="pico-input" id="pico-input" rows="1" maxlength="700" aria-label="Write a message to Pico" placeholder="Say anything... I'm listening."></textarea>
+   <button class="pico-mic" type="button" id="pico-mic" aria-pressed="false" aria-label="Speak to Pico" title="Speak to Pico">🎙</button>
+   <button class="pico-send" type="submit" id="pico-send" aria-label="Send to Pico">➤</button></div>
+   <div class="pico-fineprint"><span id="pico-mode">Chats stay in this browser tab unless you send a note to Suraj.</span><button type="button" id="pico-clear-chat">Clear chat</button></div>
+  </form>
+ </div>
+ <form id="pico-contact-view" class="pico-contact" hidden>
+  <h3>I'll help you leave a note 💌</h3>
+  <p id="pico-delivery-description">You choose what to share. I won't pretend a message was delivered until it really was.</p>
+  <label>What's your name? <span style="opacity:.6">(optional)</span><input name="name" maxlength="80" autocomplete="name" placeholder="A name Pico can use"></label>
+  <label>Your email or preferred reply contact <span style="opacity:.6">(optional)</span><input name="contact" maxlength="120" autocomplete="off" placeholder="Only if you'd like a reply"></label>
+  <label>Message for Suraj <span aria-hidden="true">*</span><textarea name="message" required maxlength="1600" placeholder="Hey Suraj, I wanted to say..."></textarea></label>
+  <label class="pico-consent"><input name="consent" type="checkbox" required> <span>I agree to share this message and any contact details I've entered with Suraj. I know Pico is a website companion, not a private messaging service.</span></label>
+  <label class="pico-trap" style="position:absolute;left:-9999px" aria-hidden="true" tabindex="-1">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+  <button type="submit" class="pico-primary" id="pico-contact-submit">Continue</button><p class="pico-status" id="pico-contact-status" role="status"></p>
+  <button class="pico-back" type="button" id="pico-contact-back">← Back to hanging out</button>
+ </form>
+ <div class="pico-settings" id="pico-settings-view" hidden>
+  <h3>Little creature, big preferences</h3><p>Make me as quiet or as chatty as you like. Nothing plays without a click.</p>
+  <label class="pico-setting-row"><span>🔊 Read replies aloud</span><input type="checkbox" id="pico-voice-setting"></label>
+  <label class="pico-setting-row"><span>♫ Gentle original background music</span><input type="checkbox" id="pico-music-setting"></label>
+  <label class="pico-setting-row"><span>✳ Tiny sound effects</span><input type="checkbox" id="pico-fx-setting"></label>
+  <label class="pico-setting-row"><span>🐾 Follow my cursor (desktop only)</span><input type="checkbox" id="pico-follow-setting"></label>
+  <label class="pico-setting-row"><span>💤 Quiet mode — no little greetings</span><input type="checkbox" id="pico-quiet-setting"></label>
+  <button type="button" class="pico-control" id="pico-settings-back">← Back to our chat</button>
+  <p>Speech recognition depends on browser support and microphone permission. You can always type instead. I don't record audio.</p>
+ </div>
+ <div class="pico-controls" id="pico-controls"><button type="button" class="pico-control" id="pico-story" title="Hear a story">✦ Tell me a story</button><button type="button" class="pico-control" id="pico-leave-note">✉ Leave a note</button><button type="button" class="pico-control" id="pico-voice-toggle" aria-pressed="false">🔇 Voice off</button></div>
+</section>
