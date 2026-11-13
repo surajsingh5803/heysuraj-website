@@ -1,0 +1,578 @@
+{
+  "owner": "Suraj Kumar",
+  "created": "2026-11-14",
+  "minimumWordsForPublishedArticles": 4000,
+  "publishingRule": "A topic remains planned until the full original article is checked, written and complete. No padded or auto-spun content.",
+  "articles": [
+    {
+      "id": 1,
+      "slug": "seo-audit-prioritisation-framework",
+      "title": "How to Prioritise an SEO Audit by Business Impact",
+      "cluster": "SEO & Search",
+      "description": "Technical errors matter, but impact, confidence and business relevance should determine the order of fixes.",
+      "keywords": [
+        "SEO audit prioritisation",
+        "business impact"
+      ],
+      "researchQuestions": [
+        "What is actually broken?",
+        "Which pages create business value?",
+        "What can realistically be fixed?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 2,
+      "slug": "google-search-console-opportunity-analysis",
+      "title": "Google Search Console: Finding Growth Opportunities in Real Data",
+      "cluster": "SEO & Search",
+      "description": "A practical analysis framework for clicks, impressions, CTR, query clusters, page intent and the limits of average position.",
+      "keywords": [
+        "Search Console strategy",
+        "CTR improvement"
+      ],
+      "researchQuestions": [
+        "Which pages underperform?",
+        "How to avoid average-position traps?",
+        "How to segment query intent?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 3,
+      "slug": "technical-seo-small-business-sites",
+      "title": "Technical SEO for Small Business Websites Without Expensive Tools",
+      "cluster": "SEO & Search",
+      "description": "Crawlability, indexing, canonicals, redirects, structured data, internal links, page performance and when to stop auditing.",
+      "keywords": [
+        "technical SEO",
+        "small business"
+      ],
+      "researchQuestions": [
+        "Which checks matter?",
+        "What are false alarms?",
+        "When does content matter more?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 4,
+      "slug": "seo-github-pages-guide",
+      "title": "SEO on GitHub Pages: A Complete Practical Guide",
+      "cluster": "SEO & Search",
+      "description": "A real-world guide to domains, HTTPS, GitHub Pages builds, canonical URLs, XML sitemaps, metadata and GSC.",
+      "keywords": [
+        "GitHub Pages SEO",
+        "static site"
+      ],
+      "researchQuestions": [
+        "How do you publish without a CMS?",
+        "How to verify indexing?",
+        "What can break after deployment?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 5,
+      "slug": "pillar-pages-service-seo",
+      "title": "Service Page and Pillar Page SEO for Hospitals and Service Businesses",
+      "cluster": "SEO & Search",
+      "description": "User intent, service architecture, safety, trust, internal linking, and useful content without keyword padding.",
+      "keywords": [
+        "service page SEO",
+        "pillar page strategy"
+      ],
+      "researchQuestions": [
+        "What belongs on a service page?",
+        "How to avoid duplication?",
+        "How to design internal linking?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 6,
+      "slug": "keyword-mapping-cannibalisation",
+      "title": "Keyword Mapping and Cannibalisation: Diagnose Before Consolidating",
+      "cluster": "SEO & Search",
+      "description": "Understand when multiple pages compete, complement or serve different query intents.",
+      "keywords": [
+        "keyword mapping",
+        "keyword cannibalisation"
+      ],
+      "researchQuestions": [
+        "Is cannibalisation real?",
+        "How to compare competing URLs?",
+        "When should pages be combined?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 7,
+      "slug": "local-seo-clinics-doctors",
+      "title": "Local SEO for Clinics, Doctors and Service Businesses",
+      "cluster": "SEO & Search",
+      "description": "Entity clarity, service relevance, profile completeness, location pages, reviews and responsible performance measurement.",
+      "keywords": [
+        "local SEO",
+        "Google Business Profile"
+      ],
+      "researchQuestions": [
+        "What can be optimised?",
+        "How to avoid duplicate listings?",
+        "What should be measured?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 8,
+      "slug": "google-business-profile-metrics",
+      "title": "Google Business Profile Calls, Directions and Views: What Counts as a Lead?",
+      "cluster": "SEO & Search",
+      "description": "Separate profile engagements, calls, direction requests, website clicks and qualified conversations.",
+      "keywords": [
+        "GBP reporting",
+        "local SEO metrics"
+      ],
+      "researchQuestions": [
+        "Which metrics overlap?",
+        "What is a confirmed enquiry?",
+        "How should reports be framed?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 9,
+      "slug": "indexing-problems-search-console",
+      "title": "Crawled but Not Indexed: Diagnosing Search Console Coverage Issues",
+      "cluster": "SEO & Search",
+      "description": "A step-by-step method for live URL tests, crawl status, canonical checks, content and sitemap discovery.",
+      "keywords": [
+        "crawled currently not indexed",
+        "Search Console"
+      ],
+      "researchQuestions": [
+        "When to request indexing?",
+        "What does a successful live test mean?",
+        "When is a 404 appropriate?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 10,
+      "slug": "internal-linking-topic-clusters",
+      "title": "Internal Linking and Topic Clusters That Actually Help Readers",
+      "cluster": "SEO & Search",
+      "description": "Build topic pathways that connect questions, deeper guides, services, examples and original research.",
+      "keywords": [
+        "internal linking",
+        "topic clusters"
+      ],
+      "researchQuestions": [
+        "How to choose anchor text?",
+        "How many links are useful?",
+        "How to avoid orphan pages?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 11,
+      "slug": "google-ads-lead-quality",
+      "title": "Why Low Cost per Lead Can Hide Poor Campaign Performance",
+      "cluster": "Paid Media & Analytics",
+      "description": "Diagnose accidental clicks, duplicate leads, irrelevant intent and how to measure real prospect quality.",
+      "keywords": [
+        "cost per lead",
+        "lead quality"
+      ],
+      "researchQuestions": [
+        "How to define quality?",
+        "How to audit conversion tracking?",
+        "How to feed quality back?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 12,
+      "slug": "search-vs-performance-max",
+      "title": "Search Ads vs Performance Max: Choosing a Campaign for Lead Generation",
+      "cluster": "Paid Media & Analytics",
+      "description": "A grounded framework for control, intent, assets, conversion feedback and lead quality.",
+      "keywords": [
+        "Google Search Ads",
+        "Performance Max"
+      ],
+      "researchQuestions": [
+        "Which campaigns provide control?",
+        "When is automation sensible?",
+        "How to test fairly?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 13,
+      "slug": "meta-ads-local-service-leads",
+      "title": "Meta Ads for Local Service Businesses: Better Signals, Better Follow-up",
+      "cluster": "Paid Media & Analytics",
+      "description": "Audience-message fit, creative testing, forms, message ads, landing pages and quality feedback.",
+      "keywords": [
+        "Meta Ads lead generation",
+        "local marketing"
+      ],
+      "researchQuestions": [
+        "What should a lead form ask?",
+        "How to avoid low intent?",
+        "How to improve follow-up?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 14,
+      "slug": "marketing-reporting-framework",
+      "title": "Digital Marketing Monthly Reports That Lead to Better Decisions",
+      "cluster": "Paid Media & Analytics",
+      "description": "Build an honest reporting system across GBP, GA4, paid media, enquiries, attribution and next steps.",
+      "keywords": [
+        "marketing reporting",
+        "monthly performance"
+      ],
+      "researchQuestions": [
+        "How to avoid double counting?",
+        "How to separate leads from actions?",
+        "How to structure insights?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 15,
+      "slug": "ga4-conversion-measurement",
+      "title": "GA4 Conversion Measurement for Service Websites: Events to Enquiries",
+      "cluster": "Paid Media & Analytics",
+      "description": "Map clicks, phone events, forms, messaging and CRM outcomes without inventing conversions.",
+      "keywords": [
+        "GA4 event tracking",
+        "lead conversion"
+      ],
+      "researchQuestions": [
+        "What should be a key event?",
+        "How to check data?",
+        "What can GA4 not know?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 16,
+      "slug": "landing-page-cro-checklist",
+      "title": "Landing Page Conversion Optimisation: A Practical Diagnostic Framework",
+      "cluster": "Paid Media & Analytics",
+      "description": "Evaluate promise, relevance, page speed, trust, form design, contact routes and experiment quality.",
+      "keywords": [
+        "landing page CRO",
+        "conversion optimisation"
+      ],
+      "researchQuestions": [
+        "Which friction matters?",
+        "What to test first?",
+        "How to avoid fake A/B insights?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 17,
+      "slug": "marketing-attribution-reality",
+      "title": "Attribution in Real-World Marketing: Why the Data Never Fully Agrees",
+      "cluster": "Paid Media & Analytics",
+      "description": "Understand platform differences, click windows, offline conversions, duplicated conversions and uncertainty.",
+      "keywords": [
+        "marketing attribution",
+        "GA4 versus Ads"
+      ],
+      "researchQuestions": [
+        "Why totals conflict?",
+        "How should models be interpreted?",
+        "When do qualitative signals matter?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 18,
+      "slug": "ai-agents-vs-automations",
+      "title": "AI Agents vs Workflow Automation: When to Use Each",
+      "cluster": "AI & Automation",
+      "description": "A practical architecture for predictable workflows, bounded autonomy, human oversight and failure handling.",
+      "keywords": [
+        "AI agents",
+        "workflow automation"
+      ],
+      "researchQuestions": [
+        "When is an agent unnecessary?",
+        "How to define tools?",
+        "How to review actions?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 19,
+      "slug": "custom-gpts-lessons",
+      "title": "Lessons From Experimenting With 177 Custom GPTs",
+      "cluster": "AI & Automation",
+      "description": "What specialist assistants can teach about scope, prompting, reliable outputs and feedback loops.",
+      "keywords": [
+        "custom GPTs",
+        "AI assistants"
+      ],
+      "researchQuestions": [
+        "What makes a useful GPT?",
+        "What fails repeatedly?",
+        "How to measure utility?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 20,
+      "slug": "ai-chatbot-lead-generation",
+      "title": "AI Chatbots for Lead Generation: UX, Qualification and Human Handoffs",
+      "cluster": "AI & Automation",
+      "description": "A realistic guide to conversational flows, user consent, safe escalation and conversion quality.",
+      "keywords": [
+        "AI chatbots",
+        "lead generation"
+      ],
+      "researchQuestions": [
+        "When should chat ask for details?",
+        "How to limit hallucinations?",
+        "When to hand off?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 21,
+      "slug": "ai-automation-data-quality",
+      "title": "Building Trustworthy AI Automations With APIs and Validation",
+      "cluster": "AI & Automation",
+      "description": "Design source verification, retries, idempotency, observability and permissions into practical workflows.",
+      "keywords": [
+        "AI automation",
+        "API workflows"
+      ],
+      "researchQuestions": [
+        "What breaks in production?",
+        "How do retries work?",
+        "How to avoid wrong actions?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 22,
+      "slug": "ai-seo-audit-engine",
+      "title": "Designing an AI-Assisted SEO Audit Engine: From Signals to Priorities",
+      "cluster": "AI & Automation",
+      "description": "Technical checks, Search Console context, crawl limits, confidence scoring and actionable findings.",
+      "keywords": [
+        "SEO audit engine",
+        "AI SEO"
+      ],
+      "researchQuestions": [
+        "How to rank issues?",
+        "What can AI verify?",
+        "How to make recommendations traceable?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 23,
+      "slug": "lead-intelligence-system",
+      "title": "Building a Lead Intelligence System Without Sacrificing Data Quality",
+      "cluster": "AI & Automation",
+      "description": "Discover businesses using relevant signals, score fit, preserve evidence and avoid scraping abuse.",
+      "keywords": [
+        "lead intelligence",
+        "prospecting research"
+      ],
+      "researchQuestions": [
+        "Where do signals come from?",
+        "What is qualified?",
+        "How to respect privacy?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 24,
+      "slug": "ai-content-quality-review",
+      "title": "An Editorial Quality System for AI-Assisted Content",
+      "cluster": "AI & Automation",
+      "description": "Research, originality, source checking, human experience, technical accuracy and preventing scaled low-value output.",
+      "keywords": [
+        "AI content quality",
+        "SEO content"
+      ],
+      "researchQuestions": [
+        "How to factcheck?",
+        "What makes content original?",
+        "What deserves publication?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 25,
+      "slug": "crm-product-architecture",
+      "title": "Designing a Useful CRM: Modules, Permissions and Data Models",
+      "cluster": "Products & Entrepreneurship",
+      "description": "The difficult decisions behind CRM scope, access control, workflow reliability and adoption.",
+      "keywords": [
+        "CRM architecture",
+        "SaaS planning"
+      ],
+      "researchQuestions": [
+        "Which modules first?",
+        "How to model permissions?",
+        "What should be measured?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 26,
+      "slug": "micro-saas-validation",
+      "title": "Validating a Micro SaaS Before You Build Too Much",
+      "cluster": "Products & Entrepreneurship",
+      "description": "Understand repeated pain, user willingness, simple prototypes and distribution before adding features.",
+      "keywords": [
+        "micro SaaS",
+        "product validation"
+      ],
+      "researchQuestions": [
+        "Who feels the pain?",
+        "How do you test demand?",
+        "When to stop?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 27,
+      "slug": "solo-founder-no-budget",
+      "title": "Building Digital Products With Limited Budget and Time",
+      "cluster": "Products & Entrepreneurship",
+      "description": "Host cheaply, prioritise security and user feedback, choose technical compromises deliberately.",
+      "keywords": [
+        "bootstrapped SaaS",
+        "indie maker"
+      ],
+      "researchQuestions": [
+        "What can be free?",
+        "What costs cannot be avoided?",
+        "How to focus?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 28,
+      "slug": "agency-to-consultancy",
+      "title": "From Marketing Agency Services to Strategy-Led Consulting",
+      "cluster": "Products & Entrepreneurship",
+      "description": "Scope, positioning, diagnosis, pricing logic, repeatable delivery and what makes advice valuable.",
+      "keywords": [
+        "digital marketing consultancy",
+        "agency strategy"
+      ],
+      "researchQuestions": [
+        "What is being sold?",
+        "How to productise expertise?",
+        "How to prove value?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 29,
+      "slug": "personal-brand-github",
+      "title": "Building a Personal Brand Website on GitHub Pages",
+      "cluster": "Personal Brand & Career",
+      "description": "A first-hand practical guide to selecting a domain, design, DNS, HTTPS, deployment, accessibility and SEO.",
+      "keywords": [
+        "personal brand website",
+        "GitHub Pages"
+      ],
+      "researchQuestions": [
+        "Why a personal domain?",
+        "How to deploy?",
+        "What makes a site credible?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    },
+    {
+      "id": 30,
+      "slug": "ai-search-brand-visibility",
+      "title": "Personal Brand Visibility in AI Search: What Is Worth Doing?",
+      "cluster": "Personal Brand & Career",
+      "description": "A grounded look at structured identity, original experience, authoritative references and why SEO fundamentals remain central.",
+      "keywords": [
+        "AI search visibility",
+        "personal brand SEO"
+      ],
+      "researchQuestions": [
+        "How are entities understood?",
+        "What content matters?",
+        "Which AI SEO claims lack evidence?"
+      ],
+      "targetWords": 4000,
+      "status": "planned",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+    }
+  ]
+}
