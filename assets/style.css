@@ -385,3 +385,67 @@ html[data-motion="off"] .hero .orbit-core{transform:none!important}
  .nav-list li a::before{transition:none}
 }
 html[data-motion="off"] .hero-actions .btn,html[data-motion="off"] .contact-actions .btn{transform:none!important}
+
+
+/* ----- Personal portrait / signature orbital hero ----- */
+/* A real identity anchors the sculpture, without removing the original animated system. */
+.orbit-core{isolation:isolate}
+.orbit-disc{z-index:1}
+.orbit-ring{z-index:0}
+.orbit-disc .core-glyph{opacity:.16;filter:blur(.45px)}
+.orbit-disc .core-scan{opacity:.38;bottom:11%}
+.portrait-plane{
+  position:absolute;z-index:2;inset:-8% -11% -14%;
+  display:flex;justify-content:center;align-items:flex-end;
+  pointer-events:none;overflow:hidden;border-radius:32px;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 73%,rgba(0,0,0,.92) 82%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0%,#000 73%,rgba(0,0,0,.92) 82%,transparent 100%);
+}
+.portrait-plane::before{
+  content:"";position:absolute;inset:11% 12% 10%;border-radius:50%;
+  background:radial-gradient(ellipse at 50% 49%,var(--glow),transparent 70%);
+  filter:blur(28px);opacity:.9;pointer-events:none
+}
+.portrait-picture{
+  position:relative;width:100%;height:100%;
+  display:flex;align-items:flex-end;justify-content:center;
+  transform-origin:50% 74%;
+  transition:transform .65s cubic-bezier(.22,1,.36,1),filter .65s ease;
+}
+.portrait-picture img{
+  display:block;height:100%;width:auto;max-width:100%;
+  object-fit:contain;object-position:center bottom;
+  filter:drop-shadow(0 24px 36px rgba(0,0,0,.36)) drop-shadow(0 2px 18px var(--glow))
+}
+@media(hover:hover) and (pointer:fine){
+  .orbit-stage:hover .portrait-picture{transform:translateY(-7px) scale(1.025)}
+  .orbit-stage:hover .orbit-disc .core-glyph{opacity:.24}
+}
+.hud{z-index:4}
+.hud-a{top:8%;left:-1%}
+.hud-b{right:-4%;bottom:16%}
+.hud-c{left:7%;bottom:7%}
+/* Deliberate differences across motion scenes without distracting face animation. */
+html[data-motion-scene="aurora"] .portrait-plane::before{background:conic-gradient(from 30deg,transparent,var(--glow),transparent,var(--glow),transparent)}
+html[data-motion-scene="breathe"] .portrait-plane::before{animation:portrait-aura 7s ease-in-out infinite alternate}
+@keyframes portrait-aura{from{opacity:.35;transform:scale(.94)}to{opacity:.9;transform:scale(1.09)}}
+@media(max-width:900px){
+  .orbit-stage{min-height:420px}
+  .orbit-core{width:min(100%,450px)}
+  .portrait-plane{inset:-8% -8% -12%}
+}
+@media(max-width:650px){
+  .orbit-stage{min-height:335px}
+  .orbit-core{width:min(100%,320px)}
+  .portrait-plane{inset:-7% -9% -13%;border-radius:22px}
+  .hud-a{top:3%;left:-1%}
+  .hud-b{right:-1%;bottom:14%}
+  .hud-c{left:2%;bottom:3%}
+}
+@media(prefers-reduced-motion:reduce){
+  .portrait-picture,.portrait-plane::before{animation:none!important;transition:none!important}
+  .orbit-stage:hover .portrait-picture{transform:none!important}
+}
+html[data-motion="off"] .portrait-picture,
+html[data-motion="off"] .portrait-plane::before{animation:none!important;transition:none!important}
+html[data-motion="off"] .orbit-stage:hover .portrait-picture{transform:none!important}
