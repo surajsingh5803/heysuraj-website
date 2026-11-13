@@ -104,7 +104,7 @@ http.createServer(async(req,res)=>{
  const url=new URL(req.url,"http://127.0.0.1");
  if(req.method==="OPTIONS"){if(!domains.has(origin))return write(res,403,{error:"Origin not allowed"},origin);return write(res,204,{},origin);}
  if(url.pathname==="/health"&&req.method==="GET")return write(res,200,{ok:true,ai:!!APIKEY,inbox:!!pool},origin);
- if(url.pathname.startsWith("/api/")&&!domains.has(origin))return write(res,403,{error:"Origin not allowed"},origin);
+ if(url.pathname.startsWith("/api/")&&!domains.has(origin)&&!(owner(req)&&["GET","PATCH"].includes(req.method)))return write(res,403,{error:"Origin not allowed"},origin);
  try{
   if(url.pathname==="/api/chat"&&req.method==="POST"){
    if(!limit(req,25))return write(res,429,{error:"Slow down a moment."},origin);
