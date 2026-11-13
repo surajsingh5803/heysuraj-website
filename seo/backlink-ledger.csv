@@ -1,0 +1,6 @@
+source_domain,source_url,target_url,link_type,activity,status,verified_live,last_checked
+"github.com","https://github.com/surajsingh5803/lazyplex-digital#personal-project-notes","https://heysuraj.com/projects/lazy-plex/","owner-readme","README updated","source_committed_not_live_verified","false","2026-11-14"
+"github.com","https://github.com/surajsingh5803/lp-seo-intelligence#personal-project-notes","https://heysuraj.com/projects/seo-audit-engine/","owner-readme","README updated","source_committed_not_live_verified","false","2026-11-14"
+"github.com","https://github.com/surajsingh5803/LP-LeadOS#personal-project-notes","https://heysuraj.com/projects/lp-leados/","owner-readme","README updated","source_committed_not_live_verified","false","2026-11-14"
+"github.com","https://github.com/surajsingh5803/lp-crm#personal-project-notes","https://heysuraj.com/projects/lp-crm/","owner-readme","README updated","source_committed_not_live_verified","false","2026-11-14"
+"digital.lazyplex.com","https://digital.lazyplex.com/about/","https://heysuraj.com/","founder-attribution","Existing About page source references the personal website","source_contains_link_live_not_verified","false","2026-11-14"
