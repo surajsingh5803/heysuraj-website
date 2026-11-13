@@ -100,7 +100,7 @@ export function createPicoBrain(){
   if(/(?:recruit|job|hire|career)/i.test(query))links.push({title:"Suraj's LinkedIn profile",url:"https://www.linkedin.com/in/surajkumarmarketing/"});
   return {reply,links:links.filter((v,i,a)=>safeUrl(v.url)&&a.findIndex(x=>x.url===v.url)===i).slice(0,2)};
  }
- const NEWS_Q=/\b(news|headlines|trending|latest updates?|what happened today|today.?s news|current events?|ai news|tech news|technology news|business news|world news|breaking news|samachar|khabar)\b/i;
+ const NEWS_Q=/\b(news|headlines|trending|latest (?:updates?|news|in (?:ai|tech|technology|marketing|business)|(?:ai|tech|technology|marketing|business) news)|what happened today|what(?:'s| is) happening (?:in|with|today)|what(?:'s| is) new in (?:ai|tech|technology|marketing|business)|today.?s news|current (?:events?|topics?|affairs)|recent (?:ai|tech|business|world) (?:news|updates?)|ai news|tech news|technology news|business news|world news|breaking news|samachar|khabar)\b/i;
  function dateLabel(date){try{return new Date(date).toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"});}catch{return "unknown date";}}
  async function answerNews(query){
   const q=normal(query);
