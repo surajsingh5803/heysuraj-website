@@ -4,7 +4,7 @@ import {readdir,readFile,writeFile} from "node:fs/promises";
 import path from "node:path";
 const output="assets/pico-knowledge.json";
 const existing=JSON.parse(await readFile(output,"utf8"));
-const keep=(existing.records||[]).filter(x=>x.kind!=="heysuraj");
+const keep=(existing.records||[]).filter(x=>x.kind!=="heysuraj"&&x.kind!=="project");
 const directories=["","about","work","projects/lazy-plex","projects/lp-leados","projects/lp-crm","projects/seo-audit-engine","projects/heysuraj-website","writing","writing/seo-github-pages-guide","writing/google-ads-lead-quality","writing/ai-agents-vs-automations"];
 const categoryKeywords={
 "":["suraj","personal website","heysuraj","portfolio","digital marketing","builder","ai","projects"],
@@ -36,6 +36,21 @@ for(const dir of directories){
   url:"https://heysuraj.com/"+(dir?dir+"/":""),summary:desc,keywords:categoryKeywords[dir]||dir.split("/"),content,
   source:"Official HeySuraj website",updated:new Date().toISOString().slice(0,10)});
 }
-const result={version:1,generatedAt:new Date().toISOString(),policy:existing.policy,records:[...records,...keep]};
+const app=await readFile("assets/app.js","utf8");
+const beg=app.indexOf("const PROJECTS = ["),end=app.indexOf("const LAB = [",beg);
+const projects=[];
+if(beg>=0&&end>beg){
+ for(const line of app.slice(beg,end).split("\n").filter(x=>x.trim().startsWith("{id:"))){
+  const obj={};
+  for(const m of line.matchAll(/([a-zA-Z]+):"((?:\\"|[^"])*)"/g))obj[m[1]]=m[2].replace(/\\"/g,'"');
+  if(!obj.id||!obj.title)continue;
+  projects.push({id:"project-"+obj.id,kind:"project",title:obj.title,
+   url:obj.detailUrl?"https://heysuraj.com"+obj.detailUrl:"https://heysuraj.com/#projects",
+   summary:obj.description||"",keywords:[obj.title,obj.id.replaceAll("-"," "),obj.type||"",obj.focus||""],
+   content:["Project status: "+(obj.status||"unspecified"),"Tagline: "+(obj.tagline||""),"What it is: "+(obj.description||""),"Focus: "+(obj.focus||""),"Approach: "+(obj.approach||""),"Lessons: "+(obj.learn||"")].join(". "),
+   source:"HeySuraj published project archive",updated:new Date().toISOString().slice(0,10)});
+ }
+}
+const result={version:1,generatedAt:new Date().toISOString(),policy:existing.policy,records:[...records,...projects,...keep]};
 await writeFile(output,JSON.stringify(result,null,2)+"\n");
-console.log("Updated public Pico knowledge:",records.length,"site pages +",keep.length,"curated external records");
+console.log("Updated public Pico knowledge:",records.length,"site pages +",projects.length,"project cards +",keep.length,"external records");
