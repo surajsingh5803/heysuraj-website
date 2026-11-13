@@ -481,10 +481,10 @@ function ambientTone(freq,duration=.75,volume=.02,type="sine"){
  osc.connect(gain).connect(ctx.destination);osc.start(now);osc.stop(now+duration+.03);
 }
 function musicBeat(){
- if(document.hidden||state.voiceRecording||state.speaking)return;
+ if(document.hidden||state.voiceMode||state.voiceRecording||state.speaking)return;
  const step=musicTick++,idx=step%melody.length,chord=harmony[Math.floor(step/4)%harmony.length];
- ambientTone(melody[idx],.74,.019,"sine");
- if(idx%4===0){ambientTone(chord,1.7,.014,"triangle");ambientTone(chord*1.498,1.25,.008,"sine");}
+ ambientTone(melody[idx],.74,.032,"sine");
+ if(idx%4===0){ambientTone(chord,1.7,.020,"triangle");ambientTone(chord*1.498,1.25,.008,"sine");}
  if(idx%4===2)ambientTone(melody[idx]/2,1.05,.007,"triangle");
 }
 function music(){
