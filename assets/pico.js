@@ -21,7 +21,7 @@ function pick(a){return a[Math.floor(Math.random()*a.length)];}
 function fromSession(){try{const v=JSON.parse(store.read("hs.pico.session")||"null");return v&&Array.isArray(v.history)?v:null;}catch{return null;}}
 function preferences(){const defaults={voice:false,music:false,fx:false,follow:false,quiet:false};try{const v=JSON.parse(store.read("hs.pico.prefs",true)||"null");if(v&&typeof v==="object")for(const k of Object.keys(defaults))if(typeof v[k]==="boolean")defaults[k]=v[k];}catch{}return defaults;}
 let prefs=preferences();const previous=fromSession();
-const state={role:previous&&previous.role||null,history:previous&&previous.history.slice(-18)||[],nudges:previous&&previous.nudges||0,lastNudge:previous&&previous.lastNudge||0,petCount:0,open:false,view:"chat",busy:false,interactions:0,section:"home",voiceRecording:null};
+const state={role:previous&&previous.role||null,history:previous&&previous.history.slice(-18)||[],nudges:previous&&previous.nudges||0,lastNudge:previous&&previous.lastNudge||0,petCount:0,open:false,view:"chat",busy:false,interactions:0,section:"home",voiceRecording:null,voiceMode:false,speaking:false,voiceFailures:0};
 const voiceCapable="speechSynthesis" in window;
 let audio=null,musicHandle=0,musicStep=0,animationHandle=0,nudgeHandle=0;
 const spriteButton=$("pico-sprite-button"),sprite=$("pico-sprite"),panel=$("pico-panel"),chat=$("pico-chat"),input=$("pico-input"),nudge=$("pico-nudge");
@@ -36,10 +36,10 @@ const about={
  motto:"He says: 'A mix of ventures, experiments and tools — because the best way to learn is to build.' I keep repeating that to my stuffed-animal friends."
 };
 const modes={
- friend:{intro:["Wait, you know Suraj? 🐾 That's exciting! Are you an old friend, college friend or work friend?","Ooooh! A friend of Suraj? Now I'm curious. How do you two know each other?"],follow:["I bet you have stories I don't know. What's a fun memory?","If you'd like to leave him a surprise note, I'll help you prepare one."]},
- recruiter:{intro:["A recruiter? I'll put on my imaginary tiny blazer. What sort of role are you looking to fill?","Professional visitor detected! What kind of opportunity would you like to discuss?"],follow:["He's worked across digital marketing, client-facing roles and software experiments. What kind of position are you considering?","If you share the role, location and what matters to your team, I can help you prepare a message for Suraj."]},
- founder:{intro:["Someone building a business? I love that! What's the big idea?","Oh, a fellow builder! Are you launching, growing or fixing something?"],follow:["What part of the business is the hardest to solve right now?","Suraj likes turning ideas into practical things. What are you hoping to create?"]},
- visitor:{intro:["You're here just to hang out? Perfect. I live here for that. 🐾","No agenda? That's my favourite kind of visit. What's on your mind?"],follow:["Tell me about your day. I'm a very good listener, despite these enormous ears.","We can chat about anything, or you can ask me about Suraj. No pressure."]}
+ friend:{intro:["Oho, an insider! 😂 Did you come with gossip or snacks?","A friend! Finally, someone who might know where my missing biscuits went. How do you know Suraj?"],follow:["Okay, enough about my human. How has YOUR day been?","What is the most ridiculous thing that happened to you recently? I promise to laugh respectfully. Mostly.","You can leave a surprise note if you want. Otherwise, let’s gossip about life."]},
+ recruiter:{intro:["A recruiter? One second, putting on my tiny invisible tie. How’s the hiring universe treating you?","Recruiter spotted! 📋 I can be professional. For at least twelve seconds. What brings you here?"],follow:["Tell me, what’s the toughest part of finding good people?","Got a role in mind, or are you here for a much-needed snack break?","Want help leaving the details? No rush; I’m not sending you a calendar invite."]},
+ founder:{intro:["Founder! So you also say ‘just one small change’ and accidentally work until midnight? 😂","Building a business? Brave. I once tried running a biscuit startup. Ate the inventory. What are you making?"],follow:["What’s your latest big idea? I promise not to pitch a subscription for it.","Tell me your weirdest startup problem. I’m excellent at listening and questionable at accounting.","Want to brainstorm, or should we just complain about meetings for a minute?"]},
+ visitor:{intro:["No agenda? Fantastic. This is officially a meeting-free zone. 🐾","Just hanging out? Perfect. I was about to start a very important nap. Want to talk instead?"],follow:["How’s life? You can tell me the fun stuff or the messy stuff.","Important question: are we chatting, ranting, or inventing a terrible business idea?","You can vent here. My only qualification is extremely large ears."]}
 };
 const sections={
  home:"Psst! This is Suraj's digital home, but I prefer making friends to giving tours.",
@@ -81,11 +81,11 @@ function appendMessage(who,text,quiet=false,save=true){
 }
 function choices(custom){
  $("pico-choices")?.remove();
- const values=custom||(state.role?[["Ask a secret","secret"],["Tell me about Suraj","about"],["Leave a message","note"]]:[["I'm a friend","friend"],["I'm a recruiter","recruiter"],["I run a business","founder"],["Just hanging out","visitor"]]);
+ const values=custom||(state.role?[["Roast me (gently)","roast"],["Surprise me","surprise"],["Leave a message","note"]]:[["I'm a friend","friend"],["I'm a recruiter","recruiter"],["I run a business","founder"],["Just hanging out","visitor"]]);
  const div=document.createElement("div");div.className="pico-chips";div.id="pico-choices";
  for(const [label,cmd] of values){
   const button=document.createElement("button");button.className="pico-chip";button.type="button";button.textContent=label;
-  button.addEventListener("click",()=>{if(cmd==="note"){showView("contact");return}if(modes[cmd]){appendMessage("visitor",label,true);setRole(cmd);return}sendText(cmd==="secret"?"Tell me a secret about Suraj":cmd==="about"?"Tell me about Suraj":label);});
+  button.addEventListener("click",()=>{if(cmd==="note"){showView("contact");return}if(modes[cmd]){appendMessage("visitor",label,true);setRole(cmd);return}sendText(cmd==="roast"?"Roast me gently":cmd==="surprise"?"Surprise me with something funny":cmd==="secret"?"Tell me a secret about Suraj":cmd==="about"?"Tell me about Suraj":label);});
   div.append(button);
  }
  chat.append(div);chat.scrollTop=chat.scrollHeight;
@@ -95,33 +95,69 @@ function setRole(role){
 }
 function localReply(message){
  const t=message.toLowerCase();
- if(/\b(kaise ho|kya haal|kese ho)\b/.test(t))return "Main mast hoon! Bas apni poonch sambhaal raha hoon. 🐾 Tum batao, kaisa chal raha hai sab?";
- if(/\b(suraj ke bare|suraj ke baare|suraj ko jaante|suraj kaun)\b/.test(t))return "Haan, Suraj ko jaanta hoon! Usko marketing, AI aur naye experiments banana bahut pasand hai. Uski journey ke baare mein kya jaanna hai?";
  if(/\b(dost hoon|dost hun|suraj ka dost|mera dost suraj)\b/.test(t)&&state.role!=="friend"){setRole("friend");return null;}
- if(/\b(kya kar rahe|kya karte|tum kya|batao pico)\b/.test(t))return "Main? Yahin baitha hoon, visitors se dosti kar raha hoon. 🐾 Tum kya kar rahe ho?";
-
- if(/^(hi|hello|hey|yo|namaste|sup|good morning|good evening)\b/.test(t))return pick(["Hi, human! 🐾 What's something good about your day?","Hey hey! Pico here. Need a friend for a few minutes?","Hello. I was just pretending to be busy. How's life?"]);
  if(/\b(friend|classmate|school friend|college friend|know suraj)\b/.test(t)&&state.role!=="friend"){setRole("friend");return null;}
  if(/\b(recruiter|recruiting|hiring|job|vacancy|open role)\b/.test(t)&&state.role!=="recruiter"){setRole("recruiter");return null;}
  if(/\b(founder|startup|starting a business|launching a business|company owner)\b/.test(t)&&state.role!=="founder"){setRole("founder");return null;}
- if(/\b(message|contact|send.*suraj|leave.*note|tell suraj|share.*opportunity)\b/.test(t)){showView("contact");return "A note? I can help! You decide what to share, and I'll be clear about the delivery step.";}
- if(/\b(secret|easter egg|hidden|surprise)\b/.test(t))return pick([about.website,"A tiny Pico secret: I love meeting visitors more than giving website tours. I wasn't hired for tour-guide duty anyway. 🐾",about.motto]);
- if(/\b(education|college|mba|pgdm|isb|student)\b/.test(t))return about.school;
- if(/\b(lazy plex|lazyplex|agency|consultancy)\b/.test(t))return about.lazy;
- if(/\b(seo|ads|marketing|analytics|campaign|client|growth)\b/.test(t))return about.work+" Is this something you're working on?";
- if(/\b(ai|automation|crm|lead scraper|saas|software|project|experiment|tool)\b/.test(t))return about.products+" Which one sounds interesting?";
- if(/\b(gaming|game|hobby|free time|interest)\b/.test(t))return about.hobby;
+ if(/\b(message|contact|send.*suraj|leave.*note|tell suraj|share.*opportunity)\b/.test(t)){
+  showView("contact");return "Ooh, post office duty! 💌 I'll help you write it. Nothing sends without your say-so.";
+ }
+ if(/\b(sad|lonely|stressed|bad day|anxious|feeling down)\b/.test(t)){
+  return pick(["Oof, that sounds like a lot. Want to tell me what happened? I can just listen. 🐾",
+   "I can't fix the entire universe with tiny paws, but I can listen. What's bothering you?"]);
+ }
+ if(/\b(roast me|roast my|make fun of me|roast please)\b/.test(t))
+  return pick(["You came here to get roasted by a cartoon red panda. I think your browser already won. 😂",
+   "Your productivity app has a productivity app. And somehow you're still here chatting with a tiny panda.",
+   "I'd roast you harder, but I'm five inches tall. My lawyers are two biscuits and a leaf."]);
+ if(/\b(roast suraj|make fun of suraj)\b/.test(t))
+  return pick(["He builds tools to save time, then spends all the saved time building more tools. Genius or side quest? Yes. 😂",
+   "Suraj once gave his website more themes than my wardrobe has leaves. And I don't even wear clothes."]);
+ if(/\b(roast|sarcasm|sarcastic)\b/.test(t))
+  return "Sarcasm? My favourite free service. Unlike certain apps, I won't ask for your card number. 😌";
+ if(/\b(joke|funny|make me laugh|surprise me|something funny)\b/.test(t))
+  return pick(["I tried being an influencer. My first post got three likes. Two were from me. 🐾",
+   "My to-do list says 'eat, nap, repeat'. HR says I need more ambition. HR is a squirrel.",
+   "Why do developers hate nature? Too many bugs. Sorry. I'm legally required to make one bad joke.",
+   "I applied for a job as a search engine. They said I had too many tabs open. Honestly, fair."]);
+ if(/\b(kaise ho|kya haal|kese ho|how are you|how's it going)\b/.test(t))
+  return pick(["Main mast! Bas duniya ke saare biscuits ka audit kar raha hoon. Tum batao? 🐾",
+   "Alive, fluffy, and underqualified for taxes. Tumhara din kaisa gaya?"]);
+ if(/^(hi|hello|hey|yo|namaste|sup|good morning|good evening)\b/.test(t))
+  return pick(["Arre hello! I was in the middle of an important nap. Kya scene hai? 🐾",
+   "Well well well. A human! Please tell me you brought gossip or snacks.",
+   "Hi! No sales pitch, promise. What's going on?"]);
+ if(/\b(bye|goodbye|later|good night)\b/.test(t))return "Okay, go be legendary. I’ll be here judging the furniture. Bye! 🐾";
+ if(/\b(thanks|thank you|shukriya)\b/.test(t))return pick(["Anytime. Payment accepted in compliments and biscuits. 🐾","Shukriya accepted. My ego has grown three sizes."]);
+ if(/\b(are you ai|are you real|who are you|what can you do|bot)\b/.test(t))
+  return "I'm Pico, a cartoon red panda with opinions, zero rent and some actual software. Let's chat—what's on your mind?";
+ if(/\b(secret|easter egg|hidden)\b/.test(t))
+  return pick(["Pssst. My greatest secret? I sometimes pretend the mouse cursor is a butterfly. Don't tell anyone.",
+   "I once stole a snack from my own emergency snack drawer. It was an inside job.",
+   about.website]);
+ if(/\b(voice|microphone|mic|sound|speak|talk aloud|music)\b/.test(t))
+  return "Tap my little mic and we can talk out loud. Tap it again to return to typing. I'll do my best squeaky-panda impression. 🎙";
+ if(/\b(tell me a story about suraj|about suraj|who is suraj|suraj ke bare|suraj ke baare|suraj kaun)\b/.test(t))return about.story;
+ if(/\b(college|mba|pgdm|education|isb)\b/.test(t))return about.school;
+ if(/\b(lazy plex|lazyplex|consultancy|agency)\b/.test(t))return about.lazy;
+ if(/\b(seo|ads|marketing|analytics|campaign|growth)\b/.test(t))return about.work+" Got a challenge in that area?";
+ if(/\b(ai|automation|crm|lead scraper|saas|software|experiment|tool)\b/.test(t))return about.products;
+ if(/\b(gaming|game|hobby|free time)\b/.test(t))return about.hobby;
  if(/\b(website|github|hosting|domain)\b/.test(t))return about.website;
- if(/\b(about suraj|who is suraj|his journey|story of suraj|tell me about suraj)\b/.test(t))return about.story+" "+about.motto;
- if(/\b(are you ai|are you real|who are you|what can you do|bot)\b/.test(t))return "I'm Pico, an animated red panda with conversational software behind my fluffy ears. Not a real animal, and not Suraj himself. I can chat, share approved stories and help you leave a message.";
- if(/\b(sad|lonely|stressed|bad day|tired)\b/.test(t))return "Aw, I wish I could offer a real little paw-sized hug. Want to talk about it, or should I tell you a silly joke?";
- if(/\b(happy|amazing|excited|great day)\b/.test(t))return "Ooooh! Happy human detected. ✨ Tell me the good news—my tail is already celebrating.";
- if(/\b(joke|funny|make me laugh)\b/.test(t))return "Why does a red panda never miss a software deadline? ...Because he paws-es time. Okay, that was terrible. I still like it. 🐾";
- if(/\b(voice|music|sound|speak|talk aloud|sing)\b/.test(t))return "I can read replies aloud and make tiny original sounds—only when you switch them on. Open my little settings gear. 🎵";
- if(/\b(bye|goodbye|later)\b/.test(t))return "Bye, friend! This corner will be here whenever you return. 🐾";
- if(/\b(thanks|thank you|shukriya)\b/.test(t))return pick(["Anytime! Being a good companion is my favourite job.","You're welcome. Want to stay a little longer? 🐾"]);
+ if(/\b(what are you doing|what's up|bored|bore ho raha|kya kar rahe)\b/.test(t))
+  return pick(["Trying to look busy. Difficult when your entire career is sitting in a corner. 😂",
+   "Thinking about snacks. What are you up to?",
+   "Planning a very serious heist. Target: one biscuit. Wanna join?"]);
+ if(/\b(tell me a story|story time)\b/.test(t))
+  return "Once upon a time, a red panda opened 42 browser tabs to find one biscuit recipe. He found an SEO audit instead. The end. Dramatic, no?";
  if(state.role&&modes[state.role])return pick(modes[state.role].follow);
- return pick(["I'm listening. What happened next? 🐾","Interesting! Tell me a little more about that.","You seem like a curious person. What's something you've always wanted to try?","Hmm. Do you want advice, a story, or just someone to listen?"]);
+ return pick([
+  "Interesting. Tell me the part you left out—I have giant ears for a reason. 🐾",
+  "Okay wait, that sounds like a story. What happened next?",
+  "I have two questions: how did we get here, and are snacks involved?",
+  "You're not boring, which is rude because I was planning a nap. Go on.",
+  "Fair point. Are we solving something, venting, or just hanging out?"
+ ]);
 }
 async function remoteReply(message){
  if(!API)return null;
