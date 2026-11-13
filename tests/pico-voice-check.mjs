@@ -5,7 +5,8 @@ const issues=[];
 const assert=(value,message)=>{if(!value)throw Error(message)};
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 try{
- browser=await chromium.launch({headless:true,args:["--no-sandbox"]});
+ try{browser=await chromium.launch({channel:"chrome",headless:true,args:["--no-sandbox"]});}
+ catch{browser=await chromium.launch({headless:true,args:["--no-sandbox"]});}
  const page=await browser.newPage({viewport:{width:390,height:844}});
  const pageErrors=[];
  page.on("pageerror",e=>pageErrors.push(e.message));
