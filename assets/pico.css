@@ -108,3 +108,28 @@
  #pico-root *,#pico-root *::before,#pico-root *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
  #pico-root .pico-sprite-button{transform:none!important}
 }
+
+
+/* Quiet, personality-rich micro-behaviours */
+#pico-root .pico-ear-left{transform-origin:74px 68px;animation:pico-ear-left 10.1s infinite}
+#pico-root .pico-ear-right{transform-origin:181px 68px;animation:pico-ear-right 12.3s infinite}
+#pico-root.pico-curious .pico-ear-left{transform:rotate(-11deg)}
+#pico-root.pico-curious .pico-ear-right{transform:rotate(10deg)}
+#pico-root.pico-scratch .pico-arms{transform-origin:57% 70%;animation:pico-scratch .25s ease-in-out 5 alternate}
+#pico-root.pico-walk .pico-legs{transform-origin:center 84%;animation:pico-step .24s ease-in-out 4 alternate}
+#pico-root.pico-walk .pico-sprite{animation:pico-wiggle .9s ease-in-out}
+#pico-root.pico-stretch .pico-sprite{animation:pico-stretch .95s ease-in-out both}
+#pico-root.pico-yawn .pico-mouth{animation:pico-yawn .8s ease-in-out both}
+#pico-root.pico-yawn .pico-eyes{transform-origin:50% 48%;animation:pico-sleepblink .8s ease-in-out both}
+#pico-root.pico-peek .pico-sprite{animation:pico-peek 1.1s ease-in-out both}
+#pico-root.pico-wiggle .pico-sprite{animation:pico-wiggle .8s ease-in-out both}
+@keyframes pico-ear-left{0%,61%,64%,100%{transform:rotate(0)}62%{transform:rotate(-15deg)}63%{transform:rotate(5deg)}}
+@keyframes pico-ear-right{0%,35%,38%,100%{transform:rotate(0)}36%{transform:rotate(15deg)}37%{transform:rotate(-7deg)}}
+@keyframes pico-scratch{from{transform:rotate(0)}to{transform:rotate(-9deg) translateY(-8px)}}
+@keyframes pico-step{from{transform:rotate(2deg)}to{transform:rotate(-3deg) translateY(-3px)}}
+@keyframes pico-wiggle{0%,100%{transform:translateX(0) rotate(0)}25%{transform:translateX(-6px) rotate(-5deg)}60%{transform:translateX(7px) rotate(6deg)}}
+@keyframes pico-stretch{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.095) translateY(-5px)}}
+@keyframes pico-yawn{0%,100%{transform:scaleY(1)}50%{transform:scaleY(2.25)}}
+@keyframes pico-sleepblink{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.12)}}
+@keyframes pico-peek{0%,100%{transform:translateX(0) rotate(0)}40%{transform:translateX(22px) rotate(8deg)}65%{transform:translateX(13px) rotate(-4deg)}}
+@media(prefers-reduced-motion:reduce){#pico-root .pico-ear-left,#pico-root .pico-ear-right{animation:none!important}}
