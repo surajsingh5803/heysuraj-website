@@ -77,8 +77,9 @@
         "What can break after deployment?"
       ],
       "targetWords": 4000,
-      "status": "planned",
-      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+      "status": "published",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links.",
+      "publishedAt": "2026-11-14"
     },
     {
       "id": 5,
@@ -210,8 +211,9 @@
         "How to feed quality back?"
       ],
       "targetWords": 4000,
-      "status": "planned",
-      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+      "status": "published",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links.",
+      "publishedAt": "2026-11-14"
     },
     {
       "id": 12,
@@ -343,8 +345,9 @@
         "How to review actions?"
       ],
       "targetWords": 4000,
-      "status": "planned",
-      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links."
+      "status": "published",
+      "publishingPrinciple": "Publish only after factual verification, adding original examples, source review and meaningful internal links.",
+      "publishedAt": "2026-11-14"
     },
     {
       "id": 19,
