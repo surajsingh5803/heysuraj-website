@@ -33,10 +33,11 @@ for(const v of widths){
     const heading=document.querySelector("main h1");
     const header=document.querySelector(".site-header");
     const r=main?.getBoundingClientRect();
-    return {width,pageWidth,mainWidth:r?.width,mainLeft:r?.left,headingText:heading?.innerText,headerHeight:header?.getBoundingClientRect().height,cards:cards.length,emptyReveal,projects:document.querySelectorAll(".project-card").length,topics:document.querySelectorAll(".roadmap-list li").length,hasH1:!!heading,details:document.querySelectorAll("details.roadmap-group").length};
+    const culprits=pageWidth>width+3?[...document.body.querySelectorAll("*")].filter(el=>{const b=el.getBoundingClientRect();const cs=getComputedStyle(el);return cs.display!=="none"&&cs.visibility!=="hidden"&&b.width>0&&(b.right>width+3||b.left<-3)}).sort((a,b)=>b.getBoundingClientRect().right-a.getBoundingClientRect().right).slice(0,10).map(el=>{const b=el.getBoundingClientRect();return {tag:el.tagName,class:el.className?.baseVal??el.className,id:el.id,left:Math.round(b.left),right:Math.round(b.right),width:Math.round(b.width)}}):[];
+    return {width,pageWidth,culprits,mainWidth:r?.width,mainLeft:r?.left,headingText:heading?.innerText,headerHeight:header?.getBoundingClientRect().height,cards:cards.length,emptyReveal,projects:document.querySelectorAll(".project-card").length,topics:document.querySelectorAll(".roadmap-list li").length,hasH1:!!heading,details:document.querySelectorAll("details.roadmap-group").length};
    });
    if(response?.status()!==200)fails.push(path+" "+v.name+" HTTP "+response?.status());
-   if(metrics.pageWidth>metrics.width+3)fails.push(path+" "+v.name+" horizontal overflow "+metrics.pageWidth+" > "+metrics.width);
+   if(metrics.pageWidth>metrics.width+3)fails.push(path+" "+v.name+" horizontal overflow "+metrics.pageWidth+" > "+metrics.width+" culprits="+JSON.stringify(metrics.culprits));
    if(!metrics.hasH1)fails.push(path+" "+v.name+" no H1");
    if(metrics.emptyReveal)fails.push(path+" "+v.name+" hidden reveal panels: "+metrics.emptyReveal);
    if(path==="/"&&metrics.projects!==22)fails.push("Home "+v.name+" projects "+metrics.projects+" expected 22");
