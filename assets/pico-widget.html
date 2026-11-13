@@ -3,6 +3,7 @@
   <span class="pico-name">PICO</span><span class="pico-hello" aria-hidden="true">✳</span>
 </button>
 <div class="pico-nudge" id="pico-nudge" hidden><span class="pico-nudge-text" id="pico-nudge-text"></span><button type="button" id="pico-nudge-dismiss" aria-label="Dismiss Pico's thought">×</button></div>
+<div class="pico-soundbar" aria-label="Website audio controls"><button type="button" id="pico-site-music" aria-pressed="false" title="Play or pause original website music">♫ <span>Music off</span></button><button type="button" id="pico-site-fx" aria-pressed="false" title="Turn Pico sound effects on or off">✧ <span>Sounds off</span></button></div>
 <section class="pico-panel" id="pico-panel" role="dialog" aria-label="Hang out with Pico" aria-modal="false" hidden>
  <div class="pico-headbar">
   <span class="pico-headbar-avatar"><img src="/assets/pico-red-panda.svg?v=2" alt=""></span>
@@ -16,7 +17,7 @@
    <div class="pico-compose"><textarea class="pico-input" id="pico-input" rows="1" maxlength="700" aria-label="Write a message to Pico" placeholder="Say anything... I'm listening."></textarea>
    <button class="pico-mic" type="button" id="pico-mic" aria-pressed="false" aria-label="Switch to voice conversation" title="Start hands-free voice conversation"><span aria-hidden="true" id="pico-mic-icon">🎙</span><span class="pico-mic-label" id="pico-mic-label">Talk</span></button>
    <button class="pico-send" type="submit" id="pico-send" aria-label="Send to Pico">➤</button></div>
-   <div class="pico-voice-status" id="pico-voice-status" role="status" aria-live="polite" hidden><span class="pico-voice-dot" aria-hidden="true"></span><span id="pico-voice-hint">Listening... say anything.</span></div>
+   <div class="pico-voice-status" id="pico-voice-status" role="status" aria-live="polite" hidden><span class="pico-voice-dot" aria-hidden="true"></span><span id="pico-voice-hint">Listening... say anything.</span><button type="button" class="pico-resume-mic" id="pico-resume-mic" hidden>Resume mic</button></div>
    <div class="pico-fineprint"><span id="pico-mode">Chats stay in this browser tab unless you send a note to Suraj.</span><button type="button" id="pico-clear-chat">Clear chat</button></div>
   </form>
  </div>
@@ -39,7 +40,7 @@
   <label class="pico-setting-row"><span>🐾 Follow my cursor (desktop only)</span><input type="checkbox" id="pico-follow-setting"></label>
   <label class="pico-setting-row"><span>💤 Quiet mode — no little greetings</span><input type="checkbox" id="pico-quiet-setting"></label>
   <button type="button" class="pico-control" id="pico-settings-back">← Back to our chat</button>
-  <p>Mic conversation stays active until you tap “Type instead,” close Pico, or leave the page. Speech recognition depends on your browser and may use its speech service. Pico does not save microphone recordings; use typing whenever you prefer.</p>
+  <p>Voice mode stays available until you switch to typing, but the actual microphone automatically pauses after a quiet spell. Tap Resume mic when you want to continue. Speech recognition may use your browser provider; Pico does not store microphone recordings.</p>
  </div>
- <div class="pico-controls" id="pico-controls"><button type="button" class="pico-control" id="pico-story" title="Start playful banter">✦ Surprise me</button><button type="button" class="pico-control" id="pico-leave-note">✉ Leave a note</button><button type="button" class="pico-control" id="pico-voice-toggle" aria-pressed="false">🔇 Voice off</button></div>
+ <div class="pico-controls" id="pico-controls"><button type="button" class="pico-control" id="pico-story" title="Start playful banter">✦ Surprise me</button><button type="button" class="pico-control" id="pico-leave-note">✉ Leave a note</button><button type="button" class="pico-control" id="pico-voice-toggle" aria-pressed="false">🔇 Voice off</button><button type="button" class="pico-control pico-sound-toggle" id="pico-music-toggle" aria-pressed="false">♫ Music off</button><button type="button" class="pico-control pico-sound-toggle" id="pico-fx-toggle" aria-pressed="false">✧ Sounds off</button></div>
 </section>
