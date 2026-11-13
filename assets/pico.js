@@ -172,16 +172,18 @@ async function sendText(value){
  const text=cap(value,700);if(!text||state.busy)return;
  state.busy=true;appendMessage("visitor",text,true);state.interactions++;input.value="";$("pico-send").disabled=true;mood("pico-curious",700);
  const locally=localReply(text);
- if(locally===null||state.view!=="chat"){state.busy=false;$("pico-send").disabled=false;return;}
+ if(locally===null||state.view!=="chat"){state.busy=false;$("pico-send").disabled=false;if(state.voiceMode&&!state.speaking)scheduleListening(600);return;}
  const reply=await remoteReply(text)||locally;
  if(state.open&&state.view==="chat"){appendMessage("pico",reply);choices();}
  state.busy=false;$("pico-send").disabled=false;
+ if(state.voiceMode&&!state.speaking)scheduleListening(500);
 }
 function showView(view){
  state.view=view;
  $("pico-chat-view").hidden=view!=="chat";$("pico-chat-view").style.display=view==="chat"?"flex":"none";
  $("pico-contact-view").hidden=view!=="contact";$("pico-settings-view").hidden=view!=="settings";$("pico-controls").hidden=view!=="chat";
- if(view==="chat")input.focus({preventScroll:true});
+ if(view!=="chat"&&state.voiceMode)stopVoiceMode({focus:false});
+ if(view==="chat"&&!state.voiceMode)input.focus({preventScroll:true});
  if(view==="settings")refreshSettings();
  if(view==="contact"){
   $("pico-delivery-description").textContent=API?"If the private service is connected, your note can be saved securely. Pico will confirm the result.":"The private inbox isn't connected yet. I can open your message in WhatsApp for you to send; I cannot store it automatically.";
@@ -191,7 +193,7 @@ function showView(view){
 function openPanel(next){
  state.open=next;panel.hidden=!next;root.classList.toggle("pico-is-open",next);spriteButton.setAttribute("aria-expanded",String(next));nudge.hidden=true;
  if(next){root.classList.remove("pico-sleeping");showView("chat");}
- else{window.window.speechSynthesis?.cancel();if(state.voiceRecording)try{state.voiceRecording.stop();}catch{}}
+ else{if(state.voiceMode)stopVoiceMode({focus:false});else window.speechSynthesis?.cancel();}
 }
 function showNudge(text){
  if(prefs.quiet||state.open||state.nudges>=2||Date.now()-state.lastNudge<85000)return;
@@ -219,12 +221,145 @@ function observePages(){
  },{threshold:.3,rootMargin:"-15% 0px -35% 0px"});
  nodes.forEach(node=>io.observe(node));
 }
+/* Voice chat is opt-in. The switch remains active across individual utterances,
+   but never keeps a microphone open in a hidden tab or closed chat window. */
+let voiceRestart=0,speechWatchdog=0,speechGeneration=0;
+const SpeechInput=window.SpeechRecognition||window.webkitSpeechRecognition;
+const microphone=$("pico-mic"),voiceStatusBox=$("pico-voice-status"),voiceStatusText=$("pico-voice-hint");
+function voiceStatus(text,kind="paused"){
+ root.classList.remove("pico-voice-listening","pico-voice-thinking","pico-voice-speaking","pico-voice-paused");
+ if(state.voiceMode)root.classList.add("pico-voice-"+kind);
+ voiceStatusBox.hidden=!state.voiceMode;
+ if(state.voiceMode)voiceStatusText.textContent=text||"Say something. I'm all ears. 🐾";
+ microphone.setAttribute("aria-pressed",String(state.voiceMode));
+ microphone.setAttribute("aria-label",state.voiceMode?"Turn microphone off and switch to typing":"Switch to voice conversation");
+ microphone.title=state.voiceMode?"Turn mic off / type instead":"Start continuous voice conversation";
+ $("pico-mic-icon").textContent=state.voiceMode?"⌨":"🎙";
+ $("pico-mic-label").textContent=state.voiceMode?"Type instead":"Talk";
+ root.classList.toggle("pico-voice-mode",state.voiceMode);
+ input.disabled=state.voiceMode;
+ $("pico-send").hidden=state.voiceMode;
+}
+function stopVoiceRecognition(){
+ clearTimeout(voiceRestart);voiceRestart=0;
+ const rec=state.voiceRecording;state.voiceRecording=null;
+ if(rec){try{rec.abort();}catch{}}
+}
+function scheduleListening(delay=400){
+ clearTimeout(voiceRestart);voiceRestart=0;
+ if(!state.voiceMode||state.speaking||state.busy||!state.open||state.view!=="chat"||document.hidden)return;
+ voiceRestart=setTimeout(()=>{voiceRestart=0;startVoiceRecognition();},delay);
+}
+function stopVoiceMode({focus=true}={}){
+ state.voiceMode=false;state.speaking=false;
+ speechGeneration++;clearTimeout(speechWatchdog);
+ stopVoiceRecognition();
+ try{window.speechSynthesis?.cancel();}catch{}
+ voiceStatus();
+ if(focus&&state.open&&state.view==="chat")input.focus({preventScroll:true});
+}
+function startVoiceRecognition(){
+ if(!state.voiceMode||state.voiceRecording||state.busy||state.speaking||!state.open||state.view!=="chat"||document.hidden)return;
+ if(!SpeechInput){stopVoiceMode();appendMessage("pico","This browser doesn't support voice input. Typing still works. 🐾",true);return;}
+ try{
+  const rec=new SpeechInput();
+  state.voiceRecording=rec;
+  rec.lang=(navigator.language||"").toLowerCase().startsWith("hi")?"hi-IN":"en-IN";
+  rec.continuous=true;rec.interimResults=true;rec.maxAlternatives=1;
+  rec.onstart=()=>{if(rec===state.voiceRecording&&state.voiceMode)voiceStatus("Listening… say whatever's on your mind.","listening");};
+  rec.onresult=e=>{
+   if(rec!==state.voiceRecording||!state.voiceMode||state.busy)return;
+   let finalText="",partial="";
+   for(let i=e.resultIndex||0;i<(e.results?.length||0);i++){
+    const result=e.results[i],heard=String(result?.[0]?.transcript||"").trim();
+    if(result.isFinal)finalText+=(finalText?" ":"")+heard;
+    else partial=heard;
+   }
+   if(finalText){
+    state.voiceFailures=0;stopVoiceRecognition();
+    voiceStatus("Got it! Thinking of something clever…","thinking");
+    void sendText(finalText);
+   }else if(partial){voiceStatus("Hearing you: "+partial.slice(0,75),"listening");}
+  };
+  rec.onerror=e=>{
+   if(rec!==state.voiceRecording||!state.voiceMode)return;
+   const error=e?.error||"unknown";
+   if(["not-allowed","service-not-allowed","audio-capture","language-not-supported"].includes(error)){
+    stopVoiceMode();
+    appendMessage("pico",error==="not-allowed"||error==="service-not-allowed"
+     ?"My mic needs browser permission. You can type instead, no drama. 🎙"
+     :"My microphone isn't available right now. Typing still works.",true);
+    return;
+   }
+   if(error!=="aborted"){
+    state.voiceFailures++;
+    voiceStatus(error==="no-speech"?"Still here. Listening again…":"A tiny audio hiccup. Trying again…","paused");
+    if(state.voiceFailures>8){
+     stopVoiceMode();
+     appendMessage("pico","My ears need a break—voice input keeps failing in this browser. You can try the mic again or type.",true);
+    }
+   }
+  };
+  rec.onend=()=>{
+   if(rec===state.voiceRecording)state.voiceRecording=null;
+   if(state.voiceMode&&!state.busy&&!state.speaking)scheduleListening(650);
+  };
+  rec.start();
+  voiceStatus("Turning my ears on…","paused");
+ }catch{
+  state.voiceRecording=null;
+  stopVoiceMode();
+  appendMessage("pico","Couldn't start the mic. Please check browser microphone access, or just type. 🐾",true);
+ }
+}
+function startVoiceMode(){
+ if(!SpeechInput){
+  appendMessage("pico","My ears don't work with this browser's speech recognition. The keyboard is all yours. 🐾",true);return;
+ }
+ if(!state.open||state.view!=="chat")return;
+ state.voiceMode=true;state.voiceFailures=0;
+ setPref("voice",true); // one explicit mic click also opts in to spoken replies
+ voiceStatus("Microphone on. Say hi—I'll reply out loud.","paused");
+ startVoiceRecognition();
+}
+function chooseYouthfulVoice(voices){
+ const english=voices.filter(v=>/^en(?:-|$)/i.test(v.lang||""));
+ const sorted=english.sort((a,b)=>{
+  const score=v=>(/^en-IN$/i.test(v.lang)?6:0)+(/natural|neural|google|microsoft|samantha|zira|heera|female/i.test(v.name)?2:0)+(/child|young|junior/i.test(v.name)?2:0);
+  return score(b)-score(a);
+ });
+ return sorted[0]||voices[0]||null;
+}
 function speak(message){
- if(!prefs.voice||!voiceCapable)return;
- try{speechSynthesis.cancel();const voice=new SpeechSynthesisUtterance(message.replace(/[\u{1F300}-\u{1FAFF}]/gu,""));voice.pitch=1.25;voice.rate=1.05;voice.volume=.75;
- const voices=speechSynthesis.getVoices(),match=voices.find(v=>v.lang==="en-IN")||voices.find(v=>/^en/i.test(v.lang));if(match)voice.voice=match;
- voice.onend=()=>root.classList.remove("pico-speaking");
- speechSynthesis.speak(voice);}catch{}
+ if((!prefs.voice&&!state.voiceMode)||!voiceCapable){
+  if(state.voiceMode)scheduleListening(500);
+  return;
+ }
+ if(state.voiceMode)stopVoiceRecognition(); // don't transcribe Pico's own voice
+ clearTimeout(speechWatchdog);
+ const generation=++speechGeneration;
+ try{
+  speechSynthesis.cancel();
+  const utterance=new SpeechSynthesisUtterance(message.replace(/[\u{1F300}-\u{1FAFF}]/gu,"").replace(/\s+/g," ").trim());
+  utterance.pitch=1.43;utterance.rate=1.045;utterance.volume=.82;
+  const selected=chooseYouthfulVoice(speechSynthesis.getVoices());
+  if(selected){utterance.voice=selected;utterance.lang=selected.lang||"en-IN";}
+  else utterance.lang="en-IN";
+  state.speaking=true;
+  if(state.voiceMode)voiceStatus("Pico's talking… I'm listening again right after.","speaking");
+  const finish=()=>{
+   if(generation!==speechGeneration)return;
+   clearTimeout(speechWatchdog);state.speaking=false;
+   root.classList.remove("pico-speaking");
+   if(state.voiceMode){voiceStatus("Your turn! I'm listening…","paused");scheduleListening(550);}
+  };
+  utterance.onend=finish;utterance.onerror=finish;
+  speechSynthesis.speak(utterance);
+  speechWatchdog=setTimeout(()=>{if(generation!==speechGeneration)return;try{speechSynthesis.cancel();}catch{}finish();},
+   Math.min(29000,Math.max(6500,utterance.text.length*115)));
+ }catch{
+  state.speaking=false;if(state.voiceMode)scheduleListening(450);
+ }
 }
 function audioContext(){
  const C=window.AudioContext||window.webkitAudioContext;if(!C)return null;
@@ -249,7 +384,7 @@ function refreshSettings(){
 }
 function setPref(key,value){
  prefs[key]=Boolean(value);store.write("hs.pico.prefs",JSON.stringify(prefs),true);refreshSettings();
- if(key==="voice"&&!value)window.speechSynthesis?.cancel();
+ if(key==="voice"&&!value){if(state.voiceMode)stopVoiceMode({focus:false});else window.speechSynthesis?.cancel();}
  if(key==="music")music();
  if(key==="fx"&&value)playTone(520,.14,.02);
  if(key==="follow"&&!value){spriteButton.style.setProperty("--pico-dx","0px");spriteButton.style.setProperty("--pico-dy","0px");}
@@ -315,7 +450,7 @@ $("pico-settings-button").addEventListener("click",()=>showView("settings"));
 $("pico-settings-back").addEventListener("click",()=>showView("chat"));
 $("pico-leave-note").addEventListener("click",()=>showView("contact"));
 $("pico-contact-back").addEventListener("click",()=>showView("chat"));
-$("pico-story").addEventListener("click",()=>sendText("Tell me a little story about Suraj"));
+$("pico-story").addEventListener("click",()=>sendText("Surprise me with something funny"));
 $("pico-voice-toggle").addEventListener("click",()=>setPref("voice",!prefs.voice));
 $("pico-clear-chat").addEventListener("click",()=>{
  state.history=[];state.role=null;store.del("hs.pico.session");chat.replaceChildren();
@@ -325,29 +460,17 @@ $("pico-compose-form").addEventListener("submit",e=>{e.preventDefault();sendText
 input.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();sendText(input.value);}});
 $("pico-contact-view").addEventListener("submit",sendNote);
 for(const k of ["voice","music","fx","follow","quiet"])$("pico-"+k+"-setting").addEventListener("change",e=>setPref(k,e.target.checked));
-$("pico-mic").addEventListener("click",()=>{
- const Recognition=window.SpeechRecognition||window.webkitSpeechRecognition;
- if(!Recognition){appendMessage("pico","My ears can't use voice input in this browser. You can type instead. 🐾",true);return;}
- if(state.voiceRecording){try{state.voiceRecording.stop();}catch{}return;}
- try{
-  const rec=new Recognition();state.voiceRecording=rec;rec.lang=(navigator.language||"").startsWith("hi")?"hi-IN":"en-IN";rec.interimResults=false;rec.maxAlternatives=1;
-  $("pico-mic").setAttribute("aria-pressed","true");
-  rec.onresult=e=>{const heard=e.results&&e.results[0]&&e.results[0][0]&&e.results[0][0].transcript;if(heard){input.value=heard;sendText(heard);}};
-  rec.onerror=()=>{appendMessage("pico","My ears missed that. You can always type instead.",true);};
-  rec.onend=()=>{state.voiceRecording=null;$("pico-mic").setAttribute("aria-pressed","false");};
-  rec.start();
- }catch{state.voiceRecording=null;$("pico-mic").setAttribute("aria-pressed","false");}
-});
+$("pico-mic").addEventListener("click",()=>{if(state.voiceMode)stopVoiceMode();else startVoiceMode();});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&state.open){if(state.view!=="chat")showView("chat");else openPanel(false);}});
-document.addEventListener("visibilitychange",()=>{if(document.hidden){window.speechSynthesis?.cancel();}else if(!state.open)root.classList.add("pico-sleeping");});
+document.addEventListener("visibilitychange",()=>{if(document.hidden){stopVoiceRecognition();speechGeneration++;clearTimeout(speechWatchdog);state.speaking=false;window.speechSynthesis?.cancel();if(state.voiceMode)voiceStatus("Paused while this tab is hidden.","paused");}else if(state.voiceMode)scheduleListening(550);else if(!state.open)root.classList.add("pico-sleeping");});
 fetch("/assets/pico-red-panda.svg?v=2").then(r=>r.ok?r.text():null).then(svg=>{if(svg&&svg.startsWith("<svg"))sprite.innerHTML=svg;}).catch(()=>{});
 if(previous&&previous.history.length){
  for(const entry of state.history){const box=document.createElement("div");box.className="pico-turn";box.dataset.who=entry.who==="visitor"?"visitor":"pico";
  const label=document.createElement("small");label.textContent=entry.who==="visitor"?"You":"Pico";const bubble=document.createElement("div");bubble.className="pico-message";bubble.textContent=cap(entry.text);box.append(label,bubble);chat.append(box);}
-}else appendMessage("pico","Psst, hello! I'm Pico, Suraj's little red-panda pal. 🐾 I'm not a tour guide. I just like spending time with visitors. Want to hang out?",true);
-choices();refreshSettings();observePages();
+}else appendMessage("pico","Psst! I was in the middle of a world-class nap. 🐾 I’m Pico. Want to chat, rant, or judge the internet together?",true);
+choices();refreshSettings();voiceStatus();observePages();
 $("pico-mode").textContent=API?"AI replies are processed by the connected API. Notes require your consent.":"Pico's chat stays in this tab. Notes can be sent using WhatsApp.";
-setTimeout(()=>{if(!state.open&&!prefs.quiet)showNudge(pick(["Hey, human! Need a tiny friend for a few minutes? 🐾","Psst. I'm Pico. No tours, just good company!"]));},12500);
+setTimeout(()=>{if(!state.open&&!prefs.quiet)showNudge(pick(["Oi, human. Your tabs look stressed. Need company? 🐾","I was napping, but gossip is technically an emergency."]))},12500);
 setTimeout(()=>{if(!state.open&&!prefs.follow)root.classList.add("pico-sleeping");},54000);
 setInterval(()=>{
  if(document.hidden||state.open||prefs.quiet||state.busy||!matchMedia("(prefers-reduced-motion: no-preference)").matches||document.documentElement.dataset.motion==="off")return;
