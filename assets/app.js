@@ -96,14 +96,13 @@ function renderLab(id){
 }
 function renderWriting(){
  const grid=byId("writing-grid");
+ if(!grid)return;
  const published=[
-  {title:"SEO on GitHub Pages: From Domain to Search Console",cluster:"SEO & SEARCH",href:"/writing/seo-github-pages-guide/",words:"4,457 words"},
-  {title:"Why Low Cost per Lead Can Hide Poor Campaign Performance",cluster:"PAID MEDIA & ANALYTICS",href:"/writing/google-ads-lead-quality/",words:"4,364 words"},
-  {title:"AI Agents vs Workflow Automation: How to Choose Each",cluster:"AI & AUTOMATION",href:"/writing/ai-agents-vs-automations/",words:"4,160 words"}
+  {title:"SEO on GitHub Pages: From Domain Setup to Search Console",cluster:"SEO & SEARCH",href:"/writing/seo-github-pages-guide/",summary:"Custom domains, indexing, canonical URLs and practical technical SEO for a static website.",words:"4,457 words",time:"22 min"},
+  {title:"Why Low Cost per Lead Can Hide Poor Campaign Performance",cluster:"PAID MEDIA & ANALYTICS",href:"/writing/google-ads-lead-quality/",summary:"Understand accidental call clicks, duplicate conversions, lead quality and what happens after the enquiry.",words:"4,364 words",time:"22 min"},
+  {title:"AI Agents vs Workflow Automation",cluster:"AI & AUTOMATION",href:"/writing/ai-agents-vs-automations/",summary:"When to use deterministic workflows, how to manage autonomy and why validation matters.",words:"4,160 words",time:"21 min"}
  ];
- grid.innerHTML=published.map(w=>'<a class="article-card" href="'+w.href+'"><span class="mono">PUBLISHED GUIDE / '+w.cluster+'</span><h3>'+fmt(w.title)+'</h3><span class="meta"><span>'+w.words+'</span><strong>Read guide ↗</strong></span></a>').join("")+
- WRITING.slice(0,3).map(w=>'<button class="article-card" type="button" data-writing="'+fmt(w.id)+'"><span class="mono">UPCOMING / '+fmt(w.category)+'</span><h3>'+fmt(w.title)+'</h3><span class="meta"><span>EDITORIAL PLANNING</span><strong>Preview idea ↗</strong></span></button>').join("");
- grid.querySelectorAll("[data-writing]").forEach(btn=>btn.addEventListener("click",()=>openWriting(btn.dataset.writing)));
+ grid.innerHTML=published.map((w,i)=>'<a class="article-card article-card--published" href="'+w.href+'"><span class="article-card-top"><span class="mono">'+fmt(w.cluster)+'</span><span class="mono muted">0'+(i+1)+'</span></span><h3>'+fmt(w.title)+'</h3><p>'+fmt(w.summary)+'</p><span class="meta"><span>'+w.words+' · '+w.time+' read</span><strong>Read article ↗</strong></span></a>').join("");
 }
 function openWriting(id){
  const w=WRITING.find(x=>x.id===id);if(!w)return;
