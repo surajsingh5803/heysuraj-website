@@ -1,0 +1,11 @@
+# Keep Pico private-service secrets and local dependencies out of the public website
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+node_modules/
+**/node_modules/
+*.log
+.DS_Store
