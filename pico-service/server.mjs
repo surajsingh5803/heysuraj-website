@@ -27,7 +27,7 @@ const PUBLIC_MEMORY=[
 ].join("\n");
 function write(res,status,data,origin){
  const headers={"Content-Type":"application/json; charset=utf-8","Cache-Control":"no-store","X-Content-Type-Options":"nosniff","Vary":"Origin"};
- if(domains.has(origin)){headers["Access-Control-Allow-Origin"]=origin;headers["Access-Control-Allow-Methods"]="GET,POST,PATCH,OPTIONS";headers["Access-Control-Allow-Headers"]="Content-Type,Authorization";}
+ if(domains.has(origin)){headers["Access-Control-Allow-Origin"]=origin;headers["Access-Control-Allow-Methods"]="GET,POST,PATCH,DELETE,OPTIONS";headers["Access-Control-Allow-Headers"]="Content-Type,Authorization";}
  res.writeHead(status,headers);res.end(JSON.stringify(data));
 }
 function ipOf(req){return req.socket.remoteAddress||"unknown";}
@@ -117,7 +117,7 @@ http.createServer(async(req,res)=>{
 
  if(req.method==="OPTIONS"){if(!domains.has(origin))return write(res,403,{error:"Origin not allowed"},origin);return write(res,204,{},origin);}
  if(url.pathname==="/health"&&req.method==="GET")return write(res,200,{ok:true,ai:!!APIKEY,inbox:!!pool},origin);
- if(url.pathname.startsWith("/api/")&&!domains.has(origin)&&!(owner(req)&&["GET","PATCH"].includes(req.method)))return write(res,403,{error:"Origin not allowed"},origin);
+ if(url.pathname.startsWith("/api/")&&!domains.has(origin)&&!(owner(req)&&["GET","PATCH","DELETE"].includes(req.method)))return write(res,403,{error:"Origin not allowed"},origin);
  try{
   if(url.pathname==="/api/chat"&&req.method==="POST"){
    if(!limit(req,25))return write(res,429,{error:"Slow down a moment."},origin);
@@ -146,6 +146,12 @@ http.createServer(async(req,res)=>{
    return write(res,200,{items:result.rows},origin);
   }
   const match=url.pathname.match(/^\/api\/messages\/([0-9a-f-]{36})$/);
+  if(match&&req.method==="DELETE"){
+   if(!owner(req))return write(res,401,{error:"Authentication required"},origin);
+   if(!pool)return write(res,503,{error:"Database not configured"},origin);
+   const result=await pool.query("DELETE FROM pico_messages WHERE id=$1 RETURNING id",[match[1]]);
+   return write(res,result.rowCount?200:404,result.rowCount?{deleted:true,id:match[1]}:{error:"Unknown note"},origin);
+  }
   if(match&&req.method==="PATCH"){
    if(!owner(req))return write(res,401,{error:"Authentication required"},origin);
    if(!pool)return write(res,503,{error:"Database not configured"},origin);
