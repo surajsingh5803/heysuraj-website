@@ -1,7 +1,55 @@
 {
-  "generatedAt": "2026-11-13T21:51:10.237Z",
+  "generatedAt": "2026-11-14T06:41:54.985Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
+    {
+      "title": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
+      "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-14T05:52:31.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Trump will discuss the \"reduction of nuclear weapons\" during the unprecedented talks, a spokeswoman says."
+    },
+    {
+      "title": "What we know about the longest ground stop since 9/11",
+      "url": "https://www.bbc.co.uk/news/articles/cqx2wyvyr3zzo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-14T03:45:21.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "US officials say the disruption was caused by old equipment overloading and not a cyber-attack or a Microsoft outage."
+    },
+    {
+      "title": "Even Grand Theft Auto's original creators haven't been able to play GTA 6",
+      "url": "https://www.bbc.co.uk/news/articles/c6jd7k5ryl1mo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-14T00:37:01.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "The next title in the series is expected to be the biggest video game release ever."
+    },
+    {
+      "title": "Setback for SpaceX Starship rocket's double-catch test",
+      "url": "https://www.bbc.co.uk/news/articles/ckregdgnl0xpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-14T00:01:01.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Elon Musk’s company aborted an attempted catch of the rocket’s booster - instead it came down in the ocean."
+    },
+    {
+      "title": "'Miracle on Mississippi' - All passengers rescued after New Orleans cruise ship collision",
+      "url": "https://www.bbc.co.uk/news/articles/cw20xmy0m5yyo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T23:40:45.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The collision leaves 32 people in hospital with non-critical injuries, but no-one unaccounted for."
+    },
+    {
+      "title": "How the Jensen Huang scandal created a headache for business-friendly Singapore",
+      "url": "https://www.bbc.co.uk/news/articles/ck1exevgql4qo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-13T23:00:31.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "The scandal has cast a spotlight on Singapore's success as a chip hub - and a location for alleged illicit trade."
+    },
     {
       "title": "Microsoft outage 'stark reminder' of how much we rely on tech",
       "url": "https://www.bbc.co.uk/news/articles/cxzd9171m51qo?at_medium=RSS&at_campaign=rss",
@@ -11,7 +59,7 @@
       "summary": "Microsoft has apologised for the issue, which it said was due to a technical failure."
     },
     {
-      "title": "Microsoft 'deeply sorry' for global outage after almost 24 hours of disruption",
+      "title": "Microsoft 'deeply sorry' for global outage as it reports broad recovery",
       "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-13T21:14:22.000Z",
       "category": "World",
@@ -30,17 +78,9 @@
       "title": "Why is Microsoft's outage lasting so long and will emails be lost?",
       "url": "https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-13T18:36:57.000Z",
-      "category": "World",
+      "category": "Business",
       "source": "BBC News",
       "summary": "Microsoft says it is continuing to restore services including Outlook and Teams following a global outage."
-    },
-    {
-      "title": "The Peruvian city that has embraced Pope Leo as one of its own",
-      "url": "https://www.bbc.co.uk/news/articles/cwg7l8n7dx5mo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T18:34:45.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Pope Leo XIV is in Peru as part of his Latin America tour, just weeks after having surgery for lung cancer."
     },
     {
       "title": "Courts, spies and MPs: How the Microsoft outage has been felt around the world",
@@ -59,36 +99,12 @@
       "summary": "The fact the question of European security now features in discussions is viewed in Moscow as a victory, BBC Russia Editor Steve Rosenberg says."
     },
     {
-      "title": "German spies handed new powers to tackle 'hybrid threats' from abroad",
-      "url": "https://www.bbc.co.uk/news/articles/c6jre3z03w4go?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T15:42:52.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "German reforms mean foreign and domestic intelligence services will have greater powers to combat espionage, terrorism and sabotage."
-    },
-    {
-      "title": "NHS, schools and police forces hit by Microsoft outage",
-      "url": "https://www.bbc.co.uk/news/articles/c6vg2ljjpj32o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T13:41:25.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Major airports and intelligence services are unaffected, while the government is still assessing the impact."
-    },
-    {
       "title": "How a sex scandal at Nvidia is putting pressure on the White House",
       "url": "https://www.bbc.co.uk/news/articles/c67429m3vem3o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-13T12:22:30.000Z",
       "category": "Business",
       "source": "BBC News",
       "summary": "Jensen Huang's personal life may have triggered the crisis, but the questions now reach into the White House itself."
-    },
-    {
-      "title": "Watch: How a server outage took down Microsoft Teams and Outlook",
-      "url": "https://www.bbc.co.uk/news/videos/cqzjr903n01po?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T11:43:27.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "A Microsoft outage is affecting services including Teams, Outlook and AI software Copilot."
     },
     {
       "title": "Heat pumps: How much heat does your home really need?",
