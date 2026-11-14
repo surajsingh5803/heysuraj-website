@@ -1,22 +1,70 @@
 {
-  "generatedAt": "2026-11-14T06:41:54.985Z",
+  "generatedAt": "2026-11-14T18:16:07.010Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
-      "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-14T05:52:31.000Z",
+      "title": "Sotheby's auction of $180m Van Gogh challenged over claims it was 'sold under duress'",
+      "url": "https://www.bbc.co.uk/news/articles/cmwy05gg75lvo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-14T18:00:10.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Trump will discuss the \"reduction of nuclear weapons\" during the unprecedented talks, a spokeswoman says."
+      "summary": "Sotheby's says it will work with the heirs of a family who had previously owned the artwork to try and reach a solution."
     },
     {
-      "title": "What we know about the longest ground stop since 9/11",
-      "url": "https://www.bbc.co.uk/news/articles/cqx2wyvyr3zzo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-14T03:45:21.000Z",
+      "title": "Philippines wins first Eurovision Song Contest Asia",
+      "url": "https://www.bbc.co.uk/news/articles/cqrlgnx9dx6eo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-14T17:56:59.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "US officials say the disruption was caused by old equipment overloading and not a cyber-attack or a Microsoft outage."
+      "summary": "Front-runner Carmelle wins with 211 points for her women's empowerment anthem Sobra-Sobra."
+    },
+    {
+      "title": "Copper wire upgrade caused nationwide flight suspension, US transport secretary says",
+      "url": "https://www.bbc.co.uk/news/articles/c6wy9lynq4qno?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-14T17:16:36.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The US government is trying to find out whether the chaos was caused by \"incompetence\" or faulty equipment."
+    },
+    {
+      "title": "Italy fines Meta €805m over accessing users' photos",
+      "url": "https://www.bbc.co.uk/news/articles/cwn83gxemk35o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-14T16:29:48.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The social media giant is accused of not informing 20 million users it had access to their photos."
+    },
+    {
+      "title": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
+      "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-14T15:15:57.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The Ukrainian president says US envoys touted the exchange as part of efforts to end the war with Russia."
+    },
+    {
+      "title": "What we know about the ground stop and what to do if you're affected",
+      "url": "https://www.bbc.co.uk/news/articles/cqx2wyvyr3zzo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-14T14:20:57.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "US officials say the disruption was caused by old equipment overloading and not a cyber-attack."
+    },
+    {
+      "title": "Second catch attempt for SpaceX Starship rocket",
+      "url": "https://www.bbc.co.uk/news/articles/ckregdgnl0xpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-14T14:18:41.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The attempt follows an unsuccessful effort to catch of the rocket’s booster which instead came down in the ocean."
+    },
+    {
+      "title": "Microsoft says services fully restored after day-long global outage",
+      "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-14T06:42:27.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Efforts to address the underlying problem with Outlook, Teams and Copilot are complete, the tech firm says."
     },
     {
       "title": "Even Grand Theft Auto's original creators haven't been able to play GTA 6",
@@ -25,22 +73,6 @@
       "category": "Technology",
       "source": "BBC News",
       "summary": "The next title in the series is expected to be the biggest video game release ever."
-    },
-    {
-      "title": "Setback for SpaceX Starship rocket's double-catch test",
-      "url": "https://www.bbc.co.uk/news/articles/ckregdgnl0xpo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-14T00:01:01.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Elon Musk’s company aborted an attempted catch of the rocket’s booster - instead it came down in the ocean."
-    },
-    {
-      "title": "'Miracle on Mississippi' - All passengers rescued after New Orleans cruise ship collision",
-      "url": "https://www.bbc.co.uk/news/articles/cw20xmy0m5yyo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T23:40:45.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The collision leaves 32 people in hospital with non-critical injuries, but no-one unaccounted for."
     },
     {
       "title": "How the Jensen Huang scandal created a headache for business-friendly Singapore",
@@ -59,20 +91,12 @@
       "summary": "Microsoft has apologised for the issue, which it said was due to a technical failure."
     },
     {
-      "title": "Microsoft 'deeply sorry' for global outage as it reports broad recovery",
-      "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T21:14:22.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Experts say the event is a \"stark reminder\" of how heavily the world relies on a small group of big tech providers."
-    },
-    {
-      "title": "Nvidia scandal fallout widens as Trump's treasury secretary blames cabinet colleague",
+      "title": "Pressure grows on Trump's Commerce Secretary Lutnick in fallout from Nvidia scandal",
       "url": "https://www.bbc.co.uk/news/articles/cqvg2d1eg7zro?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-13T19:53:57.000Z",
-      "category": "World",
+      "category": "Business",
       "source": "BBC News",
-      "summary": "Scott Bessent suggests Howard Lutnick’s commerce department failed to ban exports of Nvidia's chips to a firm thought to have links with China."
+      "summary": "Scott Bessent told CNBC that several government agencies \"were in favour of putting Megaspeed on the entity list for months\"."
     },
     {
       "title": "Why is Microsoft's outage lasting so long and will emails be lost?",
@@ -81,22 +105,6 @@
       "category": "Business",
       "source": "BBC News",
       "summary": "Microsoft says it is continuing to restore services including Outlook and Teams following a global outage."
-    },
-    {
-      "title": "Courts, spies and MPs: How the Microsoft outage has been felt around the world",
-      "url": "https://www.bbc.co.uk/news/articles/cqp9d58eldlro?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T17:34:58.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "From city governments in the US to spy agencies in Australia, the Microsoft outage is being felt around the world."
-    },
-    {
-      "title": "Rosenberg: Uncompromising Putin ups demands for peace with Ukraine",
-      "url": "https://www.bbc.co.uk/news/articles/cq39glwprknjo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T16:40:31.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The fact the question of European security now features in discussions is viewed in Moscow as a victory, BBC Russia Editor Steve Rosenberg says."
     },
     {
       "title": "How a sex scandal at Nvidia is putting pressure on the White House",
