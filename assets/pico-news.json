@@ -1,7 +1,39 @@
 {
-  "generatedAt": "2026-11-14T22:34:19.748Z",
+  "generatedAt": "2026-11-15T06:47:44.764Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
+    {
+      "title": "Judge temporarily blocks Trump from closing Washington DC golf course for renovation",
+      "url": "https://www.bbc.co.uk/news/articles/c6j9mn7l14y0o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T03:21:04.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "It is the latest development in a months-long challenge to the president's plans for East Potomac Golf Links."
+    },
+    {
+      "title": "Pope Leo speaks of community 'suffering' on visit to remote Andes town",
+      "url": "https://www.bbc.co.uk/news/articles/cr4gnz0lv2vlo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T02:49:45.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Santa Cruz de Succhabamba is part of the Diocese of Chiclayo, where the pope served as bishop from 2015 to 2023."
+    },
+    {
+      "title": "Beauty advent calendars can cost hundreds - but are they value for money?",
+      "url": "https://www.bbc.co.uk/news/articles/cqn83l442724o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T00:01:07.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Beauty calendars have become a Christmas staple and have become particularly popular with female shoppers."
+    },
+    {
+      "title": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
+      "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-14T22:37:25.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The US has not confirmed the Ukrainian president's comments - a US official told the BBC \"many ideas continue to be discussed\"."
+    },
     {
       "title": "'Can you believe it?': SpaceX catches part of its Starship rocket on return to Earth",
       "url": "https://www.bbc.co.uk/news/videos/cwlym2gy3y3eo?at_medium=RSS&at_campaign=rss",
@@ -9,14 +41,6 @@
       "category": "World",
       "source": "BBC News",
       "summary": "SpaceX has performed the historic catch using mechanical arms nicknamed \"chopsticks\"."
-    },
-    {
-      "title": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
-      "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-14T20:41:45.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The US has not confirmed the Ukrainian president's comments which follow meetings US envoys had with him and Russia's Vladimir Putin."
     },
     {
       "title": "Copper wire upgrade caused nationwide flight suspension, US transport secretary says",
@@ -43,22 +67,6 @@
       "summary": "Front-runner Carmelle emerges victorious with her women's empowerment anthem Sobra-Sobra."
     },
     {
-      "title": "Sotheby's auction of $180m Van Gogh challenged over claims it was 'sold under duress'",
-      "url": "https://www.bbc.co.uk/news/articles/cmwy05gg75lvo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-14T18:00:10.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Sotheby's says it will work with the heirs of a family who had previously owned the artwork to try and reach a solution."
-    },
-    {
-      "title": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
-      "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-14T15:53:55.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Trump will discuss the \"reduction of nuclear weapons\" during the unprecedented talks, a spokeswoman says."
-    },
-    {
       "title": "Microsoft says services fully restored after day-long global outage",
       "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-14T06:42:27.000Z",
@@ -78,7 +86,7 @@
       "title": "How the Jensen Huang scandal created a headache for business-friendly Singapore",
       "url": "https://www.bbc.co.uk/news/articles/ck1exevgql4qo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-13T23:00:31.000Z",
-      "category": "Technology",
+      "category": "Business",
       "source": "BBC News",
       "summary": "The scandal has cast a spotlight on Singapore's success as a chip hub - and a location for alleged illicit trade."
     },
@@ -107,28 +115,12 @@
       "summary": "Microsoft says it is continuing to restore services including Outlook and Teams following a global outage."
     },
     {
-      "title": "How a sex scandal at Nvidia is putting pressure on the White House",
-      "url": "https://www.bbc.co.uk/news/articles/c67429m3vem3o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T12:22:30.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Jensen Huang's personal life may have triggered the crisis, but the questions now reach into the White House itself."
-    },
-    {
       "title": "Heat pumps: How much heat does your home really need?",
       "url": "https://www.bbc.co.uk/news/articles/cqy43zk3kk04o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-13T09:29:25.000Z",
       "category": "Business",
       "source": "BBC News",
       "summary": "Knowing how much heat your home loses is important before installing a new heating system."
-    },
-    {
-      "title": "Ex-Nvidia CEO Jensen Huang summoned to testify before Congress about affair with alleged Chinese spy",
-      "url": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T03:57:01.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Huang abruptly quit on Thursday as head of one of the world's most valuable companies after revelations of alleged extramarital affairs."
     },
     {
       "title": "The rise of 'housefishing' - when does using AI go from enhancing to misleading?",
