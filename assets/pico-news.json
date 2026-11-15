@@ -1,25 +1,73 @@
 {
-  "generatedAt": "2026-11-15T06:47:44.764Z",
+  "generatedAt": "2026-11-15T18:57:24.789Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "Judge temporarily blocks Trump from closing Washington DC golf course for renovation",
-      "url": "https://www.bbc.co.uk/news/articles/c6j9mn7l14y0o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T03:21:04.000Z",
+      "title": "Zelensky urges US and Musk to lift Starlink restrictions and be on 'right side of history'",
+      "url": "https://www.bbc.co.uk/news/articles/c6m25zg88k45o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T18:08:20.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "It is the latest development in a months-long challenge to the president's plans for East Potomac Golf Links."
+      "summary": "The Ukrainian president says restrictions are still in place and making it difficult to stop Russian attacks."
     },
     {
-      "title": "Pope Leo speaks of community 'suffering' on visit to remote Andes town",
-      "url": "https://www.bbc.co.uk/news/articles/cr4gnz0lv2vlo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T02:49:45.000Z",
+      "title": "Czechs rally against plan to switch funding of public media",
+      "url": "https://www.bbc.co.uk/news/articles/cm8e0knr7604o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T17:23:40.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Santa Cruz de Succhabamba is part of the Diocese of Chiclayo, where the pope served as bishop from 2015 to 2023."
+      "summary": "Protesters say the move will stifle media freedom, while the government insists broadcasters need to cut costs."
     },
     {
-      "title": "Beauty advent calendars can cost hundreds - but are they value for money?",
+      "title": "Suspected China spy linked to Nvidia's ex-boss left in 2025, Megaspeed says",
+      "url": "https://www.bbc.co.uk/news/articles/cmdx1vpprk9vo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T14:56:21.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The Nvidia scandal has raised questions over whether advanced AI chips ended up in China, despite US restrictions."
+    },
+    {
+      "title": "Iran targets US military base in Bahrain with drone attack",
+      "url": "https://www.bbc.co.uk/news/articles/cqn4e2py48kwo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T13:42:58.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "It marks the second attack on the country in three days and comes as the US and Iran remain locked in a stand-off over the Strait of Hormuz."
+    },
+    {
+      "title": "South Korea's top scorer in tax accountancy exam admits cheating",
+      "url": "https://www.bbc.co.uk/news/articles/ckvg2ezvpe08o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T13:37:45.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Han Won-seok, 34, confessed to using a hidden camera and AI to get a near-perfect mark on the significant test."
+    },
+    {
+      "title": "Minister backs legal right to job support for young people",
+      "url": "https://www.bbc.co.uk/news/articles/cqr7gn1zmlj1o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T13:06:15.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The work and pensions secretary said the level of support currently on offer was too vague."
+    },
+    {
+      "title": "Three men sentenced to death in Jordan over fatal church mass shooting",
+      "url": "https://www.bbc.co.uk/news/articles/c3rrg9xgqlwpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T11:06:32.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The attack on funeral at a Greek Orthodox church killed nine and injured 34 others last month."
+    },
+    {
+      "title": "Israel kills Hamas commander in strike on Gaza camp, officials say",
+      "url": "https://www.bbc.co.uk/news/articles/cqrkg4r6mg7xo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T08:17:41.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Both Hamas and IDF officials confirm the death of Samir Abu Younis, commander of the Rafah Brigade."
+    },
+    {
+      "title": "Beauty advent calendars can cost hundreds but are they value for money?",
       "url": "https://www.bbc.co.uk/news/articles/cqn83l442724o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-15T00:01:07.000Z",
       "category": "Business",
@@ -27,44 +75,12 @@
       "summary": "Beauty calendars have become a Christmas staple and have become particularly popular with female shoppers."
     },
     {
-      "title": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
-      "url": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-14T22:37:25.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The US has not confirmed the Ukrainian president's comments - a US official told the BBC \"many ideas continue to be discussed\"."
-    },
-    {
-      "title": "'Can you believe it?': SpaceX catches part of its Starship rocket on return to Earth",
-      "url": "https://www.bbc.co.uk/news/videos/cwlym2gy3y3eo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-14T22:09:40.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "SpaceX has performed the historic catch using mechanical arms nicknamed \"chopsticks\"."
-    },
-    {
-      "title": "Copper wire upgrade caused nationwide flight suspension, US transport secretary says",
-      "url": "https://www.bbc.co.uk/news/articles/c6wy9lynq4qno?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-14T19:12:25.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The US government is trying to find out whether the chaos was caused by \"incompetence\" or faulty equipment."
-    },
-    {
       "title": "Italy fines Meta €805m over accessing users' photos",
       "url": "https://www.bbc.co.uk/news/articles/cwn83gxemk35o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-14T18:28:06.000Z",
-      "category": "World",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "The social media giant is accused of not informing 20 million users it had access to their photos."
-    },
-    {
-      "title": "Philippines wins first Eurovision Song Contest Asia",
-      "url": "https://www.bbc.co.uk/news/articles/cqrlgnx9dx6eo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-14T18:17:58.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Front-runner Carmelle emerges victorious with her women's empowerment anthem Sobra-Sobra."
     },
     {
       "title": "Microsoft says services fully restored after day-long global outage",
@@ -97,22 +113,6 @@
       "category": "Technology",
       "source": "BBC News",
       "summary": "Microsoft has apologised for the issue, which it said was due to a technical failure."
-    },
-    {
-      "title": "Pressure grows on Trump's Commerce Secretary Lutnick in fallout from Nvidia scandal",
-      "url": "https://www.bbc.co.uk/news/articles/cqvg2d1eg7zro?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T19:53:57.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Scott Bessent told CNBC that several government agencies \"were in favour of putting Megaspeed on the entity list for months\"."
-    },
-    {
-      "title": "Why is Microsoft's outage lasting so long and will emails be lost?",
-      "url": "https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T18:36:57.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Microsoft says it is continuing to restore services including Outlook and Teams following a global outage."
     },
     {
       "title": "Heat pumps: How much heat does your home really need?",
