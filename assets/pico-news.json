@@ -1,94 +1,118 @@
 {
-  "generatedAt": "2026-11-16T06:45:36.309Z",
+  "generatedAt": "2026-11-16T22:18:15.797Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "Mexican drug lord Miguel Angel Felix Gallardo dies age 80",
-      "url": "https://www.bbc.co.uk/news/articles/c51k9nkwrndxo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T03:21:56.000Z",
+      "title": "Houthi rebel advance in Yemen may further destabilise global economy",
+      "url": "https://www.bbc.co.uk/news/articles/cmy97qperq9eo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T21:40:07.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Known as the 'Boss of Bosses', he was the head of all-powerful Guadalajara Cartel in the 1980s before his arrest broke up his drug organisation."
+      "summary": "The Iran-backed Houthis are gaining ground and their advance could have dangerous consequences, writes the BBC's security correspondent."
     },
     {
-      "title": "Australian MP 'full of gratitude' upon leaving hospital after alleged car attack",
-      "url": "https://www.bbc.co.uk/news/articles/cmpqr9j81888o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T03:09:49.000Z",
+      "title": "Forensic expert says his analysis of autopsy photos suggests Epstein was killed",
+      "url": "https://www.bbc.co.uk/news/articles/c5n4exg1kkmyo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T20:33:57.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "The MP lost both of her legs after the alleged attack outside her electorate office four weeks ago."
+      "summary": "Professor Michael Freeman tells BBC Newsnight that he believes the convicted sex offender's injuries are consistent with a homicide."
     },
     {
-      "title": "Yemeni forces' retreat leaves Houthis in control of key Red Sea waterway",
-      "url": "https://www.bbc.co.uk/news/articles/cqvg2xgyvnjpo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T03:08:31.000Z",
+      "title": "Lindsay Clancy to face retrial next year for deaths of her three children",
+      "url": "https://www.bbc.co.uk/news/articles/cw5y1v8de35go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T19:30:30.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Saudi-backed forces say they are moving troops from the Bab al-Mandab Strait to defend the interim capital Aden."
+      "summary": "The 36-year-old's first trial this year fell apart when a 12-person jury failed to reach a verdict."
     },
     {
-      "title": "Investors sue chip giant Intel after 29% stock plunge",
-      "url": "https://www.bbc.co.uk/news/articles/cw62p42p288do?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T03:04:01.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "A proposed class action says Intel hid the impact of slowing sales, inflating its shares."
-    },
-    {
-      "title": "Suspected China spy linked to Nvidia's ex-boss left in 2025, Megaspeed says",
-      "url": "https://www.bbc.co.uk/news/articles/cmdx1vpprk9vo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T01:47:57.000Z",
+      "title": "Trump backs return of ex-Nvidia boss after 'Bring Jensen Back' campaign launched",
+      "url": "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T19:16:52.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "The Nvidia scandal has raised questions over whether advanced AI chips ended up in China, despite US restrictions."
+      "summary": "A number of tech figures want the board of the AI chip giant to give Jensen Huang his job back."
     },
     {
-      "title": "Black Friday and tax return scams - don't fall for these",
-      "url": "https://www.bbc.co.uk/news/articles/cm4gnlz2p61ko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T00:50:39.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Tens of thousands of scams are reported to HMRC - so it has advice on how to spot a fake request and refund."
-    },
-    {
-      "title": "Cut National Insurance for under-25s to create jobs, Milburn report to say",
-      "url": "https://www.bbc.co.uk/news/articles/c6p9dzmj514ko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T22:30:03.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The report being launched this week will suggest gradually reducing employment costs over five years."
-    },
-    {
-      "title": "Canada bars Russia from Junior World Championships",
-      "url": "https://www.bbc.co.uk/sport/ice-hockey/articles/cqkgm0jgv4mdo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T22:01:16.000Z",
+      "title": "When will we see Robert Pattinson as Bond in cinemas?",
+      "url": "https://www.bbc.co.uk/news/videos/cmd91xjd9zk2o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T17:18:54.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Canada says it will not allow Russian athletes to compete in the Junior Ice Hockey World Championships because of the war in Ukraine."
+      "summary": "Robert Pattinson has been announced as the next James Bond, becoming the seventh actor to take up the mantle of 007."
     },
     {
-      "title": "UK will have 'voice' but no vote on EU food rules in Brexit reset",
+      "title": "Five EU countries announce migrant deportation centre in Rwanda",
+      "url": "https://www.bbc.co.uk/news/articles/cw987343352go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T16:27:24.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Germany, Denmark, Austria, Greece and the Netherlands have announced a \"return hub\" for failed asylum seekers."
+    },
+    {
+      "title": "Faisal Islam: What's in the Brexit reset food deal and are there trade-offs?",
       "url": "https://www.bbc.co.uk/news/articles/c6wy4l8nl42wo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T22:00:24.000Z",
+      "publishedAt": "2026-11-16T15:40:16.000Z",
       "category": "Business",
       "source": "BBC News",
       "summary": "EU minister Hamish Falconer insists Britain would have some influence on policy as part of a new deal."
     },
     {
-      "title": "Prince Harry praises war veterans on surprise visit to Ukraine",
-      "url": "https://www.bbc.co.uk/news/articles/c60evn992jq8o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T22:00:13.000Z",
+      "title": "Landmark Crimea bridge hit as Russia reports biggest Ukrainian drone attack of war",
+      "url": "https://www.bbc.co.uk/news/articles/ckx27v6dpjz0o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T14:58:12.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "He has been showing support for injured veterans in Ukraine and praising the country's resilience."
+      "summary": "Russia said Ukraine had launched over 2,000 drones over the course of a day, while Kyiv came under a record 17 air raid alerts."
     },
     {
-      "title": "Zelensky urges US and Musk to lift Starlink restrictions and be on 'right side of history'",
-      "url": "https://www.bbc.co.uk/news/articles/c6m25zg88k45o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T19:32:39.000Z",
-      "category": "World",
+      "title": "GTA 6 hacker pleads guilty after release from secure hospital",
+      "url": "https://www.bbc.co.uk/news/articles/cq99exy89dngo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T13:34:22.000Z",
+      "category": "Technology",
       "source": "BBC News",
-      "summary": "The Ukrainian president says the slowed-down internet is making it difficult to stop Russian attacks."
+      "summary": "21-year-old Arion Kurtaj pleaded guilty to the Rockstar Games hack and others he carried out when he was a teenager."
+    },
+    {
+      "title": "Create more jobs for under-25s by cutting National Insurance, key report urges",
+      "url": "https://www.bbc.co.uk/news/articles/c6p9dzmj514ko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T13:19:33.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Some parents are so desperate for their children to find a job that they've offered to pay their wages, one hairdresser has told the BBC."
+    },
+    {
+      "title": "Avoid this Black Friday scam - how to check it's a real deal",
+      "url": "https://www.bbc.co.uk/news/articles/cm4gnlz2p61ko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T09:58:52.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Sales and the looming tax deadline mean more scams - here's how to make sure you don't get caught out."
+    },
+    {
+      "title": "Gas starts flowing from Jackdaw after government green light",
+      "url": "https://www.bbc.co.uk/news/articles/c9x2elzm047po?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T06:24:08.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Ministers last month announced the Jackdaw gas field, which lies 150 miles east of Aberdeen, had been approved after years of uncertainty."
+    },
+    {
+      "title": "Intel sued by investors after PC sales slump hits share price",
+      "url": "https://www.bbc.co.uk/news/articles/cw62p42p288do?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T03:04:01.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "A proposed class action claims the firm hid the impact of slowing PC sales from shareholders."
+    },
+    {
+      "title": "Suspected China spy linked to Nvidia's ex-boss left in 2025, Megaspeed says",
+      "url": "https://www.bbc.co.uk/news/articles/cmdx1vpprk9vo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T01:47:57.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "The Nvidia scandal has raised questions over whether advanced AI chips ended up in China, despite US restrictions."
     },
     {
       "title": "South Korea's top scorer in tax accountancy exam admits cheating",
@@ -97,14 +121,6 @@
       "category": "Technology",
       "source": "BBC News",
       "summary": "Han Won-seok, 34, confessed to using a hidden camera and AI to get a near-perfect mark on the significant test."
-    },
-    {
-      "title": "Minister backs legal right to job support for young people",
-      "url": "https://www.bbc.co.uk/news/articles/cqr7gn1zmlj1o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T13:06:15.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The work and pensions secretary said the level of support currently on offer was too vague."
     },
     {
       "title": "Beauty advent calendars can cost hundreds but are they value for money?",
@@ -129,22 +145,6 @@
       "category": "Technology",
       "source": "BBC News",
       "summary": "Efforts to address the underlying problem with Outlook, Teams and Copilot are complete, the tech firm says."
-    },
-    {
-      "title": "Even Grand Theft Auto's original creators haven't been able to play GTA 6",
-      "url": "https://www.bbc.co.uk/news/articles/c6jd7k5ryl1mo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-14T00:37:01.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "The next title in the series is expected to be the biggest video game release ever."
-    },
-    {
-      "title": "How the Jensen Huang scandal created a headache for business-friendly Singapore",
-      "url": "https://www.bbc.co.uk/news/articles/ck1exevgql4qo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T23:00:31.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "The scandal has cast a spotlight on Singapore's success as a chip hub - and a location for alleged illicit trade."
     }
   ]
 }
