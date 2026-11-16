@@ -1,44 +1,100 @@
 {
-  "generatedAt": "2026-11-15T18:57:24.789Z",
+  "generatedAt": "2026-11-16T06:45:36.309Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "Zelensky urges US and Musk to lift Starlink restrictions and be on 'right side of history'",
-      "url": "https://www.bbc.co.uk/news/articles/c6m25zg88k45o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T18:08:20.000Z",
+      "title": "Mexican drug lord Miguel Angel Felix Gallardo dies age 80",
+      "url": "https://www.bbc.co.uk/news/articles/c51k9nkwrndxo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T03:21:56.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "The Ukrainian president says restrictions are still in place and making it difficult to stop Russian attacks."
+      "summary": "Known as the 'Boss of Bosses', he was the head of all-powerful Guadalajara Cartel in the 1980s before his arrest broke up his drug organisation."
     },
     {
-      "title": "Czechs rally against plan to switch funding of public media",
-      "url": "https://www.bbc.co.uk/news/articles/cm8e0knr7604o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T17:23:40.000Z",
+      "title": "Australian MP 'full of gratitude' upon leaving hospital after alleged car attack",
+      "url": "https://www.bbc.co.uk/news/articles/cmpqr9j81888o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T03:09:49.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Protesters say the move will stifle media freedom, while the government insists broadcasters need to cut costs."
+      "summary": "The MP lost both of her legs after the alleged attack outside her electorate office four weeks ago."
+    },
+    {
+      "title": "Yemeni forces' retreat leaves Houthis in control of key Red Sea waterway",
+      "url": "https://www.bbc.co.uk/news/articles/cqvg2xgyvnjpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T03:08:31.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Saudi-backed forces say they are moving troops from the Bab al-Mandab Strait to defend the interim capital Aden."
+    },
+    {
+      "title": "Investors sue chip giant Intel after 29% stock plunge",
+      "url": "https://www.bbc.co.uk/news/articles/cw62p42p288do?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T03:04:01.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "A proposed class action says Intel hid the impact of slowing sales, inflating its shares."
     },
     {
       "title": "Suspected China spy linked to Nvidia's ex-boss left in 2025, Megaspeed says",
       "url": "https://www.bbc.co.uk/news/articles/cmdx1vpprk9vo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T14:56:21.000Z",
+      "publishedAt": "2026-11-16T01:47:57.000Z",
       "category": "World",
       "source": "BBC News",
       "summary": "The Nvidia scandal has raised questions over whether advanced AI chips ended up in China, despite US restrictions."
     },
     {
-      "title": "Iran targets US military base in Bahrain with drone attack",
-      "url": "https://www.bbc.co.uk/news/articles/cqn4e2py48kwo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T13:42:58.000Z",
+      "title": "Black Friday and tax return scams - don't fall for these",
+      "url": "https://www.bbc.co.uk/news/articles/cm4gnlz2p61ko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T00:50:39.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Tens of thousands of scams are reported to HMRC - so it has advice on how to spot a fake request and refund."
+    },
+    {
+      "title": "Cut National Insurance for under-25s to create jobs, Milburn report to say",
+      "url": "https://www.bbc.co.uk/news/articles/c6p9dzmj514ko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T22:30:03.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The report being launched this week will suggest gradually reducing employment costs over five years."
+    },
+    {
+      "title": "Canada bars Russia from Junior World Championships",
+      "url": "https://www.bbc.co.uk/sport/ice-hockey/articles/cqkgm0jgv4mdo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T22:01:16.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "It marks the second attack on the country in three days and comes as the US and Iran remain locked in a stand-off over the Strait of Hormuz."
+      "summary": "Canada says it will not allow Russian athletes to compete in the Junior Ice Hockey World Championships because of the war in Ukraine."
+    },
+    {
+      "title": "UK will have 'voice' but no vote on EU food rules in Brexit reset",
+      "url": "https://www.bbc.co.uk/news/articles/c6wy4l8nl42wo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T22:00:24.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "EU minister Hamish Falconer insists Britain would have some influence on policy as part of a new deal."
+    },
+    {
+      "title": "Prince Harry praises war veterans on surprise visit to Ukraine",
+      "url": "https://www.bbc.co.uk/news/articles/c60evn992jq8o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T22:00:13.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "He has been showing support for injured veterans in Ukraine and praising the country's resilience."
+    },
+    {
+      "title": "Zelensky urges US and Musk to lift Starlink restrictions and be on 'right side of history'",
+      "url": "https://www.bbc.co.uk/news/articles/c6m25zg88k45o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-15T19:32:39.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The Ukrainian president says the slowed-down internet is making it difficult to stop Russian attacks."
     },
     {
       "title": "South Korea's top scorer in tax accountancy exam admits cheating",
       "url": "https://www.bbc.co.uk/news/articles/ckvg2ezvpe08o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-15T13:37:45.000Z",
-      "category": "World",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "Han Won-seok, 34, confessed to using a hidden camera and AI to get a near-perfect mark on the significant test."
     },
@@ -49,22 +105,6 @@
       "category": "Business",
       "source": "BBC News",
       "summary": "The work and pensions secretary said the level of support currently on offer was too vague."
-    },
-    {
-      "title": "Three men sentenced to death in Jordan over fatal church mass shooting",
-      "url": "https://www.bbc.co.uk/news/articles/c3rrg9xgqlwpo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T11:06:32.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The attack on funeral at a Greek Orthodox church killed nine and injured 34 others last month."
-    },
-    {
-      "title": "Israel kills Hamas commander in strike on Gaza camp, officials say",
-      "url": "https://www.bbc.co.uk/news/articles/cqrkg4r6mg7xo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T08:17:41.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Both Hamas and IDF officials confirm the death of Samir Abu Younis, commander of the Rafah Brigade."
     },
     {
       "title": "Beauty advent calendars can cost hundreds but are they value for money?",
@@ -86,7 +126,7 @@
       "title": "Microsoft says services fully restored after day-long global outage",
       "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-14T06:42:27.000Z",
-      "category": "Business",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "Efforts to address the underlying problem with Outlook, Teams and Copilot are complete, the tech firm says."
     },
@@ -102,33 +142,9 @@
       "title": "How the Jensen Huang scandal created a headache for business-friendly Singapore",
       "url": "https://www.bbc.co.uk/news/articles/ck1exevgql4qo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-13T23:00:31.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The scandal has cast a spotlight on Singapore's success as a chip hub - and a location for alleged illicit trade."
-    },
-    {
-      "title": "Microsoft outage 'stark reminder' of how much we rely on tech",
-      "url": "https://www.bbc.co.uk/news/articles/cxzd9171m51qo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T21:15:41.000Z",
       "category": "Technology",
       "source": "BBC News",
-      "summary": "Microsoft has apologised for the issue, which it said was due to a technical failure."
-    },
-    {
-      "title": "Heat pumps: How much heat does your home really need?",
-      "url": "https://www.bbc.co.uk/news/articles/cqy43zk3kk04o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T09:29:25.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Knowing how much heat your home loses is important before installing a new heating system."
-    },
-    {
-      "title": "The rise of 'housefishing' - when does using AI go from enhancing to misleading?",
-      "url": "https://www.bbc.co.uk/news/articles/cm62y0wrnz9zo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-13T00:13:35.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Experts warn that using AI to enhance property images can go too far and mislead prospective buyers."
+      "summary": "The scandal has cast a spotlight on Singapore's success as a chip hub - and a location for alleged illicit trade."
     }
   ]
 }
