@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="980" height="360" viewBox="0 0 980 360" role="img" aria-labelledby="t d">
+<title id="t">Featured projects — Suraj Kumar</title><desc id="d">Custom visual GitHub profile banner for Suraj Kumar, founder of Lazy Plex and builder of AI and digital strategy systems.</desc>
+<defs>
+<linearGradient id="panel" x2="1" y2="1"><stop stop-color="#0A1522"/><stop offset="1" stop-color="#071013"/></linearGradient>
+<linearGradient id="edge" x2="1" y2="0"><stop stop-color="#BAFF68"/><stop offset=".56" stop-color="#6EF1DF"/><stop offset="1" stop-color="#3E777F"/></linearGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#071013" stop-opacity="0"/><stop offset="1" stop-color="#071013"/></linearGradient>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#24433F" opacity=".65"/></pattern>
+<clipPath id="frame"><rect x="1" y="1" width="978" height="358" rx="22"/></clipPath>
+</defs>
+<style>
+text{font-family:Arial,Helvetica,sans-serif}
+.mono{font-family:'Courier New',monospace;letter-spacing:2px}
+.white{fill:#F2F8F1}.mute{fill:#93A5A5}.lime{fill:#BAFF68}.aqua{fill:#6EF1DF}
+.fine{stroke:#244039;stroke-width:1;fill:none}
+.pulse{animation:pulse 3s ease-in-out infinite}
+.rise{animation:rise 1.5s both}
+.bob{animation:bob 5s ease-in-out infinite}
+.spin{transform-origin:center;animation:spin 36s linear infinite}
+.glow{animation:glow 4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.4}}
+@keyframes rise{0%{opacity:0;transform:translateY(15px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes bob{50%{transform:translateY(-10px)}}
+@keyframes spin{100%{transform:rotate(360deg)}}
+@keyframes glow{50%{opacity:.55}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<rect width="980" height="360" rx="22" fill="url(#panel)"/>
+<rect x="1" y="1" width="978" height="358" rx="22" fill="none" stroke="#23403D" stroke-width="2"/>
+<g clip-path="url(#frame)"><rect width="980" height="360" fill="url(#dots)"/></g>
+
+<text x="38" y="38" class="mono lime" font-size="12">03 / CURRENT PROJECTS</text><text x="38" y="82" class="white" font-size="37" font-weight="900">Things I am actually building.</text>
+<text x="38" y="113" class="mute" font-size="15">Real projects, documented work and experiments in progress.</text>
+<rect x="35" y="142" width="291" height="182" rx="18" fill="#0E1D23" stroke="#2A4D42"/><text x="55" y="169" class="mono lime" font-size="11">PROJECT / 01</text><text x="55" y="207" class="white" font-weight="800" font-size="24">HEY SURAJ</text><text x="55" y="230" class="aqua" font-size="12.5">Personal HQ + interactive web</text><text x="55" y="265" class="mute" font-size="12.5">A playful portfolio, writing hub</text><text x="55" y="284" class="mute" font-size="12.5">and original AI companion, Pico.</text><path d="M55 300 H301" stroke="#365E4B"/><text x="285" y="316" class="lime" font-size="12">↗</text></rect><rect x="344" y="142" width="291" height="182" rx="18" fill="#0E1D23" stroke="#2A4D42"/><text x="364" y="169" class="mono lime" font-size="11">PROJECT / 02</text><text x="364" y="207" class="white" font-weight="800" font-size="24">LAZY PLEX</text><text x="364" y="230" class="aqua" font-size="12.5">Digital strategy &amp; growth</text><text x="364" y="265" class="mute" font-size="12.5">A venture connecting creative</text><text x="364" y="284" class="mute" font-size="12.5">thinking, marketing and systems.</text><path d="M364 300 H610" stroke="#365E4B"/><text x="594" y="316" class="lime" font-size="12">↗</text></rect><rect x="653" y="142" width="291" height="182" rx="18" fill="#0E1D23" stroke="#2A4D42"/><text x="673" y="169" class="mono lime" font-size="11">PROJECT / 03</text><text x="673" y="207" class="white" font-weight="800" font-size="24">THE LP TOOLKIT</text><text x="673" y="230" class="aqua" font-size="12.5">AI &amp; business software experiments</text><text x="673" y="265" class="mute" font-size="12.5">CRM, LeadOS and an SEO engine</text><text x="673" y="284" class="mute" font-size="12.5">under active development.</text><path d="M673 300 H919" stroke="#365E4B"/><text x="903" y="316" class="lime" font-size="12">↗</text></rect>
+
+</svg>
