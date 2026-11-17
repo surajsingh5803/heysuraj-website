@@ -1,14 +1,86 @@
 {
-  "generatedAt": "2026-11-16T22:18:15.797Z",
+  "generatedAt": "2026-11-17T08:06:29.595Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "Houthi rebel advance in Yemen may further destabilise global economy",
-      "url": "https://www.bbc.co.uk/news/articles/cmy97qperq9eo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T21:40:07.000Z",
+      "title": "Crimea bridge shut after reported Ukrainian strike, as Russia hits Kyiv crossings",
+      "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-17T08:02:27.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "The Iran-backed Houthis are gaining ground and their advance could have dangerous consequences, writes the BBC's security correspondent."
+      "summary": "The bridge linking Crimea and Russia has reportedly sustained major damage, while two routes through Kyiv are closed."
+    },
+    {
+      "title": "Which areas have the most jobs for 16-24 year-olds? Use our look-up to find out",
+      "url": "https://www.bbc.co.uk/news/articles/cw3djdjk5d7ko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-17T07:21:37.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "How many jobs are there where you live and in which sectors are you most likely to find an opening?"
+    },
+    {
+      "title": "Ukraine accuses Russia of targeting rescue operation after 'double-tap' strike kills 72",
+      "url": "https://www.bbc.co.uk/news/articles/c30rk8x5g80qo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-17T05:59:01.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Efforts to recover bodies after a “double-tap” attack in southern Ukraine are being hampered by continuing Russian strikes, officials say."
+    },
+    {
+      "title": "Nvidia dismisses 'Bring Jensen Back' campaign as Trump backs effort to reinstate ex boss",
+      "url": "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-17T02:37:53.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "A number of tech figures have backed an effort asking the AI chip giant to give Jensen Huang his job back."
+    },
+    {
+      "title": "Imran Khan seeks urgent medical care fearing he 'may not return alive'",
+      "url": "https://www.bbc.co.uk/news/articles/cr894xq5yeyko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-17T01:26:01.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Pakistan's ex-prime minister, who has been in prison since August 2023, says he has been denied justice."
+    },
+    {
+      "title": "New Zealand tricks and annual leave - the lengths fans are going to for GTA 6",
+      "url": "https://www.bbc.co.uk/news/articles/cm4gn9xnn1ppo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-17T01:04:45.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "Sensor Tower estimates the game has already made $1.18bn from pre-orders across PlayStation and Xbox"
+    },
+    {
+      "title": "Customers report service outages at major US banks",
+      "url": "https://www.bbc.co.uk/news/articles/cj752wvqneq6o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-17T00:18:01.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Chase Bank, the largest US bank, said a software bug might be causing the issue, but that it was not \"systemic'\" or \"cyber-related\"."
+    },
+    {
+      "title": "We couldn't afford a house alone, so we bought one with strangers",
+      "url": "https://www.bbc.co.uk/news/articles/c5742lwdyzglo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-17T00:00:02.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "People who can't afford to get on the housing ladder are buying homes with someone they don't know."
+    },
+    {
+      "title": "The AI start-ups fixing India's broken roads and messy land records",
+      "url": "https://www.bbc.co.uk/news/articles/c820vnln2lzpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T23:25:53.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "From legal-tech to healthcare, dozens of Indian AI start-ups are solving uniquely Indian challenges."
+    },
+    {
+      "title": "OpenAI sued by California over Hugging Face attack",
+      "url": "https://www.bbc.co.uk/news/articles/c6wy4xv2mxglo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-16T23:12:24.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Attorney General Rob Bonta alleges that the artificial intelligence misled and endangered the public."
     },
     {
       "title": "Forensic expert says his analysis of autopsy photos suggests Epstein was killed",
@@ -27,44 +99,12 @@
       "summary": "The 36-year-old's first trial this year fell apart when a 12-person jury failed to reach a verdict."
     },
     {
-      "title": "Trump backs return of ex-Nvidia boss after 'Bring Jensen Back' campaign launched",
-      "url": "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T19:16:52.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "A number of tech figures want the board of the AI chip giant to give Jensen Huang his job back."
-    },
-    {
-      "title": "When will we see Robert Pattinson as Bond in cinemas?",
-      "url": "https://www.bbc.co.uk/news/videos/cmd91xjd9zk2o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T17:18:54.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Robert Pattinson has been announced as the next James Bond, becoming the seventh actor to take up the mantle of 007."
-    },
-    {
-      "title": "Five EU countries announce migrant deportation centre in Rwanda",
-      "url": "https://www.bbc.co.uk/news/articles/cw987343352go?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T16:27:24.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Germany, Denmark, Austria, Greece and the Netherlands have announced a \"return hub\" for failed asylum seekers."
-    },
-    {
       "title": "Faisal Islam: What's in the Brexit reset food deal and are there trade-offs?",
       "url": "https://www.bbc.co.uk/news/articles/c6wy4l8nl42wo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-16T15:40:16.000Z",
       "category": "Business",
       "source": "BBC News",
       "summary": "EU minister Hamish Falconer insists Britain would have some influence on policy as part of a new deal."
-    },
-    {
-      "title": "Landmark Crimea bridge hit as Russia reports biggest Ukrainian drone attack of war",
-      "url": "https://www.bbc.co.uk/news/articles/ckx27v6dpjz0o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T14:58:12.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Russia said Ukraine had launched over 2,000 drones over the course of a day, while Kyiv came under a record 17 air raid alerts."
     },
     {
       "title": "GTA 6 hacker pleads guilty after release from secure hospital",
@@ -83,26 +123,10 @@
       "summary": "Some parents are so desperate for their children to find a job that they've offered to pay their wages, one hairdresser has told the BBC."
     },
     {
-      "title": "Avoid this Black Friday scam - how to check it's a real deal",
-      "url": "https://www.bbc.co.uk/news/articles/cm4gnlz2p61ko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T09:58:52.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Sales and the looming tax deadline mean more scams - here's how to make sure you don't get caught out."
-    },
-    {
-      "title": "Gas starts flowing from Jackdaw after government green light",
-      "url": "https://www.bbc.co.uk/news/articles/c9x2elzm047po?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T06:24:08.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Ministers last month announced the Jackdaw gas field, which lies 150 miles east of Aberdeen, had been approved after years of uncertainty."
-    },
-    {
       "title": "Intel sued by investors after PC sales slump hits share price",
       "url": "https://www.bbc.co.uk/news/articles/cw62p42p288do?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-16T03:04:01.000Z",
-      "category": "Business",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "A proposed class action claims the firm hid the impact of slowing PC sales from shareholders."
     },
@@ -113,38 +137,6 @@
       "category": "Technology",
       "source": "BBC News",
       "summary": "The Nvidia scandal has raised questions over whether advanced AI chips ended up in China, despite US restrictions."
-    },
-    {
-      "title": "South Korea's top scorer in tax accountancy exam admits cheating",
-      "url": "https://www.bbc.co.uk/news/articles/ckvg2ezvpe08o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T13:37:45.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Han Won-seok, 34, confessed to using a hidden camera and AI to get a near-perfect mark on the significant test."
-    },
-    {
-      "title": "Beauty advent calendars can cost hundreds but are they value for money?",
-      "url": "https://www.bbc.co.uk/news/articles/cqn83l442724o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-15T00:01:07.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Beauty calendars have become a Christmas staple and have become particularly popular with female shoppers."
-    },
-    {
-      "title": "Italy fines Meta €805m over accessing users' photos",
-      "url": "https://www.bbc.co.uk/news/articles/cwn83gxemk35o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-14T18:28:06.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "The social media giant is accused of not informing 20 million users it had access to their photos."
-    },
-    {
-      "title": "Microsoft says services fully restored after day-long global outage",
-      "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-14T06:42:27.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Efforts to address the underlying problem with Outlook, Teams and Copilot are complete, the tech firm says."
     }
   ]
 }
