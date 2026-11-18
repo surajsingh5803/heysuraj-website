@@ -1,14 +1,110 @@
 {
-  "generatedAt": "2026-11-18T07:41:35.167Z",
+  "generatedAt": "2026-11-18T20:41:38.846Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "Higher petrol and diesel prices push UK inflation to 3.6%",
-      "url": "https://www.bbc.co.uk/news/articles/cmy498kdkx3xo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T07:40:54.000Z",
+      "title": "Israeli military launches rare ground operation in Gaza beyond Yellow Line",
+      "url": "https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T20:14:57.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Hamas condemns the incursion, which the Israeli military says is dismantling a \"terror tunnel\", as a \"flagrant\" ceasefire violation."
+    },
+    {
+      "title": "William and Kate meet PM Modi as they wrap up India tour",
+      "url": "https://www.bbc.co.uk/news/articles/cq62ped2ypy4o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T20:07:08.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The meeting in New Delhi was a late addition to the royal couple's India visit, which also included their appearance at the annual Earthshot Prize"
+    },
+    {
+      "title": "Grand Theft Auto 6 is a masterpiece, say critics",
+      "url": "https://www.bbc.co.uk/news/articles/cw8r75xm8v4po?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T17:34:25.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Critics have their say as to whether GTA 6, the most anticipated video game of all time, lives up to the hype."
+    },
+    {
+      "title": "Inside the old gas pipeline where Ukraine is fighting an underground war with Russia",
+      "url": "https://www.bbc.co.uk/news/videos/c8p3vw4q6nzzo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T17:00:40.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Watch: The BBC's Jonathan Beale joins Ukrainian forces taking the battle below ground and out of sight of Russian drones."
+    },
+    {
+      "title": "'The drones don't fly here' - BBC reports from Ukraine's new front line",
+      "url": "https://www.bbc.co.uk/news/articles/c32l507ev4v4o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T17:00:04.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Ukrainian forces are fighting Russian troops in an old Soviet tunnel in the Kharkiv region."
+    },
+    {
+      "title": "Trump shakes hands with Putin and Xi ahead of historic talks in China",
+      "url": "https://www.bbc.co.uk/news/articles/ck9d75x5wwwwo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T16:10:44.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The three leaders will meet together for the first time on Thursday during a closely-watched summit."
+    },
+    {
+      "title": "The seven Anthropic founders who are about to become multi-billionaires",
+      "url": "https://www.bbc.co.uk/news/articles/cmd7159vlr85o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T13:55:14.000Z",
       "category": "Business",
       "source": "BBC News",
-      "summary": "There are also signs inflation is impacting the wider economy, with the cost raw materials and goods leaving factories climbing."
+      "summary": "The AI company behind Claude is about to sell its shares on the US stock market - making its founders very rich."
+    },
+    {
+      "title": "Typical energy bill forecast to go up by £443 a year from January as inflation rate rises again",
+      "url": "https://www.bbc.co.uk/news/articles/cmy498kdkx3xo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T13:17:06.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Energy bills are expected to jump by 26% a year for a typical household as UK inflation hits its highest rate for a year."
+    },
+    {
+      "title": "Hacks, AI or just overdue updates - why have there been so many outages?",
+      "url": "https://www.bbc.co.uk/news/articles/c6z0kly2lll7o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T13:16:53.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "There is no evidence these are linked, but the constant series of tech disruptions can be unnerving."
+    },
+    {
+      "title": "Heating bills, chocolate and cat food: What the inflation figures mean for you",
+      "url": "https://www.bbc.co.uk/news/articles/ckq6eg55n221o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T13:10:01.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Prices are rising at their fastest pace for a year in the UK, and higher energy costs are on the way."
+    },
+    {
+      "title": "Kuwait says it repelled first Iranian attack in two months after US strikes island",
+      "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T13:04:48.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Bahrain says it was also attacked by Iran following a US air strike on the Iranian island of Qeshm in the Gulf on Tuesday."
+    },
+    {
+      "title": "British hacker who stole $11m through text message scheme jailed for six years in US",
+      "url": "https://www.bbc.co.uk/news/articles/cm87987w1qz5o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T09:28:35.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "Tyler Buchanan, from Dundee, was a member of the notorious Scattered Spider group and began hacking when he was a teenager."
+    },
+    {
+      "title": "Security flaw found in Java, world's third-largest programming language",
+      "url": "https://www.bbc.co.uk/news/articles/cke89jevqm1vo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T08:47:06.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "The same tech start-up that discovered a PHP flaw used AI to uncover a critical software bug in one of the world's most popular computer language programs."
     },
     {
       "title": "How important are Nvidia and Jensen Huang to the US economy?",
@@ -19,14 +115,6 @@
       "summary": "The former Nvidia chief executive has been at the centre of the artificial intelligence boom."
     },
     {
-      "title": "Security flaw found in Java, world's third-largest programming language",
-      "url": "https://www.bbc.co.uk/news/articles/cke89jevqm1vo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T05:33:13.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The same tech start-up that discovered a PHP flaw used AI to uncover a critical software bug in one of the world's most popular computer language programs."
-    },
-    {
       "title": "Watch: Marco Rubio says recent tech outages are 'completely unrelated' to one another",
       "url": "https://www.bbc.co.uk/news/videos/cx1l0vm87yl9o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-18T05:10:02.000Z",
@@ -35,26 +123,18 @@
       "summary": "Microsoft, major US banks, Apple and Air Traffic authorities have been hit over recent days by tech glitches."
     },
     {
-      "title": "Jeff Bezos says he was 'heavily involved' in casting Robert Pattinson as new 007",
+      "title": "Jeff Bezos says he was 'heavily involved' in casting Robert Pattinson as new Bond",
       "url": "https://www.bbc.co.uk/news/articles/cm5y1eejk292o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-18T04:00:54.000Z",
       "category": "Business",
       "source": "BBC News",
-      "summary": "The Amazon CEO said he was originally \"biased against\" Pattinson \"because he's already so famous\"."
-    },
-    {
-      "title": "Waymo pulls driverless taxis from all US freeways",
-      "url": "https://www.bbc.co.uk/news/articles/cmy86pp336qlo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T03:07:22.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "The decision comes after California banned Waymo's driverless vehicles from operating on the state's highways following a series of traffic incidents."
+      "summary": "The Amazon chairman says he was originally \"biased against\" Pattinson \"because he's already so famous\"."
     },
     {
       "title": "Nvidia says it won't reinstate Huang as it reports soaring sales",
       "url": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-18T01:18:18.000Z",
-      "category": "World",
+      "category": "Business",
       "source": "BBC News",
       "summary": "The AI chip giant reported strong quarterly earnings on Tuesday after the dramatic exit of Jensen Huang."
     },
@@ -65,70 +145,6 @@
       "category": "Business",
       "source": "BBC News",
       "summary": "Europe hopes to be a leader in a new generation of computer chips which use light to process data."
-    },
-    {
-      "title": "Philippines police ask prosecutors to charge Thomas Markle over child sex abuse material",
-      "url": "https://www.bbc.co.uk/news/articles/ckg5ry8m49ggo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T22:44:15.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Markle is being held in custody in the US after one charge and has previously denied all of the allegations."
-    },
-    {
-      "title": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
-      "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T21:24:35.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Ukraine says the missile and drone attack on the strategic bridge in the Russian-annexed Crimea took weeks to plan."
-    },
-    {
-      "title": "Russian military plane crashes, killing all 19 on board",
-      "url": "https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T21:06:11.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Russia's defence ministry says it preliminarily believes a technical malfunction was the cause of the crash in the Kemerovo region."
-    },
-    {
-      "title": "Palestinian woman, 72, shot dead by Israeli settlers in West Bank, health ministry says",
-      "url": "https://www.bbc.co.uk/news/articles/cqrlg377638yo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T20:30:20.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Palestinians say there was an attack by settlers in al-Duyuk al-Tahta, while the Israeli military says the settlers fired after being attacked."
-    },
-    {
-      "title": "Government backs welfare shake-up to prevent 'lost generation'",
-      "url": "https://www.bbc.co.uk/news/articles/ck79210y125xo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T18:43:05.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Ex-minister Alan Milburn has set out plans to divert spending from benefits towards job support."
-    },
-    {
-      "title": "'It was really scary': Mother describes sheltering during Russia strikes on Kyiv bridge",
-      "url": "https://www.bbc.co.uk/news/articles/cq7825234lgmo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T17:19:57.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Moscow has targeted bridges in Kyiv, while Ukraine severely damaged a critical bridge linking Russia to occupied Crimea."
-    },
-    {
-      "title": "How the attack on Crimean Bridge unfolded",
-      "url": "https://www.bbc.co.uk/news/articles/crz9dgz28zwdo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T15:38:10.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "One of the key symbols of Russia's occupation of Ukraine has suffered major damage after a seven-stage attack by Kyiv."
-    },
-    {
-      "title": "How new US chip restrictions on South East Asia will hit China",
-      "url": "https://www.bbc.co.uk/news/articles/cwq6e2qgvmlgo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T14:25:45.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "The new rules restrict chip exports and also access to their computing power, which China relies on heavily."
     }
   ]
 }
