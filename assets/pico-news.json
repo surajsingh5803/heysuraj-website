@@ -1,14 +1,94 @@
 {
-  "generatedAt": "2026-11-17T21:04:18.770Z",
+  "generatedAt": "2026-11-18T07:41:35.167Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "US loses measles elimination status after 26 years amid record case numbers",
-      "url": "https://www.bbc.co.uk/news/articles/c977p71jx0xxo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T21:04:00.000Z",
+      "title": "Higher petrol and diesel prices push UK inflation to 3.6%",
+      "url": "https://www.bbc.co.uk/news/articles/cmy498kdkx3xo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T07:40:54.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "There are also signs inflation is impacting the wider economy, with the cost raw materials and goods leaving factories climbing."
+    },
+    {
+      "title": "How important are Nvidia and Jensen Huang to the US economy?",
+      "url": "https://www.bbc.co.uk/news/articles/c68798vdprwpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T06:04:21.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The former Nvidia chief executive has been at the centre of the artificial intelligence boom."
+    },
+    {
+      "title": "Security flaw found in Java, world's third-largest programming language",
+      "url": "https://www.bbc.co.uk/news/articles/cke89jevqm1vo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T05:33:13.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The same tech start-up that discovered a PHP flaw used AI to uncover a critical software bug in one of the world's most popular computer language programs."
+    },
+    {
+      "title": "Watch: Marco Rubio says recent tech outages are 'completely unrelated' to one another",
+      "url": "https://www.bbc.co.uk/news/videos/cx1l0vm87yl9o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T05:10:02.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "Microsoft, major US banks, Apple and Air Traffic authorities have been hit over recent days by tech glitches."
+    },
+    {
+      "title": "Jeff Bezos says he was 'heavily involved' in casting Robert Pattinson as new 007",
+      "url": "https://www.bbc.co.uk/news/articles/cm5y1eejk292o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T04:00:54.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The Amazon CEO said he was originally \"biased against\" Pattinson \"because he's already so famous\"."
+    },
+    {
+      "title": "Waymo pulls driverless taxis from all US freeways",
+      "url": "https://www.bbc.co.uk/news/articles/cmy86pp336qlo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T03:07:22.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "The decision comes after California banned Waymo's driverless vehicles from operating on the state's highways following a series of traffic incidents."
+    },
+    {
+      "title": "Nvidia says it won't reinstate Huang as it reports soaring sales",
+      "url": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T01:18:18.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "States have reported over 5,400 cases and 10 measles-related deaths for the first time since the early 1990s."
+      "summary": "The AI chip giant reported strong quarterly earnings on Tuesday after the dramatic exit of Jensen Huang."
+    },
+    {
+      "title": "Europe plans to catch the next computer chip wave",
+      "url": "https://www.bbc.co.uk/news/articles/cqglwjd450k0o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T00:00:24.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Europe hopes to be a leader in a new generation of computer chips which use light to process data."
+    },
+    {
+      "title": "Philippines police ask prosecutors to charge Thomas Markle over child sex abuse material",
+      "url": "https://www.bbc.co.uk/news/articles/ckg5ry8m49ggo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-17T22:44:15.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Markle is being held in custody in the US after one charge and has previously denied all of the allegations."
+    },
+    {
+      "title": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
+      "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-17T21:24:35.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Ukraine says the missile and drone attack on the strategic bridge in the Russian-annexed Crimea took weeks to plan."
+    },
+    {
+      "title": "Russian military plane crashes, killing all 19 on board",
+      "url": "https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-17T21:06:11.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Russia's defence ministry says it preliminarily believes a technical malfunction was the cause of the crash in the Kemerovo region."
     },
     {
       "title": "Palestinian woman, 72, shot dead by Israeli settlers in West Bank, health ministry says",
@@ -19,28 +99,12 @@
       "summary": "Palestinians say there was an attack by settlers in al-Duyuk al-Tahta, while the Israeli military says the settlers fired after being attacked."
     },
     {
-      "title": "Russian military plane crashes killing all 19 on board",
-      "url": "https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T20:25:27.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Russia's defence ministry says it preliminarily believes a technical malfunction was the cause of the crash in the Kemerovo region."
-    },
-    {
-      "title": "Speed camera fault may have allowed drivers to escape fines",
-      "url": "https://www.bbc.co.uk/news/articles/c5y4j7z373kzo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T20:04:54.000Z",
+      "title": "Government backs welfare shake-up to prevent 'lost generation'",
+      "url": "https://www.bbc.co.uk/news/articles/ck79210y125xo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-17T18:43:05.000Z",
       "category": "Business",
       "source": "BBC News",
-      "summary": "The Home Office has revoked approval that allowed footage from speed cameras to be used in evidence."
-    },
-    {
-      "title": "Jensen Huang says he would be 'honoured' to return as Nvidia CEO if board asked him",
-      "url": "https://www.bbc.co.uk/news/articles/cwx2en2vrxmdo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T18:24:21.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Huang says he has had an \"outpouring\" of calls from investors and others calling for him to return."
+      "summary": "Ex-minister Alan Milburn has set out plans to divert spending from benefits towards job support."
     },
     {
       "title": "'It was really scary': Mother describes sheltering during Russia strikes on Kyiv bridge",
@@ -49,22 +113,6 @@
       "category": "World",
       "source": "BBC News",
       "summary": "Moscow has targeted bridges in Kyiv, while Ukraine severely damaged a critical bridge linking Russia to occupied Crimea."
-    },
-    {
-      "title": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
-      "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T16:56:38.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Ukraine says the missile and drone attack on the strategic bridge in the Russian-annexed Crimea took weeks to plan."
-    },
-    {
-      "title": "We can't afford to hire under-25s, say firms. Will Milburn plans help?",
-      "url": "https://www.bbc.co.uk/news/articles/c6d01e8m15mko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T15:56:04.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The proposal to cut employers' National Insurance costs is \"essential\" to tackling the Neet problem, one business group says."
     },
     {
       "title": "How the attack on Crimean Bridge unfolded",
@@ -78,73 +126,9 @@
       "title": "How new US chip restrictions on South East Asia will hit China",
       "url": "https://www.bbc.co.uk/news/articles/cwq6e2qgvmlgo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-17T14:25:45.000Z",
-      "category": "Business",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "The new rules restrict chip exports and also access to their computing power, which China relies on heavily."
-    },
-    {
-      "title": "Where are the most jobs for 18-24 year-olds?",
-      "url": "https://www.bbc.co.uk/news/articles/cw3djdjk5d7ko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T12:35:53.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "How many jobs are there where you live and in which sectors are you most likely to find an opening?"
-    },
-    {
-      "title": "NHS data contract to stay with Palantir until 2029",
-      "url": "https://www.bbc.co.uk/news/articles/cqvg27zpm8w8o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T12:00:12.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Despite calls from some Labour MPs to end the arrangement with Palantir, ministers say a new contract will not be awarded until 2029."
-    },
-    {
-      "title": "Pretending to be in New Zealand, booking leave and buying consoles - the lengths fans are going to for GTA 6",
-      "url": "https://www.bbc.co.uk/news/articles/cm4gn9xnn1ppo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T11:49:01.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Sensor Tower estimates the game has already made $1.18bn from pre-orders across PlayStation and Xbox"
-    },
-    {
-      "title": "US government confirms investigation into tech firm Megaspeed",
-      "url": "https://www.bbc.co.uk/news/articles/cmn504nq5033o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T11:17:32.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The Singapore-based company is suspected of helping to ship high-end AI chips from tech giant Nvidia to China, violating US export rules."
-    },
-    {
-      "title": "'We're a capitalist society': Grindr defends $120 a month premium tier",
-      "url": "https://www.bbc.co.uk/news/articles/cr1ewlqjn694o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T09:41:07.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "It says the ultra-premium service is intended for a \"small community\" of users - and could get more expensive in future."
-    },
-    {
-      "title": "Nvidia dismisses 'Bring Jensen Back' campaign as Trump backs effort to reinstate ex boss",
-      "url": "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T02:37:53.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "A number of tech figures have backed an effort asking the AI chip giant to give Jensen Huang his job back."
-    },
-    {
-      "title": "We couldn't afford a house alone, so we bought one with strangers",
-      "url": "https://www.bbc.co.uk/news/articles/c5742lwdyzglo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-17T00:00:02.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "People who can't afford to get on the housing ladder are buying homes with someone they don't know."
-    },
-    {
-      "title": "The AI start-ups fixing India's broken roads and messy land records",
-      "url": "https://www.bbc.co.uk/news/articles/c820vnln2lzpo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-16T23:25:53.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "From legal-tech to healthcare, dozens of Indian AI start-ups are solving uniquely Indian challenges."
     }
   ]
 }
