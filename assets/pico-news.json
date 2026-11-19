@@ -1,30 +1,86 @@
 {
-  "generatedAt": "2026-11-19T07:38:02.783Z",
+  "generatedAt": "2026-11-19T20:46:47.403Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "Crimean Bridge attacked again, Russia says",
-      "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-19T07:32:06.000Z",
+      "title": "Myanmar committed genocide against Rohingya minority, top UN court rules",
+      "url": "https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T20:07:02.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "The head of Crimea said traffic was suspended after another attack on the link between Russia and the occupied territory."
+      "summary": "The unprecedented International Court of Justice verdict concerns a 2017 military crackdown that killed thousands."
     },
     {
-      "title": "Gilts v kilts: What is happening with Scottish government bonds?",
-      "url": "https://www.bbc.co.uk/news/articles/cmwy8pgj2z8vo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-19T06:15:57.000Z",
+      "title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
+      "url": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T19:16:21.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "European allies of Ukraine say they have a \"united\" negotiating position at a summit in Berlin."
+    },
+    {
+      "title": "Trump, Putin and Xi release 'peace declaration' after historic meeting",
+      "url": "https://www.bbc.co.uk/news/articles/c623j4ln97x7o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T17:38:22.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "While the presidents have previously met for one-on-one meetings, this is their first trilateral discussion."
+    },
+    {
+      "title": "Dutch watchdog tells people not to buy AI smart glasses",
+      "url": "https://www.bbc.co.uk/news/articles/ckq6eyrzrzy5o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T16:33:17.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "Tests of glasses showed some misread medicine instructions or pretended to have called an ambulance"
+    },
+    {
+      "title": "Anthropic raises $81bn in record-breaking stock market debut",
+      "url": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T15:58:58.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "The company behind the Claude chatbot will become one of the most valuable firms in the world."
+    },
+    {
+      "title": "Dozens missing after boat carrying migrants sinks off Senegal's coast",
+      "url": "https://www.bbc.co.uk/news/articles/c58j484089ewo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T15:52:26.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "At least four bodies have been recovered from the boat which was reportedly carrying between 50 and 100 people."
+    },
+    {
+      "title": "Viagogo may have broken law on hidden fees, watchdog provisionally finds",
+      "url": "https://www.bbc.co.uk/news/articles/cmvg2ex7j30lo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T13:35:52.000Z",
       "category": "Business",
       "source": "BBC News",
-      "summary": "MSPs have heard both the pros and cons of the government's plan to launch its first ever bond to the market."
+      "summary": "The UK's competition body says initial findings suggest the ticket-reselling website used drip pricing."
     },
     {
-      "title": "This is a remarkable diplomatic moment for China's Xi - but it comes with pitfalls",
-      "url": "https://www.bbc.co.uk/news/articles/cr9d75we51j1o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-19T04:42:52.000Z",
+      "title": "Venezuela signs military deal with US less than a year after Maduro's removal",
+      "url": "https://www.bbc.co.uk/news/articles/cmwy8pyqlq5vo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T13:31:23.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "The meeting comes with challenges as there are things Xi does not appear keen to discuss with Putin and Trump."
+      "summary": "The US Secretary of Defence says Venezuela has \"gone from our most aggressive regional threat to a compliant security partner\"."
+    },
+    {
+      "title": "Putin vows 'far more painful' response to Ukraine's strikes on Crimean Bridge",
+      "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T13:07:35.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The bridge - a symbol of Russia's occupation of the Crimean Peninsula - suffered major damaged following a combined attack by Ukraine earlier this week."
+    },
+    {
+      "title": "UK joins in GTA 6 frenzy as game becomes available worldwide",
+      "url": "https://www.bbc.co.uk/news/articles/c6z74ep2n17zo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T12:26:39.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "The game, which was in development for 13 years, is set become one of the world's most popular entertainment products ever."
     },
     {
       "title": "Elon Musk says record $446m spending on US midterms was 'pretty foolish'",
@@ -35,20 +91,20 @@
       "summary": "The multi-billionaire also said he was \"not Maga\", distancing himself from the political movement linked to Trump."
     },
     {
-      "title": "AI giant Anthropic valued at $1.5 trillion ahead of stock market debut",
-      "url": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-19T02:20:15.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The company behind the Claude chatbot will become one of the most valuable firms in the world."
-    },
-    {
       "title": "Van Gogh painting sells for record $190.4m after row over its Nazi history",
       "url": "https://www.bbc.co.uk/news/articles/c5dj1dkwzvzwo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-19T00:49:19.000Z",
       "category": "World",
       "source": "BBC News",
       "summary": "Châtaigniers en fleurs was painted in 1890 in the final two months of Vincent van Gogh's life."
+    },
+    {
+      "title": "Crew unaware of risks before Mike Lynch's yacht Bayesian sank, say investigators",
+      "url": "https://www.bbc.co.uk/news/articles/c6e9kn15z9d7o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T00:05:31.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The vessel sank off the coast of northern Sicily, killing seven people including British tech tycoon Mike Lynch."
     },
     {
       "title": "McDonald's sex abuse: 'They were waiting for the younger girls to turn 18'",
@@ -67,23 +123,7 @@
       "summary": "The AI company behind Claude is about to sell its shares on the US stock market - making its founders very rich."
     },
     {
-      "title": "Myanmar faces historic genocide verdict at UN court over Rohingya massacres",
-      "url": "https://www.bbc.co.uk/news/articles/c5m2l90ez144o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T23:04:06.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "No state has ever been found guilty by an international court of committing genocide."
-    },
-    {
-      "title": "Israeli military launches rare ground operation in Gaza beyond Yellow Line",
-      "url": "https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T22:34:56.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Hamas condemns the incursion, which the Israeli military says is dismantling a \"terror tunnel\", as a \"flagrant\" ceasefire violation."
-    },
-    {
-      "title": "Can Anthropic's record-breaking IPO stop the AI bubble bursting?",
+      "title": "Simon Jack: Can Anthropic's record-breaking IPO stop the AI bubble bursting?",
       "url": "https://www.bbc.co.uk/news/articles/cj4gnpzll020o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-18T21:28:08.000Z",
       "category": "Business",
@@ -97,38 +137,6 @@
       "category": "Technology",
       "source": "BBC News",
       "summary": "Critics have their say as to whether GTA 6, the most anticipated video game of all time, lives up to the hype."
-    },
-    {
-      "title": "Inside the old gas pipeline where Ukraine is fighting an underground war with Russia",
-      "url": "https://www.bbc.co.uk/news/videos/c8p3vw4q6nzzo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T17:00:40.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Watch: The BBC's Jonathan Beale joins Ukrainian forces taking the battle below ground and out of sight of Russian drones."
-    },
-    {
-      "title": "Hacks, AI or just overdue updates - why have there been so many outages?",
-      "url": "https://www.bbc.co.uk/news/articles/c6z0kly2lll7o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T13:16:53.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "There is no evidence these are linked, but the constant series of tech disruptions can be unnerving."
-    },
-    {
-      "title": "British hacker who stole $11m through text message scheme jailed for six years in US",
-      "url": "https://www.bbc.co.uk/news/articles/cm87987w1qz5o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T09:28:35.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Tyler Buchanan, from Dundee, was a member of the notorious Scattered Spider group and began hacking when he was a teenager."
-    },
-    {
-      "title": "Security flaw found in Java, world's third-largest programming language",
-      "url": "https://www.bbc.co.uk/news/articles/cke89jevqm1vo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T08:47:06.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "The same tech start-up that discovered a PHP flaw used AI to uncover a critical software bug in one of the world's most popular computer language programs."
     },
     {
       "title": "Europe plans to catch the next computer chip wave",
