@@ -1,28 +1,100 @@
 {
-  "generatedAt": "2026-11-18T20:41:38.846Z",
+  "generatedAt": "2026-11-19T07:38:02.783Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
+      "title": "Crimean Bridge attacked again, Russia says",
+      "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T07:32:06.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The head of Crimea said traffic was suspended after another attack on the link between Russia and the occupied territory."
+    },
+    {
+      "title": "Gilts v kilts: What is happening with Scottish government bonds?",
+      "url": "https://www.bbc.co.uk/news/articles/cmwy8pgj2z8vo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T06:15:57.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "MSPs have heard both the pros and cons of the government's plan to launch its first ever bond to the market."
+    },
+    {
+      "title": "This is a remarkable diplomatic moment for China's Xi - but it comes with pitfalls",
+      "url": "https://www.bbc.co.uk/news/articles/cr9d75we51j1o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T04:42:52.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The meeting comes with challenges as there are things Xi does not appear keen to discuss with Putin and Trump."
+    },
+    {
+      "title": "Elon Musk says record $446m spending on US midterms was 'pretty foolish'",
+      "url": "https://www.bbc.co.uk/news/articles/cm9q8j2z3gg8o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T02:59:06.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The multi-billionaire also said he was \"not Maga\", distancing himself from the political movement linked to Trump."
+    },
+    {
+      "title": "AI giant Anthropic valued at $1.5 trillion ahead of stock market debut",
+      "url": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T02:20:15.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The company behind the Claude chatbot will become one of the most valuable firms in the world."
+    },
+    {
+      "title": "Van Gogh painting sells for record $190.4m after row over its Nazi history",
+      "url": "https://www.bbc.co.uk/news/articles/c5dj1dkwzvzwo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T00:49:19.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Châtaigniers en fleurs was painted in 1890 in the final two months of Vincent van Gogh's life."
+    },
+    {
+      "title": "McDonald's sex abuse: 'They were waiting for the younger girls to turn 18'",
+      "url": "https://www.bbc.co.uk/news/articles/c6x2eve321jno?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-19T00:00:59.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "A former McDonald's worker calls on the firm to “change the way they treat younger employees” as a judge rules a legal case against the chain can go ahead."
+    },
+    {
+      "title": "The seven Anthropic founders who are about to become multi-billionaires",
+      "url": "https://www.bbc.co.uk/news/articles/cmd7159vlr85o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T23:42:07.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The AI company behind Claude is about to sell its shares on the US stock market - making its founders very rich."
+    },
+    {
+      "title": "Myanmar faces historic genocide verdict at UN court over Rohingya massacres",
+      "url": "https://www.bbc.co.uk/news/articles/c5m2l90ez144o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T23:04:06.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "No state has ever been found guilty by an international court of committing genocide."
+    },
+    {
       "title": "Israeli military launches rare ground operation in Gaza beyond Yellow Line",
       "url": "https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T20:14:57.000Z",
+      "publishedAt": "2026-11-18T22:34:56.000Z",
       "category": "World",
       "source": "BBC News",
       "summary": "Hamas condemns the incursion, which the Israeli military says is dismantling a \"terror tunnel\", as a \"flagrant\" ceasefire violation."
     },
     {
-      "title": "William and Kate meet PM Modi as they wrap up India tour",
-      "url": "https://www.bbc.co.uk/news/articles/cq62ped2ypy4o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T20:07:08.000Z",
-      "category": "World",
+      "title": "Can Anthropic's record-breaking IPO stop the AI bubble bursting?",
+      "url": "https://www.bbc.co.uk/news/articles/cj4gnpzll020o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-18T21:28:08.000Z",
+      "category": "Business",
       "source": "BBC News",
-      "summary": "The meeting in New Delhi was a late addition to the royal couple's India visit, which also included their appearance at the annual Earthshot Prize"
+      "summary": "Anthropic's hotly anticipated IPO is expected to put it in the top 10 most valuable US companies, but the future is uncertain."
     },
     {
       "title": "Grand Theft Auto 6 is a masterpiece, say critics",
       "url": "https://www.bbc.co.uk/news/articles/cw8r75xm8v4po?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-18T17:34:25.000Z",
-      "category": "World",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "Critics have their say as to whether GTA 6, the most anticipated video game of all time, lives up to the hype."
     },
@@ -35,60 +107,12 @@
       "summary": "Watch: The BBC's Jonathan Beale joins Ukrainian forces taking the battle below ground and out of sight of Russian drones."
     },
     {
-      "title": "'The drones don't fly here' - BBC reports from Ukraine's new front line",
-      "url": "https://www.bbc.co.uk/news/articles/c32l507ev4v4o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T17:00:04.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Ukrainian forces are fighting Russian troops in an old Soviet tunnel in the Kharkiv region."
-    },
-    {
-      "title": "Trump shakes hands with Putin and Xi ahead of historic talks in China",
-      "url": "https://www.bbc.co.uk/news/articles/ck9d75x5wwwwo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T16:10:44.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The three leaders will meet together for the first time on Thursday during a closely-watched summit."
-    },
-    {
-      "title": "The seven Anthropic founders who are about to become multi-billionaires",
-      "url": "https://www.bbc.co.uk/news/articles/cmd7159vlr85o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T13:55:14.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The AI company behind Claude is about to sell its shares on the US stock market - making its founders very rich."
-    },
-    {
-      "title": "Typical energy bill forecast to go up by £443 a year from January as inflation rate rises again",
-      "url": "https://www.bbc.co.uk/news/articles/cmy498kdkx3xo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T13:17:06.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Energy bills are expected to jump by 26% a year for a typical household as UK inflation hits its highest rate for a year."
-    },
-    {
       "title": "Hacks, AI or just overdue updates - why have there been so many outages?",
       "url": "https://www.bbc.co.uk/news/articles/c6z0kly2lll7o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-18T13:16:53.000Z",
       "category": "Technology",
       "source": "BBC News",
       "summary": "There is no evidence these are linked, but the constant series of tech disruptions can be unnerving."
-    },
-    {
-      "title": "Heating bills, chocolate and cat food: What the inflation figures mean for you",
-      "url": "https://www.bbc.co.uk/news/articles/ckq6eg55n221o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T13:10:01.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Prices are rising at their fastest pace for a year in the UK, and higher energy costs are on the way."
-    },
-    {
-      "title": "Kuwait says it repelled first Iranian attack in two months after US strikes island",
-      "url": "https://www.bbc.co.uk/news/articles/cw4gn9jeqjq7o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T13:04:48.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Bahrain says it was also attacked by Iran following a US air strike on the Iranian island of Qeshm in the Gulf on Tuesday."
     },
     {
       "title": "British hacker who stole $11m through text message scheme jailed for six years in US",
@@ -105,38 +129,6 @@
       "category": "Technology",
       "source": "BBC News",
       "summary": "The same tech start-up that discovered a PHP flaw used AI to uncover a critical software bug in one of the world's most popular computer language programs."
-    },
-    {
-      "title": "How important are Nvidia and Jensen Huang to the US economy?",
-      "url": "https://www.bbc.co.uk/news/articles/c68798vdprwpo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T06:04:21.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The former Nvidia chief executive has been at the centre of the artificial intelligence boom."
-    },
-    {
-      "title": "Watch: Marco Rubio says recent tech outages are 'completely unrelated' to one another",
-      "url": "https://www.bbc.co.uk/news/videos/cx1l0vm87yl9o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T05:10:02.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Microsoft, major US banks, Apple and Air Traffic authorities have been hit over recent days by tech glitches."
-    },
-    {
-      "title": "Jeff Bezos says he was 'heavily involved' in casting Robert Pattinson as new Bond",
-      "url": "https://www.bbc.co.uk/news/articles/cm5y1eejk292o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T04:00:54.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The Amazon chairman says he was originally \"biased against\" Pattinson \"because he's already so famous\"."
-    },
-    {
-      "title": "Nvidia says it won't reinstate Huang as it reports soaring sales",
-      "url": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-18T01:18:18.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The AI chip giant reported strong quarterly earnings on Tuesday after the dramatic exit of Jensen Huang."
     },
     {
       "title": "Europe plans to catch the next computer chip wave",
