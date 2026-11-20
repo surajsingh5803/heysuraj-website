@@ -1,76 +1,124 @@
 {
-  "generatedAt": "2026-11-20T07:28:49.207Z",
+  "generatedAt": "2026-11-20T20:30:45.320Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "Tinned goods and UHT milk boost retail sales after 'Be Ready' campaign launch",
-      "url": "https://www.bbc.co.uk/news/articles/ck053mzy2qqeo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T07:26:25.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "People stocking up on long-life food drove retail sales higher October, according to official data."
-    },
-    {
-      "title": "UK and EU to agree youth mobility scheme, BBC understands",
-      "url": "https://www.bbc.co.uk/news/articles/c623j4kpg94go?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T07:14:46.000Z",
+      "title": "Anthropic shares fall after blockbuster opening as wider tech sell-off continues",
+      "url": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T20:00:53.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "The scheme is expected to be approved at Friday's UK-EU summit, with new deals on food trade and carbon emissions also on the table."
+      "summary": "Other tech companies have also taken a hit as share markets broadly slump."
     },
     {
-      "title": "Mouldy, infested housing for vulnerable people sold as ethical investments abroad",
-      "url": "https://www.bbc.co.uk/news/articles/c6evre8j12vno?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T06:00:33.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The properties are marketed at premium prices with claims of “government-backed” returns, the BBC finds."
-    },
-    {
-      "title": "GTA 6 breaks records as estimated sales top $2.3bn",
-      "url": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T02:54:40.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Rockstar Games ended a 13-year wait with what is expected to be the biggest entertainment launch ever."
-    },
-    {
-      "title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
-      "url": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T00:50:24.000Z",
+      "title": "Trump threatens ban on US firms building AI data centres overseas",
+      "url": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T19:51:52.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "European allies of Ukraine say they have a \"united\" negotiating position at a summit in Berlin."
+      "summary": "The US president provided little detail on the potential policy, saying others in his team were hearing about it for the first time."
     },
     {
-      "title": "'I tell my son it's just fireworks': Life inside Yemeni city besieged by Houthis",
-      "url": "https://www.bbc.co.uk/news/articles/cx7v2d8q879eo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T00:13:21.000Z",
+      "title": "Gérard Depardieu and French author investigated over sexual allegations",
+      "url": "https://www.bbc.co.uk/news/articles/c9ly43pj10mvo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T19:45:20.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Orla Guerin speaks to seven people trapped in the key city of Taiz, cut off from the outside world for weeks."
+      "summary": "A judicial investigation was launched after a complaint was filed last year over \"allegations of a sexual nature\"."
+    },
+    {
+      "title": "Indian man sentenced to 19-plus years in plot to assassinate US-based Sikh separatist leader",
+      "url": "https://www.bbc.co.uk/news/articles/cq702ez8d4lwo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T19:27:49.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Nikhil Gupta pleaded guilty to murder-for-hire, conspiracy to commit murder-for-hire, and conspiracy to commit money laundering in February."
+    },
+    {
+      "title": "White House removes cyber-security chief after series of tech outages",
+      "url": "https://www.bbc.co.uk/news/articles/cwz0k3nn5p5mo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T19:03:56.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "He has been fired after losing the confidence of new White House chief of staff Stephen Miller, according to reports."
+    },
+    {
+      "title": "UK to explore even closer ties with EU after agreeing deal, says Burnham",
+      "url": "https://www.bbc.co.uk/news/articles/c6jreyqgw4e9o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T17:49:48.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The UK-EU deal agreed on Friday covers British food exports, emissions trading and a youth experience scheme."
+    },
+    {
+      "title": "Russian missile hits Poland as Ukraine's allies hold military exercise, says Tusk",
+      "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T16:54:29.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Nobody was hurt and no damage has been reported, but Warsaw described the incident as a \"provocation\" from Moscow."
+    },
+    {
+      "title": "Faisal Islam: This cost-cutting UK-EU deal doesn't mean lower prices will follow",
+      "url": "https://www.bbc.co.uk/news/articles/cm1wr029evnqo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T16:41:52.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The trade deal is unlikely lower food prices for shoppers, but should boost the economy more than other post-Brexit agreements."
     },
     {
       "title": "Airbnb's divisive new house rules come into force",
       "url": "https://www.bbc.co.uk/news/articles/cmx278n2genyo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T00:12:28.000Z",
+      "publishedAt": "2026-11-20T15:48:35.000Z",
       "category": "Business",
       "source": "BBC News",
       "summary": "New rules on what Airbnb hosts can reasonably ask guests to do could mean fewer chores but higher costs for customers."
     },
     {
-      "title": "Fish and eggs al desko? The dos and don'ts of the lunch break",
+      "title": "GTA 6 drives spike in download demand, as estimated sales top $2.3bn",
+      "url": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T13:08:30.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "Rockstar Games ended a 13-year wait with what is expected to be the biggest entertainment launch ever."
+    },
+    {
+      "title": "Russia targets Kyiv crossings days after Ukraine hits Crimean Bridge",
+      "url": "https://www.bbc.co.uk/news/articles/c6x29gn4pdn9o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T13:01:16.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Russia launched one of its biggest air attacks yet as it rejected the prospect of security guarantees for Ukraine."
+    },
+    {
+      "title": "Tinned food and long-life milk boost retail sales after 'Be Ready' campaign launch",
+      "url": "https://www.bbc.co.uk/news/articles/ck053mzy2qqeo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T09:44:56.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "People stocking up on long-life food drove retail sales higher October, according to official data."
+    },
+    {
+      "title": "Should AI be judging our credit worthiness?",
+      "url": "https://www.bbc.co.uk/news/articles/c6d94pzk9vleo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T07:32:19.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Would AI be a good judge of whether you should get a mortgage, car loan or mobile phone contract?"
+    },
+    {
+      "title": "Fish and eggs al desko? The dos and don'ts of lunch at work",
       "url": "https://www.bbc.co.uk/news/articles/cwp8g4092zglo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-20T00:08:37.000Z",
       "category": "Business",
       "source": "BBC News",
-      "summary": "What is acceptable to eat at your desk, without annoying your colleagues?"
+      "summary": "Eating at your desk? The dos and don'ts of lunch at work"
     },
     {
       "title": "Tens of thousands of UK fridges secured from hackers in secret nationwide operation",
       "url": "https://www.bbc.co.uk/news/articles/c6eq49zyx7p4o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-20T00:02:07.000Z",
-      "category": "Business",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "Supermarkets, warehouses, restaurants and stadiums have been scrambling to make their devices safe."
     },
@@ -78,65 +126,9 @@
       "title": "Anthropic becomes one of world's most valuable public companies in stock market debut",
       "url": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-19T23:33:51.000Z",
-      "category": "World",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "Anthropic is the first purely AI company to be publicly listed, creating a test for the entire industry."
-    },
-    {
-      "title": "California targets Nvidia in China AI chip probe",
-      "url": "https://www.bbc.co.uk/news/articles/cqn70vxp5p4no?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-19T23:04:30.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The probe by California, where the AI chipmaker has its global headquarters, follows former CEO Jensen Huang's departure."
-    },
-    {
-      "title": "Myanmar committed genocide against Rohingya minority, top UN court rules",
-      "url": "https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-19T20:07:02.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The unprecedented International Court of Justice verdict concerns a 2017 military crackdown that killed thousands."
-    },
-    {
-      "title": "Trump, Putin and Xi release 'peace declaration' after historic meeting",
-      "url": "https://www.bbc.co.uk/news/articles/c623j4ln97x7o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-19T17:38:22.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "While the presidents have previously met for one-on-one meetings, this is their first trilateral discussion."
-    },
-    {
-      "title": "Dutch watchdog tells people not to buy AI smart glasses",
-      "url": "https://www.bbc.co.uk/news/articles/ckq6eyrzrzy5o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-19T16:33:17.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Tests of glasses showed some misread medicine instructions or pretended to have called an ambulance"
-    },
-    {
-      "title": "Anthropic raises $81bn in record-breaking stock market debut",
-      "url": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-19T15:58:58.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "The company behind the Claude chatbot will become one of the most valuable firms in the world."
-    },
-    {
-      "title": "UK joins in GTA 6 frenzy as game becomes available worldwide",
-      "url": "https://www.bbc.co.uk/news/articles/c6z74ep2n17zo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-19T12:26:39.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "The game, which was in development for 13 years, is set become one of the world's most popular entertainment products ever."
-    },
-    {
-      "title": "Elon Musk says record $446m spending on US midterms was 'pretty foolish'",
-      "url": "https://www.bbc.co.uk/news/articles/cm9q8j2z3gg8o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-19T02:59:06.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "The multi-billionaire also said he was \"not Maga\", distancing himself from the political movement linked to Trump."
     }
   ]
 }
