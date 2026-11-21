@@ -1,20 +1,76 @@
 {
-  "generatedAt": "2026-11-20T20:30:45.320Z",
+  "generatedAt": "2026-11-21T07:23:54.234Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "Anthropic shares fall after blockbuster opening as wider tech sell-off continues",
-      "url": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T20:00:53.000Z",
+      "title": "Deal with EU not dependent on tuition fees agreement, Miliband says",
+      "url": "https://www.bbc.co.uk/news/articles/cm9w9p4geke8o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-21T06:00:09.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Other tech companies have also taken a hit as share markets broadly slump."
+      "summary": "Brussels sources had previously suggested the bloc might not apply the wider deal until fees were lowered for EU students in Britain."
+    },
+    {
+      "title": "Zelensky says Putin is a 'killer' after Trump calls Russian leader a friend",
+      "url": "https://www.bbc.co.uk/news/articles/cxnv4zvmdy0jo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-21T05:15:41.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Earlier this week, Trump greeted Putin ahead of a meeting in China and said the pair have a \"great relationship."
+    },
+    {
+      "title": "Man convicted of starting Palisades fire in Los Angeles",
+      "url": "https://www.bbc.co.uk/news/articles/c64gn0gy8rj3o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-21T04:34:00.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The 30-year-old LA resident was convicted of arson leading to wildfires that killed 12 people and destroyed more than 6,800 buildings."
+    },
+    {
+      "title": "Can AI really help spot Black Friday deals? We put it to the test",
+      "url": "https://www.bbc.co.uk/news/articles/cw8dv4jmnle2o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-21T00:06:11.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "We put four AI models to the test to see if they could save us money on a new TV."
+    },
+    {
+      "title": "In a year of AI solving maths problems, Anthropic may have just solved the biggest",
+      "url": "https://www.bbc.co.uk/news/articles/c6pqr2g7w059o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T23:08:57.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "A mathematician at Anthropic says he used an AI to prove the famed Riemann hypothesis, though verification will take some time."
+    },
+    {
+      "title": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history",
+      "url": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T22:53:24.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The mammoth figure surpasses every video game launch and single-day film box office record."
+    },
+    {
+      "title": "Tech stock sell-off drags markets down as Anthropic shares slide",
+      "url": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T22:42:47.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Pressures weighed on US markets, with the S&P 500 and the Dow Jones Industrial Average pushed into correction territory."
+    },
+    {
+      "title": "French police officers sentenced for beating of music producer Michel Zecler",
+      "url": "https://www.bbc.co.uk/news/articles/ck9d7e9wvvweo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-20T22:37:09.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The court has upheld the 2020 beating of the black music producer as an aggravated circumstance of racism."
     },
     {
       "title": "Trump threatens ban on US firms building AI data centres overseas",
       "url": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T19:51:52.000Z",
-      "category": "World",
+      "publishedAt": "2026-11-20T20:54:12.000Z",
+      "category": "Business",
       "source": "BBC News",
       "summary": "The US president provided little detail on the potential policy, saying others in his team were hearing about it for the first time."
     },
@@ -25,14 +81,6 @@
       "category": "World",
       "source": "BBC News",
       "summary": "A judicial investigation was launched after a complaint was filed last year over \"allegations of a sexual nature\"."
-    },
-    {
-      "title": "Indian man sentenced to 19-plus years in plot to assassinate US-based Sikh separatist leader",
-      "url": "https://www.bbc.co.uk/news/articles/cq702ez8d4lwo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T19:27:49.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Nikhil Gupta pleaded guilty to murder-for-hire, conspiracy to commit murder-for-hire, and conspiracy to commit money laundering in February."
     },
     {
       "title": "White House removes cyber-security chief after series of tech outages",
@@ -46,17 +94,9 @@
       "title": "UK to explore even closer ties with EU after agreeing deal, says Burnham",
       "url": "https://www.bbc.co.uk/news/articles/c6jreyqgw4e9o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-20T17:49:48.000Z",
-      "category": "World",
+      "category": "Business",
       "source": "BBC News",
       "summary": "The UK-EU deal agreed on Friday covers British food exports, emissions trading and a youth experience scheme."
-    },
-    {
-      "title": "Russian missile hits Poland as Ukraine's allies hold military exercise, says Tusk",
-      "url": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T16:54:29.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Nobody was hurt and no damage has been reported, but Warsaw described the incident as a \"provocation\" from Moscow."
     },
     {
       "title": "Faisal Islam: This cost-cutting UK-EU deal doesn't mean lower prices will follow",
@@ -65,30 +105,6 @@
       "category": "Business",
       "source": "BBC News",
       "summary": "The trade deal is unlikely lower food prices for shoppers, but should boost the economy more than other post-Brexit agreements."
-    },
-    {
-      "title": "Airbnb's divisive new house rules come into force",
-      "url": "https://www.bbc.co.uk/news/articles/cmx278n2genyo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T15:48:35.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "New rules on what Airbnb hosts can reasonably ask guests to do could mean fewer chores but higher costs for customers."
-    },
-    {
-      "title": "GTA 6 drives spike in download demand, as estimated sales top $2.3bn",
-      "url": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T13:08:30.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Rockstar Games ended a 13-year wait with what is expected to be the biggest entertainment launch ever."
-    },
-    {
-      "title": "Russia targets Kyiv crossings days after Ukraine hits Crimean Bridge",
-      "url": "https://www.bbc.co.uk/news/articles/c6x29gn4pdn9o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T13:01:16.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Russia launched one of its biggest air attacks yet as it rejected the prospect of security guarantees for Ukraine."
     },
     {
       "title": "Tinned food and long-life milk boost retail sales after 'Be Ready' campaign launch",
@@ -105,30 +121,6 @@
       "category": "Business",
       "source": "BBC News",
       "summary": "Would AI be a good judge of whether you should get a mortgage, car loan or mobile phone contract?"
-    },
-    {
-      "title": "Fish and eggs al desko? The dos and don'ts of lunch at work",
-      "url": "https://www.bbc.co.uk/news/articles/cwp8g4092zglo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T00:08:37.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Eating at your desk? The dos and don'ts of lunch at work"
-    },
-    {
-      "title": "Tens of thousands of UK fridges secured from hackers in secret nationwide operation",
-      "url": "https://www.bbc.co.uk/news/articles/c6eq49zyx7p4o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T00:02:07.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Supermarkets, warehouses, restaurants and stadiums have been scrambling to make their devices safe."
-    },
-    {
-      "title": "Anthropic becomes one of world's most valuable public companies in stock market debut",
-      "url": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-19T23:33:51.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Anthropic is the first purely AI company to be publicly listed, creating a test for the entire industry."
     }
   ]
 }
