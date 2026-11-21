@@ -1,30 +1,46 @@
 {
-  "generatedAt": "2026-11-21T07:23:54.234Z",
+  "generatedAt": "2026-11-21T19:27:25.631Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "Deal with EU not dependent on tuition fees agreement, Miliband says",
-      "url": "https://www.bbc.co.uk/news/articles/cm9w9p4geke8o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-21T06:00:09.000Z",
+      "title": "Russia-bound ship attacked in Gulf of Finland",
+      "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-21T19:20:22.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Brussels sources had previously suggested the bloc might not apply the wider deal until fees were lowered for EU students in Britain."
+      "summary": "Finnish defence forces say that Ukraine was likely behind the drone attack on the vessel."
     },
     {
-      "title": "Zelensky says Putin is a 'killer' after Trump calls Russian leader a friend",
-      "url": "https://www.bbc.co.uk/news/articles/cxnv4zvmdy0jo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-21T05:15:41.000Z",
+      "title": "FBI reportedly investigating apparent hack of its criminal database",
+      "url": "https://www.bbc.co.uk/news/articles/cvze7de86pk3o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-21T16:35:15.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Earlier this week, Trump greeted Putin ahead of a meeting in China and said the pair have a \"great relationship."
+      "summary": "The National Crime Information Center database is used by federal and local law enforcement to share information."
     },
     {
-      "title": "Man convicted of starting Palisades fire in Los Angeles",
-      "url": "https://www.bbc.co.uk/news/articles/c64gn0gy8rj3o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-21T04:34:00.000Z",
+      "title": "Fight over fossil fuels leaves COP31 climate talks in deadlock",
+      "url": "https://www.bbc.co.uk/news/articles/c6ly5w40eg07o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-21T14:54:24.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "The 30-year-old LA resident was convicted of arson leading to wildfires that killed 12 people and destroyed more than 6,800 buildings."
+      "summary": "Countries from nearly 200 countries are in a deadlock to try and get a new global climate agreement."
+    },
+    {
+      "title": "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
+      "url": "https://www.bbc.co.uk/news/articles/c6wy0qj7w5zqo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-21T13:17:38.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Ukraine's president says Kyiv acted after 109 separate Russian aerial attacks on bridges in Ukraine."
+    },
+    {
+      "title": "Mexican drug lord on FBI's 10 most wanted list arrested in shoot-out",
+      "url": "https://www.bbc.co.uk/news/articles/ckz749ey0r75o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-21T13:15:21.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Fausto Isidro \"Chapo Idisro\" Meza Flores, who is accused of drug trafficking and torture, is detained after gun fight with authorities."
     },
     {
       "title": "Can AI really help spot Black Friday deals? We put it to the test",
@@ -35,10 +51,10 @@
       "summary": "We put four AI models to the test to see if they could save us money on a new TV."
     },
     {
-      "title": "In a year of AI solving maths problems, Anthropic may have just solved the biggest",
+      "title": "In a year of AI solving maths problems, an Anthropic worker says he may have cracked the biggest",
       "url": "https://www.bbc.co.uk/news/articles/c6pqr2g7w059o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-20T23:08:57.000Z",
-      "category": "World",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "A mathematician at Anthropic says he used an AI to prove the famed Riemann hypothesis, though verification will take some time."
     },
@@ -73,14 +89,6 @@
       "category": "Business",
       "source": "BBC News",
       "summary": "The US president provided little detail on the potential policy, saying others in his team were hearing about it for the first time."
-    },
-    {
-      "title": "Gérard Depardieu and French author investigated over sexual allegations",
-      "url": "https://www.bbc.co.uk/news/articles/c9ly43pj10mvo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T19:45:20.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "A judicial investigation was launched after a complaint was filed last year over \"allegations of a sexual nature\"."
     },
     {
       "title": "White House removes cyber-security chief after series of tech outages",
