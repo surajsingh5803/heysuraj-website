@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-11-21T19:27:25.631Z",
+  "generatedAt": "2026-11-22T07:04:08.456Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
+    {
+      "title": "New draft deal aims to avert collapse of talks at climate summit",
+      "url": "https://www.bbc.co.uk/news/articles/cq7827z2841zo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-22T06:54:06.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The UN COP31 meeting in Turkey enters a second day of overtime as countries struggle to reach an agreement."
+    },
+    {
+      "title": "Mexican drug lord on FBI's 10 most wanted list arrested in shoot-out",
+      "url": "https://www.bbc.co.uk/news/articles/ckz749ey0r75o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-22T01:25:03.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Fausto Isidro \"Chapo Idisro\" Meza Flores, who is accused of drug trafficking and torture, is detained after gun fight with authorities."
+    },
+    {
+      "title": "FBI reportedly investigating apparent hack of its criminal database",
+      "url": "https://www.bbc.co.uk/news/articles/cvze7de86pk3o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-22T00:10:44.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The National Crime Information Center database is used by federal and local law enforcement to share information."
+    },
     {
       "title": "Russia-bound ship attacked in Gulf of Finland",
       "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko?at_medium=RSS&at_campaign=rss",
@@ -9,22 +33,6 @@
       "category": "World",
       "source": "BBC News",
       "summary": "Finnish defence forces say that Ukraine was likely behind the drone attack on the vessel."
-    },
-    {
-      "title": "FBI reportedly investigating apparent hack of its criminal database",
-      "url": "https://www.bbc.co.uk/news/articles/cvze7de86pk3o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-21T16:35:15.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The National Crime Information Center database is used by federal and local law enforcement to share information."
-    },
-    {
-      "title": "Fight over fossil fuels leaves COP31 climate talks in deadlock",
-      "url": "https://www.bbc.co.uk/news/articles/c6ly5w40eg07o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-21T14:54:24.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Countries from nearly 200 countries are in a deadlock to try and get a new global climate agreement."
     },
     {
       "title": "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
@@ -35,12 +43,20 @@
       "summary": "Ukraine's president says Kyiv acted after 109 separate Russian aerial attacks on bridges in Ukraine."
     },
     {
-      "title": "Mexican drug lord on FBI's 10 most wanted list arrested in shoot-out",
-      "url": "https://www.bbc.co.uk/news/articles/ckz749ey0r75o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-21T13:15:21.000Z",
+      "title": "Denmark accuses Russia of plotting to assassinate US-Ukrainian rapper",
+      "url": "https://www.bbc.co.uk/news/articles/cmde1lj4yjxno?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-21T10:26:36.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Fausto Isidro \"Chapo Idisro\" Meza Flores, who is accused of drug trafficking and torture, is detained after gun fight with authorities."
+      "summary": "The Russian embassy in Denmark has denied the allegation, which has led to Russia's defence attaché being expelled."
+    },
+    {
+      "title": "Man convicted of starting Palisades fire in Los Angeles",
+      "url": "https://www.bbc.co.uk/news/articles/c64gn0gy8rj3o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-21T04:34:00.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The 30-year-old LA resident was convicted of arson leading to wildfires that killed 12 people and destroyed more than 6,800 buildings."
     },
     {
       "title": "Can AI really help spot Black Friday deals? We put it to the test",
@@ -70,17 +86,9 @@
       "title": "Tech stock sell-off drags markets down as Anthropic shares slide",
       "url": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-20T22:42:47.000Z",
-      "category": "World",
+      "category": "Business",
       "source": "BBC News",
       "summary": "Pressures weighed on US markets, with the S&P 500 and the Dow Jones Industrial Average pushed into correction territory."
-    },
-    {
-      "title": "French police officers sentenced for beating of music producer Michel Zecler",
-      "url": "https://www.bbc.co.uk/news/articles/ck9d7e9wvvweo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T22:37:09.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The court has upheld the 2020 beating of the black music producer as an aggravated circumstance of racism."
     },
     {
       "title": "Trump threatens ban on US firms building AI data centres overseas",
