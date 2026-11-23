@@ -1,38 +1,70 @@
 {
-  "generatedAt": "2026-11-22T19:50:02.019Z",
+  "generatedAt": "2026-11-23T07:51:56.113Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "Explosion on Russian ship at Libya port caused by suspected drone attack, officials say",
-      "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-22T19:26:54.000Z",
+      "title": "Burnham to tell MPs 'landmark' EU deal could make next decade 'much better'",
+      "url": "https://www.bbc.co.uk/news/articles/cmde1dy82lepo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-23T07:01:31.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Libya's eastern government says the ship had stopped for fuel and supplies on its way back to Russia."
+      "summary": "The prime minister will tell MPs the deal agreed on Friday is a \"choice between a broken status quo or change\"."
     },
     {
       "title": "What's next after no deal at COP31 climate talks?",
       "url": "https://www.bbc.co.uk/news/videos/cr1ewge81q4qo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-22T18:57:24.000Z",
+      "publishedAt": "2026-11-23T05:34:39.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "The COP31 climate summit in Turkey has formally come to an end after countries failed to agree a deal."
+      "summary": "The talks have been the longest-running in the summit's history, with negotiations breaking down two days after they had been due to end."
     },
     {
-      "title": "COP31 fails to reach major climate deal as talks expose deep divisions",
+      "title": "Boy, 7, pulled alive from rubble hours after Russian strike on Ukraine, rescuers say",
+      "url": "https://www.bbc.co.uk/news/articles/cqdr15l32d3go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-23T05:33:17.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Eleven people are dead in the attack on Dymer, with rescue efforts ongoing to find those still missing from the residential building."
+    },
+    {
+      "title": "Longest-ever UN climate talks end with no deal as deep divisions exposed",
       "url": "https://www.bbc.co.uk/news/articles/cqwy06zrd26lo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-22T18:17:59.000Z",
+      "publishedAt": "2026-11-23T05:15:06.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "The talks fail to make a breakthrough on tackling climate change after a row about mentioning fossil fuels."
+      "summary": "The prime minister of Australia, which co-hosted COP31, attributed the failure to \"difficult geopolitical times\"."
     },
     {
-      "title": "'Danger seems greater all the time': Ukrainians search for missing after Russian strikes",
-      "url": "https://www.bbc.co.uk/news/videos/cre3dvd1k9y1o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-22T17:57:43.000Z",
+      "title": "Pip assessments need 'fundamental overhaul', report to say",
+      "url": "https://www.bbc.co.uk/news/articles/cvlyj3rn201xo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-23T04:01:13.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Disability minister Sir Stephen Timms says he will recommend major reforms to the personal independence payment."
+    },
+    {
+      "title": "Energy bills will soar - here's how you can ease the pain",
+      "url": "https://www.bbc.co.uk/news/articles/crm4rygl4m3o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-23T01:05:07.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Household energy bills are about to increase but there are ways to keep a lid on your expenditure."
+    },
+    {
+      "title": "What is going on with Poundland?",
+      "url": "https://www.bbc.co.uk/news/articles/cm4g10p2r0g9o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-23T00:22:27.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Poundland has a matter of days to find a buyer or face collapsing into administration. Why?"
+    },
+    {
+      "title": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
+      "url": "https://www.bbc.co.uk/news/articles/cqe9k09j9jv4o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-23T00:08:00.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "The BBC's Sarah Rainsford reports from the scene of a collapsed residential building in Ukraine's Kyiv region."
+      "summary": "AI employees in the industry's epicentre - San Francisco - worry that the sector is overheated."
     },
     {
       "title": "Russia-bound ship towed away after it was attacked in Gulf of Finland",
@@ -57,22 +89,6 @@
       "category": "Business",
       "source": "BBC News",
       "summary": "Chris O'Shea says the number of people unable or unwilling to pay their energy bills will increase when prices jump in the new year."
-    },
-    {
-      "title": "South Korea education minister resigns over exam cheating scandal",
-      "url": "https://www.bbc.co.uk/news/articles/cw3dgk29d37no?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-22T09:20:45.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Choi Kyo-jin admits last-minute measures to stop AI-assisted cheating during the college entrance exam caused chaos."
-    },
-    {
-      "title": "Italian jeweller and businessman Paolo Bulgari dies aged 89",
-      "url": "https://www.bbc.co.uk/news/articles/c8e39qk5vrpdo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-22T07:12:41.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "In a statement to Italian media, his family remember him as \"the greatest jeweller of our time\"."
     },
     {
       "title": "Employers are being asked to give interview feedback - here's what applicants want",
@@ -110,7 +126,7 @@
       "title": "Tech stock sell-off drags markets down as Anthropic shares slide",
       "url": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-20T22:42:47.000Z",
-      "category": "Business",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "Pressures weighed on US markets, with the S&P 500 and the Dow Jones Industrial Average pushed into correction territory."
     },
@@ -129,22 +145,6 @@
       "category": "Technology",
       "source": "BBC News",
       "summary": "He has been fired after losing the confidence of new White House chief of staff Stephen Miller, according to reports."
-    },
-    {
-      "title": "Faisal Islam: This cost-cutting UK-EU deal doesn't mean lower prices will follow",
-      "url": "https://www.bbc.co.uk/news/articles/cm1wr029evnqo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T16:41:52.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The trade deal is unlikely lower food prices for shoppers, but should boost the economy more than other post-Brexit agreements."
-    },
-    {
-      "title": "Should AI be judging our credit worthiness?",
-      "url": "https://www.bbc.co.uk/news/articles/c6d94pzk9vleo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-20T07:32:19.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Would AI be a good judge of whether you should get a mortgage, car loan or mobile phone contract?"
     }
   ]
 }
