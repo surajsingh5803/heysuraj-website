@@ -1,22 +1,86 @@
 {
-  "generatedAt": "2026-11-24T00:02:07.833Z",
+  "generatedAt": "2026-11-24T10:04:31.259Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
+    {
+      "title": "Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang",
+      "url": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-24T09:42:54.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Nvidia had come under pressure from President Trump to reappoint Huang, whose comeback helped add $1tn to the company's stock value."
+    },
+    {
+      "title": "Helpful but awkward: My week with Meta's Muse ahead of its UK launch",
+      "url": "https://www.bbc.co.uk/news/articles/c9gkld2l38y6o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-24T09:33:00.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "Meta wants Muse to do for AI what WhatsApp did for messaging - here's what the BBC's technology editor found when she used it."
+    },
+    {
+      "title": "What Jensen Huang's return teaches China's Xi about Trump",
+      "url": "https://www.bbc.co.uk/news/articles/c63rgpy50x98o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-24T07:26:27.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Huang being back at the helm of Nvidia is no guarantee of relief for Beijing."
+    },
+    {
+      "title": "India's 'cockroach' party leader says he was stopped from flying to UK",
+      "url": "https://www.bbc.co.uk/news/articles/cm5y1ezx2gqyo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-24T05:33:07.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Saurav Das said that immigration authorities at Delhi airport told him that his passport had been \"flagged\"."
+    },
+    {
+      "title": "Nato chief vows defence against space threat after Russian nuclear satellite reports",
+      "url": "https://www.bbc.co.uk/news/articles/c9x2er1ry2mzo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-24T02:15:59.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "German media said Russia planned to launch a satellite with a nuclear warhead into space in coming weeks."
+    },
+    {
+      "title": "Why the rise of the corporate landlord could lead to a two-tier rental market",
+      "url": "https://www.bbc.co.uk/news/articles/c6n90g2l82d1o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-24T00:28:48.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Companies building flats that they then rent out could usher in big changes for renters"
+    },
+    {
+      "title": "BBC secret filming shows dog breeder selling sick puppies for £2k each",
+      "url": "https://www.bbc.co.uk/news/articles/c8d36d43y8po?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-24T00:11:08.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The breeder's rating was downgraded but he continued to advertise as five-star, investigation finds."
+    },
+    {
+      "title": "I pay £250 a month for someone else to do my life admin - it's worth it",
+      "url": "https://www.bbc.co.uk/news/articles/c6zjr3g13zkno?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-24T00:01:04.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Busy mothers on both sides of the Atlantic are paying companies to handle their to-do lists."
+    },
     {
       "title": "US to blacklist Asian AI firm Megaspeed after Nvidia scandal",
       "url": "https://www.bbc.co.uk/news/articles/cv98xpg5dg5zo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-23T23:16:08.000Z",
-      "category": "World",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "Megaspeed has been accused of funneling AI chips to China after a former executive's affair with Jensen Huang became public."
     },
     {
-      "title": "Nvidia reinstates CEO Jensen Huang after affair with alleged spy as Trump says 'I made the deal'",
-      "url": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-23T23:10:27.000Z",
-      "category": "Business",
+      "title": "Gisèle Pelicot 'humiliated' after nude photos sent to media to promote book",
+      "url": "https://www.bbc.co.uk/news/articles/cm3eg502nxw2o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-23T21:24:47.000Z",
+      "category": "World",
       "source": "BBC News",
-      "summary": "Nvidia had come under pressure from President Trump to reappoint Huang, whose comeback helped add $1tn to the company's stock value."
+      "summary": "The publisher of an essay on coercive control apologises for \"an unfortunate and inappropriate communication\"."
     },
     {
       "title": "Nvidia value climbs by almost $1tn and tech stocks rally after Jensen Huang returns",
@@ -33,22 +97,6 @@
       "category": "World",
       "source": "BBC News",
       "summary": "Ukraine's sinking of a Russian battleship at a port in Libya raises the stakes of the war a notch, writes Frank Gardner."
-    },
-    {
-      "title": "Iranian authorities flog singer who performed without hijab, lawyers say",
-      "url": "https://www.bbc.co.uk/news/articles/cq1j6585l5g6o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-23T18:04:20.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Parastoo Ahmadi, three musicians and a producer were reportedly given 74 lashes in Qom."
-    },
-    {
-      "title": "What failure of COP31 reveals about a divided world",
-      "url": "https://www.bbc.co.uk/news/articles/cky970n83rvjo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-23T17:24:25.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Interests of oil-producing countries, a US boycott and a dispute over finance may have torpedoed climate talks."
     },
     {
       "title": "Faisal Islam: Why Jensen Huang proved too big to fire",
@@ -78,17 +126,9 @@
       "title": "The rise and fall and rise again of Jensen Huang",
       "url": "https://www.bbc.co.uk/news/articles/cmze750zg0jeo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-23T15:49:52.000Z",
-      "category": "Business",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "Days after resigning while mired in scandal of extra-marital affairs, Nvidia's Jensen Huang is making a remarkable return."
-    },
-    {
-      "title": "Russian warship hit by Ukrainian drones in Libya, Zelensky says",
-      "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-23T15:41:23.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The Kremlin warns of an \"escalation of tensions in the region\", but declines to comment directly on the attacks in Libya."
     },
     {
       "title": "GTA 6 hacker released on licence with warning 'don't let this happen again'",
@@ -99,36 +139,12 @@
       "summary": "21-year-old Arion Kurtaj pleaded guilty to the Rockstar Games hack and others he carried out when he was a teenager."
     },
     {
-      "title": "India pledges $1.6bn to Nepal in reset of ties",
-      "url": "https://www.bbc.co.uk/news/articles/cwx2ervemj4ko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-23T13:39:30.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "As Nepal rebuilds after deadly floods, its prime minister sets contentious issues aside to secure Indian funding, port access and a new train service."
-    },
-    {
-      "title": "Capita shares plunge 70% as boss quits after civil service pensions failure",
-      "url": "https://www.bbc.co.uk/news/articles/c65y1qqw3kjxo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-23T11:24:37.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Public sector workers have been hit by delays to pension payments, in a scheme overseen by Capita since last year."
-    },
-    {
       "title": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
       "url": "https://www.bbc.co.uk/news/articles/cqe9k09j9jv4o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-23T00:08:00.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "AI employees in the industry's epicentre - San Francisco - worry that the sector is overheated."
-    },
-    {
-      "title": "Can AI really help spot Black Friday deals? We put it to the test",
-      "url": "https://www.bbc.co.uk/news/articles/cw8dv4jmnle2o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-21T00:06:11.000Z",
       "category": "Technology",
       "source": "BBC News",
-      "summary": "We put four AI models to the test to see if they could save us money on a new TV."
+      "summary": "AI employees in the industry's epicentre - San Francisco - worry that the sector is overheated."
     }
   ]
 }
