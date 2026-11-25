@@ -1,86 +1,126 @@
 {
-  "generatedAt": "2026-11-25T08:50:16.339Z",
+  "generatedAt": "2026-11-25T21:49:53.455Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "Energy bills to rise by 26% from January",
+      "title": "US stocks fall further as fears over AI intensify",
+      "url": "https://www.bbc.co.uk/news/articles/cq0md8g14zryo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T21:43:18.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "All three main US indexes were down in early trading, with the tech-dominated Nasdaq down almost 4%."
+    },
+    {
+      "title": "Poundland collapses putting 11,000 jobs at risk",
+      "url": "https://www.bbc.co.uk/news/articles/cm3vgdn037z4o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T21:31:10.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The discount chain has fallen into administration after its owners failed to find a buyer."
+    },
+    {
+      "title": "At least 30 killed in massive fire as fuel tanker crashes on Cairo highway",
+      "url": "https://www.bbc.co.uk/news/articles/cqy7rn30v314o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T21:25:14.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Another 19 are injured after the tanker reportedly overturns on a busy ring road in the Egyptian capital."
+    },
+    {
+      "title": "US Army says controlled blast of explosives in Iowa was 'huge success'",
+      "url": "https://www.bbc.co.uk/news/articles/cwg7l5ve251ko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T19:54:52.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Despite widespread concern from residents ahead of the blast, officials say that lead readings in the area so far have been promising."
+    },
+    {
+      "title": "Israeli judges recommend dropping most serious charges against Netanyahu",
+      "url": "https://www.bbc.co.uk/news/articles/cxj05mv723r2o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T19:47:39.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The Israeli PM says his trial should end after judges said there was little chance of conviction in one of three cases."
+    },
+    {
+      "title": "North Korea expels Swiss diplomat in sanctions row",
+      "url": "https://www.bbc.co.uk/news/articles/cq0l34e4kkr5o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T19:19:06.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Swiss officials said relations would be kept through North Korea's embassy in Bern, and its own embassy in Beijing."
+    },
+    {
+      "title": "Images of asteroid targeted to test Earth's defences reveal stadium-sized crater",
+      "url": "https://www.bbc.co.uk/news/articles/cw8dv112r5gmo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T17:30:16.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The asteroid's surface was transformed after a spacecraft was deliberately crashed into it four years ago"
+    },
+    {
+      "title": "What's gone wrong at Poundland?",
+      "url": "https://www.bbc.co.uk/news/articles/cm4g10p2r0g9o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T17:00:32.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Poundland has collapse into administration. Why?"
+    },
+    {
+      "title": "Trump's accounts traded Nvidia shares 44 times this year, records show",
+      "url": "https://www.bbc.co.uk/news/articles/cq772vk664yvo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T16:42:11.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "A review of the US president's financial disclosures shows Donald Trump's investment portfolios have regularly traded shares in the tech giant."
+    },
+    {
+      "title": "US announces new tariffs on host of countries including China",
+      "url": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T16:21:34.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The new levies would hit many of America's biggest trading partners, including China and the EU."
+    },
+    {
+      "title": "Energy bills to rise by 26% from January after gas prices surge",
       "url": "https://www.bbc.co.uk/news/articles/cm20qnq33e90o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T08:38:13.000Z",
+      "publishedAt": "2026-11-25T13:42:08.000Z",
       "category": "Business",
       "source": "BBC News",
       "summary": "A household using a typical amount of energy would see its annual bill rise from £1,723 to £2,166 if this level was sustained for a year."
     },
     {
-      "title": "Kilmar Ábrego García leaves US for Spain, ending Trump deportation battle",
-      "url": "https://www.bbc.co.uk/news/articles/c6808pyy5dl9o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T06:36:00.000Z",
-      "category": "World",
+      "title": "Huawei found guilty of stealing US trade secrets but acquitted of racketeering",
+      "url": "https://www.bbc.co.uk/news/articles/cmy49ngydqzpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T10:52:09.000Z",
+      "category": "Technology",
       "source": "BBC News",
-      "summary": "Ábrego García's deportation to El Salvador and return to the US became a flashpoint in the debate over President Donald Trump's immigration agenda."
+      "summary": "The verdict follows a months-long trial in New York."
     },
     {
-      "title": "Four years after huge asteroid crash, a spacecraft has now returned to assess the damage",
-      "url": "https://www.bbc.co.uk/news/articles/cw8dv112r5gmo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T06:00:36.000Z",
-      "category": "World",
+      "title": "EA adds AI-generated John Motson to FC 27 video game",
+      "url": "https://www.bbc.co.uk/news/articles/c65y10j841jpo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T10:11:34.000Z",
+      "category": "Technology",
       "source": "BBC News",
-      "summary": "The mission is studying an asteroid deliberately knocked off course by a colliding spacecraft."
+      "summary": "The AI-generated Motson will appear in the game on 26 November, with the consent of his son and wife."
+    },
+    {
+      "title": "Zoe Kleinman: Nobody is irreplaceable - unless you're Jensen Huang",
+      "url": "https://www.bbc.co.uk/news/articles/c3rrgqj2zx5yo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T10:03:12.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "The BBC's technology and AI editor on how Nvidia's boss made himself impossible to fire."
     },
     {
       "title": "US attorney general dodges questions about Nvidia investigation",
       "url": "https://www.bbc.co.uk/news/articles/crpdw1qx7jgxo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-25T03:44:07.000Z",
-      "category": "World",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "Nvidia's share price have fallen 7% as lawmakers demand answers about President Donald Trump's involvement in Huang's reinstatement."
-    },
-    {
-      "title": "Huawei found guilty of stealing US trade secrets but acquitted of racketeering",
-      "url": "https://www.bbc.co.uk/news/articles/cmy49ngydqzpo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T02:59:27.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The verdict follows a months-long trial in New York."
-    },
-    {
-      "title": "Thomas Markle charged in US for possessing child sex abuse images",
-      "url": "https://www.bbc.co.uk/news/articles/crwy4egxn592o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T01:40:42.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The FBI arrested Markle on 6 November after a search of a storage unit he had allegedly rented in Los Angeles uncovered the abuse material."
-    },
-    {
-      "title": "Trump's rescue of Nvidia's Huang brings political risks",
-      "url": "https://www.bbc.co.uk/news/articles/ckj05m2zdyryo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T01:03:05.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The US president's intercession to reinstate CEO Jensen Huang has inextricably linked their fates."
-    },
-    {
-      "title": "The rising cost of putting food on the table in India",
-      "url": "https://www.bbc.co.uk/news/articles/cmy0xj41kl50o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T01:02:13.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "India's food inflation is broadening, squeezing household budgets."
-    },
-    {
-      "title": "Russia's own figures show almost 500,000 deaths in war in Ukraine",
-      "url": "https://www.bbc.co.uk/news/articles/cmx27g533zwyo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T00:56:51.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Leaked data reveal how the full-scale invasion of Ukraine has fundamentally changed mortality patterns in Russia."
-    },
-    {
-      "title": "US preparing to unveil plan for new tariffs on global trading partners",
-      "url": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T00:38:01.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The new levies would hit many of America's biggest trading partners, including China and the EU."
     },
     {
       "title": "Why tiny cars are taking off across Europe",
@@ -91,26 +131,10 @@
       "summary": "Once seen as a car for elderly, rural people, tiny cars are being embraced by a younger demographic."
     },
     {
-      "title": "What will the energy cap changes mean for my bills?",
-      "url": "https://www.bbc.co.uk/news/articles/cdd29v8mp9jo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T00:33:25.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Regulator Ofgem is raising the cap affecting the energy bills of millions of households."
-    },
-    {
-      "title": "'I only use the washing machine on a Sunday' - how we're keeping our energy bills down",
-      "url": "https://www.bbc.co.uk/news/articles/c820qnznkrn4o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T00:30:52.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The BBC speaks to three people about steps they take to keep their energy bills under control."
-    },
-    {
       "title": "Faisal Islam: Fears over the AI boom haven't gone away",
       "url": "https://www.bbc.co.uk/news/articles/c6894evgpel5o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-24T18:21:43.000Z",
-      "category": "Business",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "There were legitimate fears before Huang's abrupt exit from Nvidia - and his return won't fix it"
     },
@@ -121,22 +145,6 @@
       "category": "Technology",
       "source": "BBC News",
       "summary": "Meta wants Muse to do for AI what WhatsApp did for messaging - here's what the BBC's technology editor found when she used it."
-    },
-    {
-      "title": "US to blacklist Asian AI firm Megaspeed after Nvidia scandal",
-      "url": "https://www.bbc.co.uk/news/articles/cv98xpg5dg5zo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-23T23:16:08.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Megaspeed has been accused of funneling AI chips to China after a former executive's affair with Jensen Huang became public."
-    },
-    {
-      "title": "Nvidia value climbs by almost $1tn and tech stocks rally after Jensen Huang returns",
-      "url": "https://www.bbc.co.uk/news/articles/cq62pn6j42jko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-23T21:23:42.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "The jump in Nvidia shares has also lifted stock markets, with the tech-heavy Nasdaq up 6.5%."
     }
   ]
 }
