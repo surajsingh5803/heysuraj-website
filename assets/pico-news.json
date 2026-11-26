@@ -1,7 +1,71 @@
 {
-  "generatedAt": "2026-11-25T21:49:53.455Z",
+  "generatedAt": "2026-11-26T08:35:15.808Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
+    {
+      "title": "Poundland collapses putting 11,000 jobs at risk",
+      "url": "https://www.bbc.co.uk/news/articles/cm3vgdn037z4o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T08:24:29.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The discount chain has fallen into administration after its owners failed to find a buyer."
+    },
+    {
+      "title": "New UK-EU treaty has 10-year termination clause, BBC understands",
+      "url": "https://www.bbc.co.uk/news/articles/c98r7p65edvgo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T07:40:04.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Text of the treaties will be published this afternoon, alongside legislation designed to enact the bulk of the deal."
+    },
+    {
+      "title": "US announces new tariffs on host of countries including China",
+      "url": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T04:10:58.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The new levies would hit many of America's biggest trading partners, including China and the EU."
+    },
+    {
+      "title": "US Army says controlled blast of explosives in Iowa was 'huge success'",
+      "url": "https://www.bbc.co.uk/news/articles/cwg7l5ve251ko?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T00:23:05.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Despite widespread concern from residents ahead of the blast, officials say that lead readings in the area so far have been promising."
+    },
+    {
+      "title": "Has global jihadism failed, or is it simply changing shape?",
+      "url": "https://www.bbc.co.uk/news/articles/cmx2x4e0n5jro?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T00:22:18.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Jihadist groups appear to be focusing on local issues rather than global terror. Does it signify a real change?"
+    },
+    {
+      "title": "US approves SpaceX plan to send a million data satellites to space",
+      "url": "https://www.bbc.co.uk/news/articles/cwp836l8n1jgo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T00:07:51.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The Starmind constellation aims to be the most cost and energy-efficient way to meet the growing demand for AI computing power."
+    },
+    {
+      "title": "Guitar wars - the transatlantic battle over the Stratocaster",
+      "url": "https://www.bbc.co.uk/news/articles/cqd01l9x8k48o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T00:01:37.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "US company Fender is in dispute with a German firm that makes generic versions of its key model."
+    },
+    {
+      "title": "Thirty-one killed in massive fire as fuel tanker crashes on Cairo highway",
+      "url": "https://www.bbc.co.uk/news/articles/cqy7rn30v314o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-25T22:18:06.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Another 21 are injured after the tanker reportedly overturns on a busy ring road in the Egyptian capital."
+    },
     {
       "title": "US stocks fall further as fears over AI intensify",
       "url": "https://www.bbc.co.uk/news/articles/cq0md8g14zryo?at_medium=RSS&at_campaign=rss",
@@ -11,44 +75,12 @@
       "summary": "All three main US indexes were down in early trading, with the tech-dominated Nasdaq down almost 4%."
     },
     {
-      "title": "Poundland collapses putting 11,000 jobs at risk",
-      "url": "https://www.bbc.co.uk/news/articles/cm3vgdn037z4o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T21:31:10.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "The discount chain has fallen into administration after its owners failed to find a buyer."
-    },
-    {
-      "title": "At least 30 killed in massive fire as fuel tanker crashes on Cairo highway",
-      "url": "https://www.bbc.co.uk/news/articles/cqy7rn30v314o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T21:25:14.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Another 19 are injured after the tanker reportedly overturns on a busy ring road in the Egyptian capital."
-    },
-    {
-      "title": "US Army says controlled blast of explosives in Iowa was 'huge success'",
-      "url": "https://www.bbc.co.uk/news/articles/cwg7l5ve251ko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T19:54:52.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Despite widespread concern from residents ahead of the blast, officials say that lead readings in the area so far have been promising."
-    },
-    {
       "title": "Israeli judges recommend dropping most serious charges against Netanyahu",
       "url": "https://www.bbc.co.uk/news/articles/cxj05mv723r2o?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-25T19:47:39.000Z",
       "category": "World",
       "source": "BBC News",
       "summary": "The Israeli PM says his trial should end after judges said there was little chance of conviction in one of three cases."
-    },
-    {
-      "title": "North Korea expels Swiss diplomat in sanctions row",
-      "url": "https://www.bbc.co.uk/news/articles/cq0l34e4kkr5o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T19:19:06.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Swiss officials said relations would be kept through North Korea's embassy in Bern, and its own embassy in Beijing."
     },
     {
       "title": "Images of asteroid targeted to test Earth's defences reveal stadium-sized crater",
@@ -65,30 +97,6 @@
       "category": "Business",
       "source": "BBC News",
       "summary": "Poundland has collapse into administration. Why?"
-    },
-    {
-      "title": "Trump's accounts traded Nvidia shares 44 times this year, records show",
-      "url": "https://www.bbc.co.uk/news/articles/cq772vk664yvo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T16:42:11.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "A review of the US president's financial disclosures shows Donald Trump's investment portfolios have regularly traded shares in the tech giant."
-    },
-    {
-      "title": "US announces new tariffs on host of countries including China",
-      "url": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T16:21:34.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The new levies would hit many of America's biggest trading partners, including China and the EU."
-    },
-    {
-      "title": "Energy bills to rise by 26% from January after gas prices surge",
-      "url": "https://www.bbc.co.uk/news/articles/cm20qnq33e90o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T13:42:08.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "A household using a typical amount of energy would see its annual bill rise from £1,723 to £2,166 if this level was sustained for a year."
     },
     {
       "title": "Huawei found guilty of stealing US trade secrets but acquitted of racketeering",
@@ -126,7 +134,7 @@
       "title": "Why tiny cars are taking off across Europe",
       "url": "https://www.bbc.co.uk/news/articles/cmwy9jne0g7qo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-25T00:34:05.000Z",
-      "category": "Business",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "Once seen as a car for elderly, rural people, tiny cars are being embraced by a younger demographic."
     },
@@ -137,14 +145,6 @@
       "category": "Technology",
       "source": "BBC News",
       "summary": "There were legitimate fears before Huang's abrupt exit from Nvidia - and his return won't fix it"
-    },
-    {
-      "title": "Helpful but awkward: My week with Meta's Muse ahead of its UK launch",
-      "url": "https://www.bbc.co.uk/news/articles/c9gkld2l38y6o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-24T09:33:00.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Meta wants Muse to do for AI what WhatsApp did for messaging - here's what the BBC's technology editor found when she used it."
     }
   ]
 }
