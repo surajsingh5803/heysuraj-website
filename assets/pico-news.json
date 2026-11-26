@@ -1,54 +1,118 @@
 {
-  "generatedAt": "2026-11-26T08:35:15.808Z",
+  "generatedAt": "2026-11-26T21:42:43.470Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
-      "title": "Poundland collapses putting 11,000 jobs at risk",
-      "url": "https://www.bbc.co.uk/news/articles/cm3vgdn037z4o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-26T08:24:29.000Z",
+      "title": "Two Italians killed in strike in Kuwait, as Iran denies responsibility",
+      "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T21:17:53.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The pair were technicians for German company Rheinmetall, according to Italy's foreign ministry."
+    },
+    {
+      "title": "Faisal Islam: Why Trump's new tariffs are less of a threat",
+      "url": "https://www.bbc.co.uk/news/articles/c6r7g4e3yep1o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T19:55:58.000Z",
       "category": "Business",
       "source": "BBC News",
-      "summary": "The discount chain has fallen into administration after its owners failed to find a buyer."
+      "summary": "Other countries have rerouted trade in response to his first tariff salvo, now they are looking beyond Trump's tenure."
     },
     {
-      "title": "New UK-EU treaty has 10-year termination clause, BBC understands",
-      "url": "https://www.bbc.co.uk/news/articles/c98r7p65edvgo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-26T07:40:04.000Z",
+      "title": "Watch: Roofs torn off and streets under water as severe weather hits US",
+      "url": "https://www.bbc.co.uk/news/videos/cq808d704m22o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T19:26:16.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Hundreds of thousands have been affected by storms in the country as the Thanksgiving holiday weekend begins."
+    },
+    {
+      "title": "When will Poundland shops close? Five key questions answered",
+      "url": "https://www.bbc.co.uk/news/articles/c6z9d3pv93glo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T17:21:21.000Z",
       "category": "Business",
       "source": "BBC News",
-      "summary": "Text of the treaties will be published this afternoon, alongside legislation designed to enact the bulk of the deal."
+      "summary": "Why is Poundland closing down, and what will happen to staff and suppliers?"
     },
     {
-      "title": "US announces new tariffs on host of countries including China",
-      "url": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-26T04:10:58.000Z",
+      "title": "Diesel tanker carrying up to 7,000 tonnes capsizes near Ibiza, killing one",
+      "url": "https://www.bbc.co.uk/news/articles/c9gklryvj24do?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T15:17:18.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "The new levies would hit many of America's biggest trading partners, including China and the EU."
+      "summary": "The possible environmental damage is still being assessed by Spain's sea rescue service."
     },
     {
-      "title": "US Army says controlled blast of explosives in Iowa was 'huge success'",
-      "url": "https://www.bbc.co.uk/news/articles/cwg7l5ve251ko?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-26T00:23:05.000Z",
+      "title": "Gérard Depardieu to stand trial for alleged rape of actress in 2018, court rules",
+      "url": "https://www.bbc.co.uk/news/articles/cmlyd76kyx44o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T14:44:26.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Despite widespread concern from residents ahead of the blast, officials say that lead readings in the area so far have been promising."
+      "summary": "A Paris appeals court rules Depardieu will go on trial for the alleged rape of Charlotte Arnould."
     },
     {
-      "title": "Has global jihadism failed, or is it simply changing shape?",
-      "url": "https://www.bbc.co.uk/news/articles/cmx2x4e0n5jro?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-26T00:22:18.000Z",
+      "title": "Pregnant US inmate escapes in prison vehicle after medical appointment",
+      "url": "https://www.bbc.co.uk/news/articles/c9m2jke85xzxo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T14:35:22.000Z",
       "category": "World",
       "source": "BBC News",
-      "summary": "Jihadist groups appear to be focusing on local issues rather than global terror. Does it signify a real change?"
+      "summary": "Rebecca Taylor had been imprisoned in New Mexico for multiple theft and burglary charges."
     },
     {
-      "title": "US approves SpaceX plan to send a million data satellites to space",
+      "title": "Norse Atlantic suspends all flights as it faces potential collapse",
+      "url": "https://www.bbc.co.uk/news/articles/c9kgmd0ldy0lo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T14:28:22.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The carrier is looking for urgent funding, but will file for bankruptcy without a financial lifeline."
+    },
+    {
+      "title": "Millions of people to see average monthly mortgage payments rise by £100",
+      "url": "https://www.bbc.co.uk/news/articles/cwg5r02zel9qo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T14:00:20.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "More people face higher mortgage repayments when they roll off a fixed deal than previously estimated."
+    },
+    {
+      "title": "Simon Jack: Is Poundland's US owner to blame for its collapse?",
+      "url": "https://www.bbc.co.uk/news/articles/c62klzxvyzyqo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T13:40:46.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "Poundland's management and MPs blame the retailer's owners, Gordon Brothers, but the US firm says without them the chain would have collapsed last year."
+    },
+    {
+      "title": "New boss appointed to lead Travelodge",
+      "url": "https://www.bbc.co.uk/news/articles/cqx2wx89kg0eo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T12:03:49.000Z",
+      "category": "Business",
+      "source": "BBC News",
+      "summary": "The new CEO will lead the Thame-based company from 1 December following Jo Boydell's resignation."
+    },
+    {
+      "title": "Musk's plan to send a million SpaceX data satellites into space approved",
       "url": "https://www.bbc.co.uk/news/articles/cwp836l8n1jgo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-26T00:07:51.000Z",
-      "category": "Business",
+      "publishedAt": "2026-11-26T09:27:44.000Z",
+      "category": "Technology",
       "source": "BBC News",
       "summary": "The Starmind constellation aims to be the most cost and energy-efficient way to meet the growing demand for AI computing power."
+    },
+    {
+      "title": "Watch: BBC confronts German man suspected of supplying migrant gangs with small boats",
+      "url": "https://www.bbc.co.uk/news/videos/cvglrz5yr79go?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T05:00:27.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Marvin Reuter is contesting extradition to France, where he could face smuggling, criminal conspiracy and involuntary manslaughter charges."
+    },
+    {
+      "title": "German boat dealer suspected of supplying Channel smuggling gangs, BBC finds",
+      "url": "https://www.bbc.co.uk/news/articles/cqlymky8kpzjo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-26T05:00:24.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "Nearly a third of crossings in early 2026 allegedly involved boats or engines from the German man's firm."
     },
     {
       "title": "Guitar wars - the transatlantic battle over the Stratocaster",
@@ -57,46 +121,6 @@
       "category": "Business",
       "source": "BBC News",
       "summary": "US company Fender is in dispute with a German firm that makes generic versions of its key model."
-    },
-    {
-      "title": "Thirty-one killed in massive fire as fuel tanker crashes on Cairo highway",
-      "url": "https://www.bbc.co.uk/news/articles/cqy7rn30v314o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T22:18:06.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Another 21 are injured after the tanker reportedly overturns on a busy ring road in the Egyptian capital."
-    },
-    {
-      "title": "US stocks fall further as fears over AI intensify",
-      "url": "https://www.bbc.co.uk/news/articles/cq0md8g14zryo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T21:43:18.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "All three main US indexes were down in early trading, with the tech-dominated Nasdaq down almost 4%."
-    },
-    {
-      "title": "Israeli judges recommend dropping most serious charges against Netanyahu",
-      "url": "https://www.bbc.co.uk/news/articles/cxj05mv723r2o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T19:47:39.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The Israeli PM says his trial should end after judges said there was little chance of conviction in one of three cases."
-    },
-    {
-      "title": "Images of asteroid targeted to test Earth's defences reveal stadium-sized crater",
-      "url": "https://www.bbc.co.uk/news/articles/cw8dv112r5gmo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T17:30:16.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "The asteroid's surface was transformed after a spacecraft was deliberately crashed into it four years ago"
-    },
-    {
-      "title": "What's gone wrong at Poundland?",
-      "url": "https://www.bbc.co.uk/news/articles/cm4g10p2r0g9o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T17:00:32.000Z",
-      "category": "Business",
-      "source": "BBC News",
-      "summary": "Poundland has collapse into administration. Why?"
     },
     {
       "title": "Huawei found guilty of stealing US trade secrets but acquitted of racketeering",
@@ -121,30 +145,6 @@
       "category": "Technology",
       "source": "BBC News",
       "summary": "The BBC's technology and AI editor on how Nvidia's boss made himself impossible to fire."
-    },
-    {
-      "title": "US attorney general dodges questions about Nvidia investigation",
-      "url": "https://www.bbc.co.uk/news/articles/crpdw1qx7jgxo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T03:44:07.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Nvidia's share price have fallen 7% as lawmakers demand answers about President Donald Trump's involvement in Huang's reinstatement."
-    },
-    {
-      "title": "Why tiny cars are taking off across Europe",
-      "url": "https://www.bbc.co.uk/news/articles/cmwy9jne0g7qo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T00:34:05.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "Once seen as a car for elderly, rural people, tiny cars are being embraced by a younger demographic."
-    },
-    {
-      "title": "Faisal Islam: Fears over the AI boom haven't gone away",
-      "url": "https://www.bbc.co.uk/news/articles/c6894evgpel5o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-24T18:21:43.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "There were legitimate fears before Huang's abrupt exit from Nvidia - and his return won't fix it"
     }
   ]
 }
