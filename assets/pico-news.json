@@ -1,22 +1,54 @@
 {
-  "generatedAt": "2026-11-27T21:26:55.409Z",
+  "generatedAt": "2026-11-28T08:02:02.380Z",
   "sourceMethod": "Scheduled source-linked RSS headline feed. No full article retrieval. Verify the linked article for details.",
   "items": [
     {
+      "title": "Pensions and benefits services still down after 'cyber incident'",
+      "url": "https://www.bbc.co.uk/news/articles/cm1wrgqyq4d8o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-28T07:55:18.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "The UK's former chief technology officer says the Department for Work and Pensions may have been hit by hackers, but the government has not confirmed that."
+    },
+    {
+      "title": "Eight killed in Peruvian military helicopter crash",
+      "url": "https://www.bbc.co.uk/news/articles/cwp9d85mlp88o?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-28T04:19:16.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The pilot was the sole survivor of the crash during a rescue mission in a remote area known for drug trafficking."
+    },
+    {
+      "title": "Turkish officials 'destroyed' pro-opposition TV channel, owner tells BBC",
+      "url": "https://www.bbc.co.uk/news/articles/cq36gk151xkdo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-28T04:13:45.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The headquarters of Halk TV were raided last month, the latest in a series of crackdowns on news sources deemed critical of the government."
+    },
+    {
+      "title": "How gamers are using AI and leaked files to clone Grand Theft Auto 6",
+      "url": "https://www.bbc.co.uk/news/articles/c64gn8pe5eeqo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-28T01:30:50.000Z",
+      "category": "Technology",
+      "source": "BBC News",
+      "summary": "With an official PC version potentially still months away, fans are getting impatient."
+    },
+    {
+      "title": "'Poison seller' Kenneth Law apologises in court to the families of his victims",
+      "url": "https://www.bbc.co.uk/news/articles/cmx2898wq2qjo?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-28T00:56:55.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "The Canadian man, who pleaded guilty to 14 counts of aiding and abetting suicide earlier this year, said he was remorseful for his actions."
+    },
+    {
       "title": "Spanish PM and rivals rally supporters in final pitch for votes",
       "url": "https://www.bbc.co.uk/news/articles/c8wy5p4gdnwvo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-27T20:57:04.000Z",
+      "publishedAt": "2026-11-27T21:55:53.000Z",
       "category": "World",
       "source": "BBC News",
       "summary": "Prime Minister Pedro Sánchez wants to defy the polls, and his main rivals accuse him of not telling the truth and of \"betrayal\"."
-    },
-    {
-      "title": "Capsized tanker carrying 7,000 tonnes of diesel to be towed away from Ibiza",
-      "url": "https://www.bbc.co.uk/news/articles/cvrlgz6g0ekgo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-27T20:34:45.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "There are fears of a major oil spillage off Ibiza but the ship's fuel tanks are so far intact."
     },
     {
       "title": "'We couldn't give up that easily': Marching bands scramble to cover costs after Thanksgiving parade rearranged",
@@ -27,14 +59,6 @@
       "summary": "Stormy weather in New York City prompted organisers to push back the Macy's parade by two days - leaving some musicians stuck."
     },
     {
-      "title": "Weary of war but with no sign of backing down, Kyiv faces another punishing winter",
-      "url": "https://www.bbc.co.uk/news/articles/c3pw4yrr8kz9o?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-27T18:42:50.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Ukraine settles in for another devastating winter as the questions persists: how will it all end?"
-    },
-    {
       "title": "Zelensky criticises 'strange' Trump-Putin friendship in BBC interview",
       "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-27T18:00:40.000Z",
@@ -43,28 +67,20 @@
       "summary": "Ukraine's president voices frustration with US and says it is not pushing Russia hard enough in peace talks to end the war."
     },
     {
-      "title": "Kenyan doomsday cult leader convicted over further 123 deaths",
-      "url": "https://www.bbc.co.uk/news/articles/cmy49de4xx1zo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-27T17:19:31.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "Paul Mackenzie is found guilty of killing his followers, weeks after being jailed for the mass murder of children."
-    },
-    {
-      "title": "Brazil pushes back on Macron calling its meat 'doped'",
-      "url": "https://www.bbc.co.uk/news/articles/c6rrg28npvzeo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-27T15:54:15.000Z",
-      "category": "World",
-      "source": "BBC News",
-      "summary": "France's president made the comment while speaking to French farming representatives, months after the EU banned Brazil beef and poultry products."
-    },
-    {
       "title": "My self-care ritual is a meal at a fancy restaurant - on my own",
       "url": "https://www.bbc.co.uk/news/articles/cw8dv11dp2yeo?at_medium=RSS&at_campaign=rss",
       "publishedAt": "2026-11-27T10:10:36.000Z",
       "category": "Business",
       "source": "BBC News",
       "summary": "Solo-dining is being embraced as a self-care trend and it's reshaping the restaurant industry."
+    },
+    {
+      "title": "Millions of wives in South Asia unprotected from marital rape - study",
+      "url": "https://www.bbc.co.uk/news/articles/cw074p95ye5do?at_medium=RSS&at_campaign=rss",
+      "publishedAt": "2026-11-27T08:13:43.000Z",
+      "category": "World",
+      "source": "BBC News",
+      "summary": "More than 100 countries have outlawed marital rape, but a large part of South Asia has not."
     },
     {
       "title": "From £250 job to £9,000 bill: Inside the rogue trader networks scamming customers at scale",
@@ -129,22 +145,6 @@
       "category": "Technology",
       "source": "BBC News",
       "summary": "The verdict follows a months-long trial in New York."
-    },
-    {
-      "title": "EA adds AI-generated John Motson to FC 27 video game",
-      "url": "https://www.bbc.co.uk/news/articles/c65y10j841jpo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T10:11:34.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "The AI-generated Motson will appear in the game on 26 November, with the consent of his son and wife."
-    },
-    {
-      "title": "Zoe Kleinman: Nobody is irreplaceable - unless you're Jensen Huang",
-      "url": "https://www.bbc.co.uk/news/articles/c3rrgqj2zx5yo?at_medium=RSS&at_campaign=rss",
-      "publishedAt": "2026-11-25T10:03:12.000Z",
-      "category": "Technology",
-      "source": "BBC News",
-      "summary": "The BBC's technology and AI editor on how Nvidia's boss made himself impossible to fire."
     }
   ]
 }
